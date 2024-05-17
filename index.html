@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Gestion Formation</title>
+    <script src="assets/js/d3.min.js"></script>
+    <script src="https://kit.fontawesome.com/41992aa5bc.js" crossorigin="anonymous"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+
+    <script src="https://unpkg.com/cal-heatmap/dist/cal-heatmap.min.js"></script>
+
+    <script defer src="https://apis.google.com/js/api.js" ></script>
+    <script defer src="https://accounts.google.com/gsi/client" ></script>
+
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/cover.css">
+    <link rel="stylesheet" href="assets/css/loader.css">
+    <link rel="stylesheet" href="https://unpkg.com/cal-heatmap/dist/cal-heatmap.css">
+    
+    <style>
+        iframe{
+            width: 100%;
+        }
+    </style>
+</head>
+<body class="d-flex h-100 text-center text-white bg-dark">
+
+    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+
+        <header>
+            <div>
+                <nav class="navbar navbar-expand-lg bg-body-tertiary bg-dark border-bottom border-bottom-dark"
+                    data-bs-theme="dark">
+                    <div class="container-fluid">
+                        <a class="navbar-brand" href="#">
+                            <img src="assets/img/logo-paragraphe-blanc.svg" alt="Logo" width="86"
+                                class="d-inline-block">
+                            <label class="text-white" style="vertical-align: -webkit-baseline-middle;">Gestion formation</label>
+                        </a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul id="navbarMain" class="navbar-nav me-auto mb-2 mb-lg-0">
+                                <li class="nav-item mx-2">
+                                    <button id="btnAuth" type="button" class="btn btn-danger">
+                                        <i class="fa-sharp fa-light fa-id-card"></i>
+                                    </button>
+                                </li>
+                                <li id="listCalendar" class="nav-item dropdown invisible">
+                                    <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown"
+                                        aria-expanded="false">
+                                        <i class="fa-regular fa-calendars"></i>
+                                        <span id="selectStory">Choisir une formation</span>
+                                    </a>
+                                    <ul id="ddCalendar" class="dropdown-menu">
+                                    </ul>
+                                </li>
+                                <li class="nav-item mx-2">
+                                    <div class="input-group">
+                                        <span class="input-group-text" >Début période :</span>
+                                        <input type="date" id="dateDeb" />
+                                    </div>
+                                </li>
+                                <li class="nav-item mx-2">
+                                    <div class="input-group">
+                                        <span class="input-group-text" >Fin période :</span>
+                                        <input type="date" id="dateFin" />
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+
+            </div>
+        </header>
+
+
+        <main id='mainContent' class="px-3 mw-100">
+
+            <div class="container-fluid text-center">
+                <div class="row">
+                    <div class="col-4 my-2">
+                        <div class="accordion" data-bs-theme="dark" id="accordionJDC">
+                            <div class="accordion-item text-white bg-dark">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseThree" aria-expanded="false"
+                                        aria-controls="collapseThree">
+                                        Details de la formation
+                                    </button>
+                                </h2>
+                                <div id="collapseThree" class="accordion-collapse show"
+                                    data-bs-parent="#accordionJDC">
+                                    <div class="accordion-body">
+                                        <div id="contentDetails">                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-8 overflow-y-scroll" id="contentMap">
+                        <div class="row my-2">
+                            <div id="cal-heatmap"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="mt-auto text-white-50">
+            <p style="padding-top: 6px;">Design by <a href="https://samszo.univ-paris8.fr/" class="text-white">Samuel
+                    Szoniecky</a>
+                <a target="_blank" href="https://www.univ-paris8.fr/EA-349-Laboratoire-Paragraphe">
+                    <img style="height: 40px;" src="assets/img/logo-paragraphe-blanc.svg"
+                        alt="Laboratoire Paragraphe" />
+                </a>
+                <a target="_blank" href="https://github.com/samszo/genStory24">
+                    <button type="button" class="btn btn-danger">
+                        <i class="fa-brands fa-github fa-2xl"></i>
+                    </button>
+                </a>
+                Template for <a href="https://getbootstrap.com/" class="text-white">Bootstrap</a>, by <a
+                    href="https://twitter.com/mdo" class="text-white">@mdo</a>.
+            </p>
+        </footer>
+
+    </div>
+
+    <script type="module" src="main.js"></script>    
+
+</body>
+</html>
