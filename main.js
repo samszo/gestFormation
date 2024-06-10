@@ -84,7 +84,7 @@ function selectCalendar(e,a){
 function initEvents(items){
     let events = items.filter(e=>{
         return e.summary.split(' : ').length == 3 ? true : false;
-    }), jours, codes, intervenants;
+    }), jours, cours, interventions=[], intervenants;
     events.forEach(e => {
         let infos = e.summary.split(' : ');
         e.code = infos[0];
@@ -92,6 +92,12 @@ function initEvents(items){
         e.intervenants = infos[2].split(',');
         e.jour = new Date(e.start.dateTime).toISOString();
         e.nbH = Math.abs(new Date(e.end.dateTime) - new Date(e.start.dateTime)) / 36e5;
+        e.intervenants.forEach(intv=>{
+            interventions.push({'intv':intv,'code':e.code,'cour':e.cour
+                ,'start':e.start.dateTime,'end':e.end.dateTime
+                ,'jour':e.jour, 'nbH':e.nbH
+            })
+        })
     });
     jours = d3.groups(events, e => e.jour).map(e=>{
         return {
@@ -100,7 +106,31 @@ function initEvents(items){
             'value':d3.sum(e[1], d=>d.nbH)
             }
         });
-    console.log(jours);
+    console.log('jours',jours);
+
+    intervenants = d3.groups(interventions, i => i.intv).map(i=>{
+        return {
+            'intervenants':i[0],
+            'events':i[1],
+            'value':d3.sum(i[1], d=>d.nbH)
+            }
+        });
+    console.log('intervenants',intervenants);
+
+    cours = d3.groups(events, c => c.code).map(c=>{
+        return {
+            'cours':c[0],
+            'events':c[1],
+            'value':d3.sum(c[1], d=>d.nbH)
+            }
+        });
+    console.log('cours',cours);
+
+
+    setCalHeatmap(jours);    
+}
+
+function setCalHeatmap(jours){
     calOpt.data = {
             source:jours,
             x: 'date',
@@ -108,12 +138,11 @@ function initEvents(items){
         };
     calOpt.scale = {
             color: {
-              scheme: 'Cool',
-              type: 'linear',
-              domain: d3.extent(jours, j => j.value)
+            scheme: 'Cool',
+            type: 'linear',
+            domain: d3.extent(jours, j => j.value)
             }
         }        
-
     calHM = new CalHeatmap();    
     calHM.paint(calOpt);
 
