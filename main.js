@@ -61,7 +61,7 @@ async function loadCalendars(token){
 
 function selectCalendar(e,a){
     console.log(a);
-    d3.select('#contentDetails').html('<h1>'+a.summary+'</h1>');
+    d3.select('#contentFormations').html('<h1>'+a.summary+'</h1>');
     //récupère les events
     try {
         var request = gapi.client.calendar.events.list({
@@ -84,50 +84,76 @@ function selectCalendar(e,a){
 function initEvents(items){
     let events = items.filter(e=>{
         return e.summary.split(' : ').length == 3 ? true : false;
-    }), jours, cours, interventions=[], intervenants;
-    events.forEach(e => {
+    }), jours, cours, interventions=[], intervenants,
+    optDate = {
+        weekday: "long",
+        year: "numeric",
+        month: "long",
+        day: "numeric",
+      };
+      
+      events.forEach(e => {
         let infos = e.summary.split(' : ');
         e.code = infos[0];
-        e.cour = infos[1];
+        e.cours = infos[1];
+        e.start.date = new Date(e.start.dateTime);
+        e.end.date = new Date(e.end.dateTime);
         e.intervenants = infos[2].split(',');
-        e.jour = new Date(e.start.dateTime).toISOString();
-        e.nbH = Math.abs(new Date(e.end.dateTime) - new Date(e.start.dateTime)) / 36e5;
+        e.jour = new Intl.DateTimeFormat("fr-FR", optDate).format(e.start.date);//new Date(e.start.dateTime).toISOString();
+        e.nbH = Math.abs(e.end.date - e.start.date) / 36e5;
         e.intervenants.forEach(intv=>{
-            interventions.push({'intv':intv,'code':e.code,'cour':e.cour
-                ,'start':e.start.dateTime,'end':e.end.dateTime
-                ,'jour':e.jour, 'nbH':e.nbH
+            interventions.push({'intervenant':intv,'code':e.code,'cours':e.cours
+                ,'jour':e.jour 
+                ,'début':e.start.date.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})
+                ,'fin':e.end.date.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})
+                , 'nb Heure':e.nbH
             })
         })
     });
+    console.log('interventions',interventions);
     jours = d3.groups(events, e => e.jour).map(e=>{
         return {
             'date':e[0],
             'events':e[1],
-            'value':d3.sum(e[1], d=>d.nbH)
+            'value':d3.sum(e[1], d=>d['nb Heure'])
             }
         });
     console.log('jours',jours);
 
-    intervenants = d3.groups(interventions, i => i.intv).map(i=>{
+    intervenants = d3.groups(interventions, i => i.intervenant).map(i=>{
         return {
-            'intervenants':i[0],
+            'label':i[0],
             'events':i[1],
             'value':d3.sum(i[1], d=>d.nbH)
             }
         });
+    intervenants = d3.sort(intervenants, (d) => d.label);
     console.log('intervenants',intervenants);
+    showListe(d3.select('#contentIntervenants'),intervenants);
 
     cours = d3.groups(events, c => c.code).map(c=>{
         return {
-            'cours':c[0],
+            'label':c[0],
             'events':c[1],
             'value':d3.sum(c[1], d=>d.nbH)
             }
         });
+    cours = d3.sort(cours, (d) => d.label);        
     console.log('cours',cours);
+    showListe(d3.select('#contentCours'),cours);
 
 
-    setCalHeatmap(jours);    
+    setCalHeatmap(jours);
+    
+    showInterventions(interventions);    
+}
+
+function showListe(s,data){
+    s.select('ul').remove();
+    s.append('ul').attr("class","list-group").selectAll('li').data(data).enter().append('li')
+        .attr("class","list-group-item d-flex justify-content-between align-items-center")
+        .text(d=>d.label)
+        .append('span').attr('class',"badge text-bg-primary rounded-pill").text(d=>d.value);
 }
 
 function setCalHeatmap(jours){
@@ -142,10 +168,65 @@ function setCalHeatmap(jours){
             type: 'linear',
             domain: d3.extent(jours, j => j.value)
             }
-        }        
+        }
+    d3.select('#cal-heatmap').select('svg').remove();        
     calHM = new CalHeatmap();    
+    calHM.on('click', (event, timestamp, value) => {
+        console.log(
+          'On <b>' +
+            new Date(timestamp).toLocaleDateString() +
+            '</b>, Le nombre heure ' +value
+        );
+      });    
     calHM.paint(calOpt);
-
 }
+
+function showInterventions(rs){
+    let pane = d3.select('#tableMain'), 
+        cont = pane.append('div')
+            .attr('class',"container-fluid"),
+        rectCont = d3.select('#contentMap').node().getBoundingClientRect(),
+        rectCal = d3.select('#cal-heatmap').node().getBoundingClientRect(),
+        div = cont.append('div').attr('class',"row").append('div').attr('class',"col-12")
+            .append('div').attr('class',"clearfix"),   
+        headers = Object.keys(rs[0]);
+    const hot = new Handsontable(div.node(), {
+        data:rs,
+        rowHeaders: true,
+        colHeaders: headers,
+        height: 600,//(rectCont.height-rectCal.height),
+        rowHeights: 40,
+        selectionMode:'single',
+        manualRowResize: true,
+        className:'htJustify',
+        renderAllRows:true,
+        customBorders: true,
+        multiColumnSorting: true,
+        filters: true,
+        allowInsertColumn: false,
+        copyPaste: false,
+        search: true,    
+        editor: 'text',
+        columns: getCellEditor(headers),
+        licenseKey: 'non-commercial-and-evaluation' // for non-commercial use only
+    });    
+}
+
+function getCellEditor(headers){
+    let editors = [];
+    headers.forEach(h=>{
+        switch (h) {
+          case 'elision':
+            editors.push({data:h, type: 'checkbox',uncheckedTemplate: '0',checkedTemplate: '1'})                  
+            break;              
+          default:
+            editors.push({data:h, type: 'text'})                  
+            break;
+        }
+      })
+    return editors;
+  }
+
+
 
 
