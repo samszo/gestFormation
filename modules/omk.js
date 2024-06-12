@@ -7,7 +7,7 @@ export class omk {
         this.ident = params.ident ? params.ident : false;
         this.mail = params.mail ? params.mail : false;
         this.api = params.api ? params.api : false;
-        this.vocabs = params.vocabs ? params.vocabs : ['dcterms','genstory'];
+        this.vocabs = params.vocabs ? params.vocabs : ['dcterms','genstory','fup8'];
         this.loader = new loader();
         this.user = false;
         this.props = [];

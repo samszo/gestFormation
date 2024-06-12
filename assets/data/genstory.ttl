@@ -1,0 +1,121 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+@prefix o: <http://omeka.org/s/vocabs/o#> .
+@prefix genstory: <https://jardindesconnaissances.univ-paris8.fr/onto/genstory#> .
+@prefix ma: <http://www.w3.org/ns/ma-ont#>.
+
+<https://jardindesconnaissances.univ-paris8.fr/onto/genstory#> a owl:Ontology ;
+    dcterms:title "Générateur d'story" .
+
+genstory:world a rdfs:Class ;
+    rdfs:label "world" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+genstory:scenario a rdfs:Class ;
+    rdfs:label "scenario" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+genstory:story a rdfs:Class ;
+    rdfs:label "story" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+genstory:actor a rdfs:Class ;
+    rdfs:label "actor" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+genstory:place a rdfs:Class ;
+    rdfs:label "place" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+genstory:event a rdfs:Class ;
+    rdfs:label "event" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+genstory:affect a rdfs:Class ;
+    rdfs:label "affect" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+genstory:object a rdfs:Class ;
+    rdfs:label "object" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+genstory:hasStory a rdf:Property ;
+    rdfs:label "has a story" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+genstory:hasActor a rdf:Property ;
+    rdfs:label "has an actor" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+genstory:hasObjet a rdf:Property ;
+    rdfs:label "has an objet" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+genstory:hasEvent a rdf:Property ;
+    rdfs:label "has an event" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+genstory:hasAffect a rdf:Property ;
+    rdfs:label "has an affect" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+genstory:hasPlace a rdf:Property ;
+    rdfs:label "has a place" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+genstory:hasScenario a rdf:Property ;
+    rdfs:label "has a scenario" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+genstory:hasWorld a rdf:Property ;
+    rdfs:label "has a world" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+genstory:hasFonction a rdf:Property ;
+    rdfs:label "has a fonction" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+genstory:hasParam a rdf:Property ;
+    rdfs:label "has a parameter" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+genstory:hasInitialCondition a rdf:Property ;
+    rdfs:label "has a initial condition" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+genstory:order a rdf:Property ;
+    rdfs:label "Order" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+genstory:hasEventAfterValid a rdf:Property ;
+    rdfs:label "has a event after validation" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+genstory:hasEventAfterFailure a rdf:Property ;
+    rdfs:label "has a event after failure" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .

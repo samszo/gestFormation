@@ -1,0 +1,115 @@
+dcterms:title,fup8:hasUE,fup8:hasParcours,fup8:code,foaf:status,fup8:ects,fup8:coef,fup8:vhec,fup8:vhch,fup8:cch,fup8:pcCM,fup8:pcTD,fup8:pcTP,fup8:sd,fup8:libre,fup8:mutuaDst,fup8:mutuaSrc,fup8:nbg
+EC1 Approches transversales des humanités numériques,307,,,Obligatoire (O),6,1,30,30,3h00,50,50,0,75,Non,Entre parcours de la mention,"EC proposé dans le Master CEN1, GSI1, et NET1",2
+EC2 Economie et droit du numérique,307,,,Obligatoire (O),3,1,30,30,3h00,50,50,0,75,Non,Entre parcours de la mention,"EC proposé dans le Master CEN1, GSI1, et NET1",2
+EC1 Introduction à la programmation,308,,,Obligatoire (O),3,1,30,30,3h00,50,50,0,75,Non,Entre parcours de la mention,"EC proposé dans le Master CEN1, GSI1, et NET1",2
+EC2 Bases de données relationnelles,308,,,Obligatoire (O),3,1,30,30,3h00,50,50,0,75,Non,Entre parcours de la mention,EC proposé dans le Master CEN1 et GSI1,2
+EC1 Atelier image  illustrator - photoshop,309,,,Obligatoire à choix (X),3,3,,30,3h00,50,50,0,25,Oui,,,5
+EC2 Atelier 3D : modélisation,309,,,Obligatoire à choix (X),3,3,,30,3h00,50,50,0,25,Oui,,,5
+EC3 Atelier son,309,,,Obligatoire à choix (X),3,3,,30,3h00,50,50,0,25,Oui,,,5
+EC4 Atelier vidéo enrichie et compositing,309,,,Obligatoire à choix (X),3,3,,30,3h00,50,50,0,25,Oui,,,5
+EC5 EC Libre,309,,,Obligatoire à choix (X),3,3,,30,3h00,50,50,0,25,Oui,,,0
+EC1 Interaction 3D,310,,,Obligatoire à choix (X),3,3,,30,3h00,50,50,0,25,Oui,,,5
+EC2 Éditorialisation et strategie de contenu,310,,,Obligatoire à choix (X),3,3,,30,3h00,50,50,0,25,Oui,,,5
+EC3 Intégration : HTML / CSS,310,,,Obligatoire à choix (X),3,3,,30,3h00,50,50,0,25,Oui,,,5
+EC4 Graphisme et ergonomie d'interfaces,310,,,Obligatoire à choix (X),3,3,,30,3h00,50,50,0,25,Oui,,,5
+EC1 Approches transversales des humanités numériques,311,,,Obligatoire (O),6,1,30,0,3h00,50,50,0,75,Non,Entre parcours de la mention,"EC proposé dans le Master CEN1, GSI1, et NET1",0
+EC2 Economie et droit du numérique,311,,,Obligatoire (O),3,1,30,0,3h00,50,50,0,75,Non,Entre parcours de la mention,"EC proposé dans le Master CEN1, GSI1, et NET1",0
+EC1 Introduction à la programmation,312,,,Obligatoire (O),1,1,15,0,3h00,50,50,0,75,Non,Entre parcours de la mention,"EC proposé dans le Master CEN1, GSI1, et NET1",0
+EC2 Bases de données relationnelles,312,,,Obligatoire (O),1,1,15,0,3h00,50,50,0,75,Non,Entre parcours de la mention,EC proposé dans le Master CEN1 et GSI1,0
+EC1 Introduction aux sciences de l'information et de la communication (SIC) (EC Libre),313,,,Obligatoire (O),3,3,21,21,3h00,100,0,0,25,Oui,,,0
+EC2 Gestion de projet en ingénierie documentaire,313,,,Obligatoire (O),4,4,30,30,3h00,50,50,0,25,Non,,,0
+EC1 Indexation des documents et métadonnées,314,,,Obligatoire (O),2,2,30,30,3h00,50,50,0,25,Non,,,0
+EC2 Langages documentaires et classifications,314,,,Obligatoire (O),3,3,30,30,3h00,50,50,0,25,Non,,,0
+EC3 Culture et outils numériques,314,,,Obligatoire (O),7,3,30,30,3h00,50,50,0,25,Non,,,0
+EC Méthodes de recherche quantitatives et qualitatives,315,,,Obligatoire (O),6,1,30,30,3h00,50,50,0,25,Non,,,1
+EC Anthropologie de la communication,315,,,Obligatoire (O),3,1,30,30,3h00,50,50,0,25,Non,,,1
+EC Programmation de systèmes d’information,316,,,Obligatoire (O),6,1,30,30,3h00,50,50,0,25,Non,,,0
+EC Introduction à la programmation,316,,,Obligatoire (O),3,1,30,0,3h00,50,50,0,75,Non,Entre parcours de la mention,"EC proposé dans le Master CEN1, GSI1, et NET1",0
+EC Sémiotique du numérique,317,,,Obligatoire (O),3,1,30,30,3h00,50,50,0,25,Non,,,1
+EC Approches transversales des humanités numériques,317,,,Obligatoire (O),6,1,30,0,3h00,50,50,0,75,Non,Entre parcours de la mention,"EC proposé dans le Master CEN1, GSI1, et NET1",0
+EC Economie et droit du numérique,317,,,Obligatoire (O),3,1,30,0,3h00,50,50,0,75,Non,Entre parcours de la mention,"EC proposé dans le Master CEN1, GSI1, et NET1",0
+EC Libre 1,318,,,Obligatoire (O),6,1,30,30,3h00,50,50,0,25,Oui,,,0
+EC1 Immersion et interaction,319,,,Obligatoire à choix (X),3,3,,30,3h00,50,50,0,25,Oui,,,1
+EC2 Conception et gestion de projet numérique,319,,,Obligatoire à choix (X),3,3,,30,3h00,50,50,0,25,Oui,,,1
+EC3 After Effects,319,,,Obligatoire à choix (X),3,3,,30,3h00,50,50,0,25,Oui,,,1
+EC1 Participation critique I,320,,,Obligatoire (O),4,4,30,30,3h00,50,50,0,25,Non,,,1
+EC2 Analyse critique,320,,,Obligatoire (O),4,4,30,30,3h00,50,50,0,25,Non,,,1
+EC1 Suivi développement et intégration,321,,,Obligatoire (O),4,4,30,30,3h00,50,50,0,25,Non,,,1
+EC2 Direction artistique,321,,,Obligatoire (O),4,4,30,30,3h00,50,50,0,25,Non,,,1
+EC3 Interaction appliquée,321,,,Obligatoire (O),4,4,30,30,3h00,50,50,0,25,Non,,,1
+EC4 Animation 2D et vidéo,321,,,Obligatoire (O),3,3,30,30,3h00,50,50,0,25,Non,,,1
+EC5 Aspects éditoriaux de la réalisation multimédia,321,,,Obligatoire (O),4,4,30,30,3h00,50,50,0,25,Non,,,1
+EC1 Gestion d’un service info-documentaire,322,,,Obligatoire (O),3,1,30,30,3h00,50,50,0,25,Non,,,1
+EC2 Veille et recherche d'informations,322,,,Obligatoire (O),3,1,30,30,3h00,30,70,0,25,Non,,,1
+EC3 Records management,322,,,Obligatoire (O),2,1,20,20,3h00,30,70,0,25,Non,,,1
+EC1 Systèmes de recherche d'information (SRI),323,,,Obligatoire (O),3,1,21,21,3h00,100,0,0,25,Non,,,1
+EC2 Gestion électronique des documents (GED),323,,,Obligatoire (O),3,1,24,24,3h00,0,100,0,25,Non,,,1
+EC3 Gestion des contenus,323,,,Obligatoire (O),3,1,20,20,3h00,50,50,0,25,Non,,,1
+EC1 Stage et rapport,324,,,Obligatoire (O),8,8,21,21,3h00,0,100,0,25,Non,,,1
+EC1 Anglais,325,,,Obligatoire (O),5,1,15,15,3h00,0,100,0,25,Non,,,0
+EC1 Numérique tangible et Internet des objets,326,,,Obligatoire à choix (X),3,1,30,30,3h00,50,50,0,25,Oui,,,1
+EC2 Hypermédia et web sémantique,326,,,Obligatoire à choix (X),3,1,30,30,3h00,50,50,0,25,Oui,,,1
+EC3 Numérique en entreprise et management de l'information au sein des organisations,326,,,Obligatoire à choix (X),3,1,30,30,3h00,50,50,0,25,Oui,,,1
+EC4 Numérique en ligne et nouvelle économie,326,,,Obligatoire à choix (X),3,1,30,30,3h00,50,50,0,25,Oui,,,1
+EC1 Enjeux actuels du numérique,327,,,Obligatoire (O),3,1,30,30,3h00,50,50,0,25,Non,,,1
+EC2 Design de l'information numérique,327,,,Obligatoire (O),3,1,30,30,3h00,50,50,0,25,Non,,,1
+EC1 Libre 2,328,,,Obligatoire (O),3,1,30,30,3h00,50,50,0,25,Oui,,,0
+EC2 Anglais,328,,,Obligatoire (O),3,1,30,30,3h00,0,100,0,25,Non,Inter-composante,Centre de langues,1
+EC1 Méthodologie d'études et rédaction de mémoire,329,,,Obligatoire (O),9,1,0,0,3h00,50,50,0,25,Non,,,1
+EC1 Développement multi-plateformes,330,,,Obligatoire à choix (X),5,5,30,30,3h00,50,50,0,30,Oui,,EC proposé dans la Mineure externe Droit offerte aux étudiants d'autres formations,1
+EC2 EC libre,330,,,Obligatoire à choix (X),5,3,30,30,3h00,50,50,0,30,Oui,,,1
+EC3 Montage start up (grizz),330,,,Obligatoire à choix (X),5,5,30,30,3h00,50,50,0,30,Oui,,,1
+EC4 UX Design,330,,,Obligatoire à choix (X),5,5,30,30,3h00,50,50,0,30,Oui,,,0
+EC1 Traitement éditorial et création numérique,331,,,Obligatoire (O),5,5,30,30,3h00,50,50,0,30,Non,,,1
+EC2 Création et direction artistique crossmedias,331,,,Obligatoire (O),5,5,30,30,3h00,50,50,0,30,Non,,,1
+EC3 Développement de prototypes crossmédias,331,,,Obligatoire (O),5,5,30,30,3h00,50,50,0,30,Non,,,1
+Initiation à la recherche,332,,,Obligatoire (O),3,3,15,15,3h00,100,0,0,30,Non,,EC proposé dans la Mineure externe Droit offerte aux étudiants d'autres formations,1
+Pratiques info communicationnelles,332,,,Obligatoire (O),2,2,15,15,3h00,100,0,0,30,Non,,,1
+Gestion des connaissances,333,,,Obligatoire (O),4,4,20,20,3h00,50,50,0,30,Non,,,1
+Gestion des données et des documents en entreprise,333,,,Obligatoire (O),3,,30,30,3h00,50,50,0,30,Non,,,1
+Communication digitale et community management,333,,,Obligatoire (O),2,2,15,15,3h00,0,100,0,30,Non,,,1
+Design de l'information,333,,,Obligatoire (O),3,3,20,20,3h00,50,50,0,30,Non,,,1
+Gestion de projet en transformation numérique,334,,,Obligatoire (O),4,,30,30,3h00,70,30,0,30,Non,,,1
+Modèles de gestion de risques informationnels,334,,,Obligatoire (O),4,,30,30,3h00,30,70,0,30,Non,,,1
+Veille stratégique et intelligence économique,335,,,Obligatoire (O),2,2,30,30,3h00,30,70,0,30,Non,,,1
+Gestion stratégique de l'information,335,,,Obligatoire (O),3,3,30,30,3h00,50,50,0,30,Non,,,1
+EC Ville post-numérique,336,,,Obligatoire (O),3,1,30,30,3h00,50,50,0,30,Non,,,1
+EC Patrimoine augmenté,336,,,Obligatoire (O),3,1,30,30,3h00,50,50,0,30,Non,,,1
+EC Ethnographie du numérique/Digital Methods,337,,,Obligatoire (O),3,1,30,30,3h00,50,50,0,30,Non,,,1
+EC Prospectives numériques,337,,,Obligatoire (O),6,1,30,30,3h00,50,50,0,30,Non,,,1
+EC Conception collaborative et ergonomie (intensif),337,,,Obligatoire (O),3,1,30,30,3h00,50,50,0,30,Non,,,1
+EC1 Littérature numérique,338,,,Obligatoire (O),6,1,30,30,3h00,50,50,0,16,Oui,Inter-composante,Avec des partenaires internatinaux,1
+EC2 Atelier génération de texte,338,,,Obligatoire à choix (X),3,1,30,30,3h00,50,50,0,8,Oui,Inter-composante,Avec des partenaires internatinaux,1
+EC3 Atelier texte animé et multimédia,338,,,Obligatoire à choix (X),3,1,30,30,3h00,50,50,0,8,Oui,Inter-composante,Avec des partenaires internatinaux,1
+EC4 Atelier création hypertextuelle et documentaire narratif,338,,,Obligatoire à choix (X),3,1,30,30,3h00,50,50,0,8,Oui,Inter-composante,Avec des partenaires internatinaux,1
+EC Problématique d'étude,339,,,Obligatoire (O),6,1,20,20,3h00,0,100,0,30,Non,,,1
+EC Etat de la recherche et veille documentaire,339,,,Obligatoire (O),3,1,30,30,3h00,50,50,0,30,Non,,,1
+EC Libre 3,340,,,Obligatoire (O),3,1,30,30,3h00,50,50,0,30,Oui,Entre parcours de la mention,,0
+EC1 Visualisation et valorisation d'archives visuelles,341,54,DMA3EDD5,Obligatoire (O),6,3,30,30,3h00,50,50,0,30,Non,,,1
+EC1 Méthodes et outils d’analyses statistiques et de fouille de données,342,54,DMA3EDD2,Obligatoire (O),6,5,21,21,3h00,50,50,0,30,Non,,,1
+EC2 EC Libre,342,54,DMA3XLID,Obligatoire (O),6,4,30,30,3h00,50,50,0,30,Oui,Entre parcours de la mention,,0
+EC1 Design des protocoles,343,54,DMA3EDD6,Obligatoire (O),6,3,30,30,3h00,50,50,0,30,Non,,,1
+EC2 Conception universelle,343,54,DMA3EDD7,Obligatoire (O),6,3,30,30,3h00,50,50,0,30,Non,,,1
+EC2 Sémiotique des interfaces,344,,,Obligatoire (O),6,3,30,30,3h00,50,50,0,30,Oui,,,1
+EC1 Participation critique II,344,,,Obligatoire (O),3,1,30,30,3h00,50,50,0,30,Non,Entre parcours de la mention,"EC proposé dans le Master CEN2, NET2 et AVUN",1
+EC1 Expression professionnelle en langue anglaise,345,,,Obligatoire à choix (X),3,3,30,30,3h00,50,50,0,30,Oui,,,1
+EC2 FLE (emprunté au Département FLE),345,,,Obligatoire à choix (X),3,3,30,0,3h00,50,50,0,30,Non,Inter-composante,Centre de langues,0
+EC1 Analyse des cas professionnels,346,,,Obligatoire (O),9,3,30,30,3h00,0,100,0,30,Non,,,1
+EC2 Méthdologie de la recherche,346,,,Obligatoire (O),9,3,15,15,3h00,0,100,0,30,Non,,,1
+EC1 Etude des controverses-datavisualisation et analyse des données,347,,,Obligatoire (O),4,4,30,30,3h00,50,50,0,30,Non,,,1
+EC2 Système d'information et programmation internet,347,,,Obligatoire (O),4,4,30,30,3h00,50,50,0,30,Non,,,1
+EC 1 Méthodologie scientifique en information-communication,348,,,Obligatoire (O),10,4,15,15,3h00,0,100,0,30,Non,,,1
+EC 2 Stage et conduite de projets professionnels,348,,,Obligatoire (O),12,4,15,15,3h00,,100,,30,,,,1
+EC1 Enjeux de l'intelligence artificielle,349,,,Obligatoire (O),3,1,30,30,3h00,50,50,0,30,Non,,,1
+"EC2 Analyse, gestion, et visualisation des données massives/Big Data",349,,,Obligatoire (O),3,1,30,30,3h00,50,50,0,30,Non,,,1
+EC1 Méthdologie de la recherche et innovations,350,,,Obligatoire (O),15,1,30,30,3h00,0,100,0,30,Non,,,1
+EC1 Participation critique II,351,,,Obligatoire (O),3,1,30,30,3h00,50,50,0,30,Non,Entre parcours de la mention,"EC proposé dans le Master CEN2, NET2 et AVUN",1
+EC2 Libre 4,351,,,Obligatoire (O),3,1,30,30,3h00,50,50,0,30,Oui,,,0
+EC3 Anglais 2,351,,,Obligatoire (O),3,1,30,0,3h00,0,100,0,30,Non,Inter-composante,Centre de langues,0
+EC1 Anglais scientifique et technique,352,54,DMA4EDD1,Obligatoire (O),3,1,30,30,3h00,50,50,0,30,Non,,,1
+EC2 Projet collaboratif tutoré,352,54,DMA4EDD2,Obligatoire (O),3,1,30,30,3h00,50,50,0,30,Non,,,1
+EC3 Participation critique II,352,54,DMA4EDA2,Obligatoire (O),3,1,30,30,3h00,50,50,0,30,Non,Entre parcours de la mention,"EC proposé dans le Master CEN2, NET2 et AVUN",1
+EC1 Communs et intelligence collective,353,54,DMA4EDD7,Obligatoire (O),6,3,30,30,3h00,50,50,0,30,Non,,,1
+EC2 Ethique du web et écosystèmes d'information,353,54,DMA4EDD4,Obligatoire (O),5,3,30,30,3h00,50,50,0,30,Non,,,1
+EC1 Veille informationnelle,354,54,DMA4EDD8,Obligatoire (O),5,7,20,20,3h00,0,100,0,30,Non,,,0
+EC2 Méthodologie pour la conduite d'études,354,54,DMA4EDD5,Obligatoire (O),5,3,30,30,3h00,0,100,0,30,Non,,,1

@@ -3,24 +3,17 @@ import {appUrl} from './modules/appUrl.js';
 
 //Omeka parameters
 let aUrl = new appUrl({'url':new URL(document.location)}),
-a = new auth({'navbar':false,
+a = new auth({'navbar':d3.select('#navbarMain'),
         mail:'samuel.szoniecky@univ-paris8.fr',
-        /*
-        apiOmk:'http://localhost/omk_genstory_24/api/',
-        ident: 'U88iy6ZRDfShexC23K9CGGG0sx6LKYn2',
-        key:'XUbZKSuaERYYhy4cIulVbSdItfC1CBMb',
-        */
+        apiOmk:'http://localhost/omk_gestForma/api/',
+        ident: 'RVkJ1ELnrfDcvV0u2geUQuu01EvUlVsw',
+        key:'B2WdPBuqwJKc0a2vN8YMJReheMO6xVuR',
         gCLIENT_ID:'482766138432-i9vp20n7b976n1bbvhg3js130niauog2.apps.googleusercontent.com',
         gAPI_KEY:'AIzaSyB39QRdVAMgoNrnFhon3WO-vRTUTNBTPbc',
         gDISCOVERY_DOC:'https://www.googleapis.com/discovery/v1/apis/calendar/v3/rest',
         gSCOPES:'https://www.googleapis.com/auth/calendar.readonly',
-        fctAuthOK:loadCalendars
+        fctAuthOK:[loadCalendars,loadParcours]
     });
-/*omeka connexion
-a.getUser(u=>{
-    console.log(u);
-});
-*/
 
 //gestion des ihm
 d3.select("#dateDeb").node().value=new Date().getFullYear()+'-09-01';
@@ -40,6 +33,26 @@ let calHM, calOpt = { range: 13,
             height: 13,        
         }
     };
+
+
+function loadParcours(){
+    let response, clsParcours;
+    try {
+        clsParcours = a.omk.getClassByTerm('fup8:Parcours');
+        response = a.omk.searchItems('resource_class_id='+clsParcours['o:id']);
+    } catch (err) {
+        console.log(err.message);
+        return;
+    }
+    //affiche la liste
+    d3.select("#listParcours").attr("class","nav-item dropdown");
+    d3.select("#ddParcours").selectAll('li').data(response).enter()
+        .append('li').append('a')
+            .attr('class',a=>a['fup8:hasAgenda'] ? "dropdown-item bg-success text-white" : "dropdown-item bg-danger text-white")
+            .text(a=>a['o:title'])
+            .on('click',selectParcours);
+}          
+
 
 async function loadCalendars(token){
     console.log(token);
@@ -80,6 +93,30 @@ function selectCalendar(e,a){
         return;
     }
 }
+
+function selectParcours(e,p){
+    console.log(p);
+    d3.select('#contentFormations').html('<iframe src='+a.omk.getItemAdminLink(p)+'></iframe>');
+    //récupère les events
+    try {
+        var request = gapi.client.calendar.events.list({
+            'calendarId': p['fup8:hasAgenda'][0]['@value'],
+            "singleEvents" : true,
+            "orderBy" : "startTime",
+            "timeMin":  new Date(document.getElementById('dateDeb').value).toISOString(),
+            "timeMax":  new Date(document.getElementById('dateFin').value).toISOString()
+          });
+        request.execute(rs=>{
+            console.log(rs);
+            initEvents(rs.items);
+        });
+    } catch (err) {
+        console.log(err.message);
+        return;
+    }
+}
+
+
 
 function initEvents(items){
     let events = items.filter(e=>{

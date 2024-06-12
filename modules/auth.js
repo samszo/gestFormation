@@ -13,7 +13,7 @@ export class auth {
         this.gAPI_KEY = params.gAPI_KEY ? params.gAPI_KEY : false;
         this.gDISCOVERY_DOC = params.gDISCOVERY_DOC ? params.gDISCOVERY_DOC : false;
         this.gSCOPES = params.gSCOPES ? params.gSCOPES : false;
-        this.fctAuthOK = params.fctAuthOK ? params.fctAuthOK : false;
+        this.fctAuthOK = params.fctAuthOK ? params.fctAuthOK : [];
 
         this.omk = false;
         this.userAdmin=false;
@@ -27,6 +27,8 @@ export class auth {
             if(me.apiOmk){
                 me.apiOmk += me.apiOmk.slice(-1)=='/' ? "" : "/";
                 me.omk = new omk({'api':me.apiOmk});
+                createNavBar();
+                me.getUser();
             }  
             if(me.gCLIENT_ID){
                 document.getElementById('btnAuth').style.visibility = 'hidden';
@@ -53,6 +55,7 @@ export class auth {
             });
             gapiInited = true;
             showBtnAuth();
+            handleAuthClick();
         }
 
         /**
@@ -73,7 +76,9 @@ export class auth {
           }
           //document.getElementById('signout_button').style.visibility = 'visible';          
           d3.select('#btnAuth').html('<i class="fa-solid fa-arrows-rotate"></i>');
-          if(me.fctAuthOK)me.fctAuthOK(tokenClient);
+          me.fctAuthOK.forEach(fct => {
+            if(fct.name=='loadCalendars')fct(tokenClient);            
+          })
         };
 
         if (gapi.client.getToken() === null) {
@@ -178,17 +183,7 @@ export class auth {
             Please contact the administrator.                                
             </div>
         </div>
-    </div>
-
-    <div class="collapse" id="alertOpenai">
-        <div  class="alert alert-warning d-flex align-items-center" role="alert">
-            <i class="fa-solid fa-triangle-exclamation"></i>
-            <div id='errorMessage' class='mx-1'>
-            This OpenAi Key is not correct !.
-            </div>
-        </div>
-    </div>
-    
+    </div>    
 
 </div>                          
 <div class="modal-footer">
@@ -214,21 +209,16 @@ export class auth {
             alertUnknown = new bootstrap.Collapse('#alertUnknown', {
                 toggle: false
             });
-            alertOpenai = new bootstrap.Collapse('#alertOpenai', {
-                toggle: false
-            });
             alertAuth.hide();
             alertMail.hide();
             alertServer.hide();
             alertUnknown.hide();
-            alertOpenai.hide();
             //gestion des événements
             me.m.selectAll("input").on('change', e => {
                 alertAuth.hide();
                 alertMail.hide();
                 alertServer.hide();
                 alertUnknown.hide();
-                alertOpenai.hide();
                 me.mail = "";
                 me.ident = "";
                 me.key = "";
@@ -282,6 +272,9 @@ export class auth {
                         if(btnLogin)btnLogin.attr('class','btn btn-danger').html(iconOut);                        
                         me.user.id=me.user['o:id'];
                         if(me.modal)me.modal.hide();
+                        me.fctAuthOK.forEach(fct => {
+                            if(fct.name=='loadParcours')fct();            
+                        })
                     }
                     if(cb)cb(me.user);
                 })    
