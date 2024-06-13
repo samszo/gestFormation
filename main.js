@@ -3,6 +3,7 @@ import {appUrl} from './modules/appUrl.js';
 
 //Omeka parameters
 let aUrl = new appUrl({'url':new URL(document.location)}),
+rsParcours, rsEC, rsEnseignants, 
 a = new auth({'navbar':d3.select('#navbarMain'),
         mail:'samuel.szoniecky@univ-paris8.fr',
         apiOmk:'http://localhost/omk_gestForma/api/',
@@ -36,17 +37,21 @@ let calHM, calOpt = { range: 13,
 
 
 function loadParcours(){
-    let response, clsParcours;
+    let clsParcours, clsEC, clsEnseignant;
     try {
         clsParcours = a.omk.getClassByTerm('fup8:Parcours');
-        response = a.omk.searchItems('resource_class_id='+clsParcours['o:id']);
+        rsParcours = a.omk.searchItems('resource_class_id='+clsParcours['o:id']);
+        clsEC = a.omk.getClassByTerm('fup8:EC');
+        rsEC = a.omk.searchItems('resource_class_id='+clsEC['o:id']);
+        clsEnseignant = a.omk.getClassByTerm('fup8:Enseignant');
+        rsEnseignants = a.omk.searchItems('resource_class_id='+clsEnseignant['o:id']);
     } catch (err) {
         console.log(err.message);
         return;
     }
-    //affiche la liste
+    //affiche la liste des parcours
     d3.select("#listParcours").attr("class","nav-item dropdown");
-    d3.select("#ddParcours").selectAll('li').data(response).enter()
+    d3.select("#ddParcours").selectAll('li').data(rsParcours).enter()
         .append('li').append('a')
             .attr('class',a=>a['fup8:hasAgenda'] ? "dropdown-item bg-success text-white" : "dropdown-item bg-danger text-white")
             .text(a=>a['o:title'])
@@ -152,16 +157,17 @@ function initEvents(items){
         return {
             'date':e[0],
             'events':e[1],
-            'value':d3.sum(e[1], d=>d['nb Heure'])
+            'value':d3.sum(e[1], d=>d.nbH)
             }
         });
     console.log('jours',jours);
 
-    intervenants = d3.groups(interventions, i => i.intervenant).map(i=>{
+    intervenants = d3.groups(interventions, i => i.intervenant).map(i=>{        
         return {
             'label':i[0],
+            'oItem':rsEnseignants.filter(e=>e['o:title']==i[0]),
             'events':i[1],
-            'value':d3.sum(i[1], d=>d.nbH)
+            'value':d3.sum(i[1], d=>d['nb Heure'])
             }
         });
     intervenants = d3.sort(intervenants, (d) => d.label);
@@ -178,7 +184,6 @@ function initEvents(items){
     cours = d3.sort(cours, (d) => d.label);        
     console.log('cours',cours);
     showListe(d3.select('#contentCours'),cours);
-
 
     setCalHeatmap(jours);
     
