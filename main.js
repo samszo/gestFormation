@@ -11,10 +11,16 @@ optDate = {
     day: "numeric",
   },
 a = new auth({'navbar':d3.select('#navbarMain'),
+        /*
         mail:'samuel.szoniecky@univ-paris8.fr',
         apiOmk:'http://localhost/omk_gestForma/api/',
         ident: 'RVkJ1ELnrfDcvV0u2geUQuu01EvUlVsw',
         key:'B2WdPBuqwJKc0a2vN8YMJReheMO6xVuR',
+        */
+        mail:'acehn@univ-paris8.fr',
+        apiOmk:'../api/',
+        ident: 'Fe82ZlMwNP8KR88BKWzGNnF7eS5qChwr',
+        key:'Jo5RZc9S3qr79GAe2TZk9UBakWcZbP48',
         gCLIENT_ID:'482766138432-i9vp20n7b976n1bbvhg3js130niauog2.apps.googleusercontent.com',
         gAPI_KEY:'AIzaSyB39QRdVAMgoNrnFhon3WO-vRTUTNBTPbc',
         gDISCOVERY_DOC:'https://www.googleapis.com/discovery/v1/apis/calendar/v3/rest',
