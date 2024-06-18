@@ -48,6 +48,18 @@
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul id="navbarMain" class="navbar-nav me-auto mb-2 mb-lg-0">
                                 <li class="nav-item mx-2">
+                                    <div class="input-group">
+                                        <span class="input-group-text" >Début période :</span>
+                                        <input type="date" id="dateDeb" />
+                                    </div>
+                                </li>
+                                <li class="nav-item mx-2">
+                                    <div class="input-group">
+                                        <span class="input-group-text" >Fin période :</span>
+                                        <input type="date" id="dateFin" />
+                                    </div>
+                                </li>
+                                <li class="nav-item mx-2">
                                     <button id="btnAuth" type="button" class="btn btn-danger">
                                         <i class="fa-sharp fa-light fa-id-card"></i>
                                     </button>
@@ -69,27 +81,11 @@
                                     </a>
                                     <ul id="ddParcours" class="dropdown-menu">
                                     </ul>
-                                </li>
-                                <li id="listTableaux" class="nav-item dropdown invisible">
-                                    <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown"
-                                        aria-expanded="false">
-                                        <i class="fa-solid fa-table"></i>
-                                        <span id="selectTableau">Choisir un tableau</span>
-                                    </a>
-                                    <ul id="ddTableau" class="dropdown-menu">
-                                    </ul>
                                 </li>                                
                                 <li class="nav-item mx-2">
-                                    <div class="input-group">
-                                        <span class="input-group-text" >Début période :</span>
-                                        <input type="date" id="dateDeb" />
-                                    </div>
-                                </li>
-                                <li class="nav-item mx-2">
-                                    <div class="input-group">
-                                        <span class="input-group-text" >Fin période :</span>
-                                        <input type="date" id="dateFin" />
-                                    </div>
+                                    <button id="btnRefreshData" type="button" class="btn btn-danger invisible">
+                                        <i class="fa-solid fa-reply-all"></i>
+                                    </button>
                                 </li>
                             </ul>
                         </div>
@@ -161,7 +157,20 @@
                             <div id="cal-heatmap"></div>
                         </div>
                         <div class="row my-2">
-                            <div id="tableMain"></div>
+                            <nav>
+                                <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                                  <button class="nav-link active" id="nav-gantt-tab" data-bs-toggle="tab" data-bs-target="#nav-gantt" type="button" role="tab" aria-controls="nav-gantt" aria-selected="true">Gantt</button>
+                                  <button class="nav-link" id="nav-grille-tab" data-bs-toggle="tab" data-bs-target="#nav-grille" type="button" role="tab" aria-controls="nav-grille" aria-selected="false">Grille</button>
+                                </div>
+                              </nav>
+                              <div class="tab-content" id="nav-tabContent">
+                                <div class="tab-pane fade show active" id="nav-gantt" role="tabpanel" aria-labelledby="nav-gantt-tab" tabindex="0">
+                                    <div id="gantt" ></div>
+                                </div>
+                                <div class="tab-pane fade" id="nav-grille" role="tabpanel" aria-labelledby="nav-grille-tab" tabindex="0">
+                                    <div id="tableMain"></div>                                    
+                                </div>
+                              </div>
                         </div>
                     </div>
                 </div>

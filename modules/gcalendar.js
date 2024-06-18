@@ -11,7 +11,7 @@ export class gapi {
 
         // Authorization scopes required by the API; multiple scopes can be
         // included, separated by spaces.
-        const SCOPES = 'https://www.googleapis.com/auth/calendar.readonly';
+        const SCOPES = 'https://www.googleapis.com/auth/calendar https://www.googleapis.com/auth/calendar.events';
 
         let tokenClient;
         let gapiInited = false;

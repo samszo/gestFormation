@@ -10,7 +10,7 @@ export class modal {
             let html = `
                 <div class="modal-dialog">
                 <div class="modal-content">
-                    <div class="modal-header">
+                    <div class="modal-header bg-danger text-white">
                     <h5 class="modal-title">${me.titre}</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
@@ -37,7 +37,8 @@ export class modal {
             me.boutons.forEach(b=>{
                 switch (b.name) {
                     case 'Close':
-                        mFooter.append('button').attr('type',"button").attr('class',"btn btn-secondary")
+                    case 'Fermer':
+                            mFooter.append('button').attr('type',"button").attr('class',"btn btn-secondary")
                             .attr('data-bs-dismiss',"modal").html(b.name);
                         break;                
                     default:

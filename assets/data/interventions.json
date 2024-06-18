@@ -1,0 +1,3018 @@
+[
+    {
+        "label": "Cours facultatif",
+        "oItem": {
+            "@context": "http://localhost/omk_gestForma/api-context",
+            "@id": "http://localhost/omk_gestForma/api/items/471",
+            "@type": [
+                "o:Item",
+                "fup8:EC"
+            ],
+            "o:id": 471,
+            "o:is_public": true,
+            "o:owner": {
+                "@id": "http://localhost/omk_gestForma/api/users/1",
+                "o:id": 1
+            },
+            "o:resource_class": {
+                "@id": "http://localhost/omk_gestForma/api/resource_classes/113",
+                "o:id": 113
+            },
+            "o:resource_template": {
+                "@id": "http://localhost/omk_gestForma/api/resource_templates/4",
+                "o:id": 4
+            },
+            "o:thumbnail": null,
+            "o:title": "Cours facultatif",
+            "thumbnail_display_urls": {
+                "large": null,
+                "medium": null,
+                "square": null
+            },
+            "o:created": {
+                "@value": "2024-06-14T08:10:05+00:00",
+                "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+            },
+            "o:modified": {
+                "@value": "2024-06-14T08:10:05+00:00",
+                "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+            },
+            "o:primary_media": null,
+            "o:media": [],
+            "o:item_set": [],
+            "o:site": [],
+            "dcterms:title": [
+                {
+                    "type": "literal",
+                    "property_id": 1,
+                    "property_label": "Title",
+                    "is_public": true,
+                    "@value": "Cours facultatif"
+                }
+            ],
+            "fup8:code": [
+                {
+                    "type": "literal",
+                    "property_id": 206,
+                    "property_label": "Code EC",
+                    "is_public": true,
+                    "@value": "Cours facultatif"
+                }
+            ]
+        },
+        "events": [
+            {
+                "intervenant": "Equipe pédagogique ACEHN",
+                "code": "Cours facultatif",
+                "cours": "semaine intensive IA",
+                "dateStart": "2025-04-07T07:00:00.000Z",
+                "jour": "lundi 7 avril 2025",
+                "début": "09:00",
+                "fin": "16:00",
+                "nb Heure": 7
+            },
+            {
+                "intervenant": "Equipe pédagogique ACEHN",
+                "code": "Cours facultatif",
+                "cours": "semaine intensive IA",
+                "dateStart": "2025-04-08T07:00:00.000Z",
+                "jour": "mardi 8 avril 2025",
+                "début": "09:00",
+                "fin": "16:00",
+                "nb Heure": 7
+            },
+            {
+                "intervenant": "Equipe pédagogique ACEHN",
+                "code": "Cours facultatif",
+                "cours": "semaine intensive IA",
+                "dateStart": "2025-04-09T07:00:00.000Z",
+                "jour": "mercredi 9 avril 2025",
+                "début": "09:00",
+                "fin": "16:00",
+                "nb Heure": 7
+            },
+            {
+                "intervenant": "Equipe pédagogique ACEHN",
+                "code": "Cours facultatif",
+                "cours": "semaine intensive IA",
+                "dateStart": "2025-04-10T07:00:00.000Z",
+                "jour": "jeudi 10 avril 2025",
+                "début": "09:00",
+                "fin": "16:00",
+                "nb Heure": 7
+            },
+            {
+                "intervenant": "Equipe pédagogique ACEHN",
+                "code": "Cours facultatif",
+                "cours": "semaine intensive IA",
+                "dateStart": "2025-04-11T07:00:00.000Z",
+                "jour": "vendredi 11 avril 2025",
+                "début": "09:00",
+                "fin": "16:00",
+                "nb Heure": 7
+            }
+        ],
+        "value": 35
+    },
+    {
+        "label": "DMA3EDD2",
+        "oItem": {
+            "@context": "http://localhost/omk_gestForma/api-context",
+            "@id": "http://localhost/omk_gestForma/api/items/442",
+            "@type": [
+                "o:Item",
+                "fup8:EC"
+            ],
+            "o:id": 442,
+            "o:is_public": true,
+            "o:owner": {
+                "@id": "http://localhost/omk_gestForma/api/users/1",
+                "o:id": 1
+            },
+            "o:resource_class": {
+                "@id": "http://localhost/omk_gestForma/api/resource_classes/113",
+                "o:id": 113
+            },
+            "o:resource_template": {
+                "@id": "http://localhost/omk_gestForma/api/resource_templates/4",
+                "o:id": 4
+            },
+            "o:thumbnail": null,
+            "o:title": "EC1 Méthodes et outils d’analyses statistiques et de fouille de données",
+            "thumbnail_display_urls": {
+                "large": null,
+                "medium": null,
+                "square": null
+            },
+            "o:created": {
+                "@value": "2024-06-11T16:15:58+00:00",
+                "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+            },
+            "o:modified": {
+                "@value": "2024-06-11T16:15:58+00:00",
+                "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+            },
+            "o:primary_media": null,
+            "o:media": [],
+            "o:item_set": [],
+            "o:site": [],
+            "dcterms:title": [
+                {
+                    "type": "literal",
+                    "property_id": 1,
+                    "property_label": "Title",
+                    "is_public": true,
+                    "@value": "EC1 Méthodes et outils d’analyses statistiques et de fouille de données"
+                }
+            ],
+            "fup8:code": [
+                {
+                    "type": "literal",
+                    "property_id": 206,
+                    "property_label": "Code EC",
+                    "is_public": true,
+                    "@value": "DMA3EDD2"
+                }
+            ],
+            "fup8:hasUE": [
+                {
+                    "type": "resource",
+                    "property_id": 224,
+                    "property_label": "A comme UE",
+                    "is_public": true,
+                    "@id": "http://localhost/omk_gestForma/api/items/342",
+                    "value_resource_id": 342,
+                    "value_resource_name": "items",
+                    "url": null,
+                    "display_title": "UE 2 Méthodologies de recherche"
+                }
+            ],
+            "foaf:status": [
+                {
+                    "type": "literal",
+                    "property_id": 184,
+                    "property_label": "status",
+                    "is_public": true,
+                    "@value": "Obligatoire (O)"
+                }
+            ],
+            "fup8:ects": [
+                {
+                    "type": "numeric:integer",
+                    "property_id": 207,
+                    "property_label": "ects",
+                    "is_public": true,
+                    "@value": 6,
+                    "@type": "http://www.w3.org/2001/XMLSchema#integer"
+                }
+            ],
+            "fup8:coef": [
+                {
+                    "type": "numeric:integer",
+                    "property_id": 209,
+                    "property_label": "coefficient",
+                    "is_public": true,
+                    "@value": 5,
+                    "@type": "http://www.w3.org/2001/XMLSchema#integer"
+                }
+            ],
+            "fup8:vhch": [
+                {
+                    "type": "numeric:integer",
+                    "property_id": 211,
+                    "property_label": "Volume Horaire chargé",
+                    "is_public": true,
+                    "@value": 21,
+                    "@type": "http://www.w3.org/2001/XMLSchema#integer"
+                }
+            ],
+            "fup8:vhec": [
+                {
+                    "type": "numeric:integer",
+                    "property_id": 210,
+                    "property_label": "Volume Horaire en présentiel",
+                    "is_public": true,
+                    "@value": 21,
+                    "@type": "http://www.w3.org/2001/XMLSchema#integer"
+                }
+            ],
+            "fup8:cch": [
+                {
+                    "type": "literal",
+                    "property_id": 212,
+                    "property_label": "Choix du Créneau Horaire",
+                    "is_public": true,
+                    "@value": "3h00"
+                }
+            ],
+            "fup8:pcCM": [
+                {
+                    "type": "numeric:integer",
+                    "property_id": 213,
+                    "property_label": "% Cours magistraux",
+                    "is_public": true,
+                    "@value": 50,
+                    "@type": "http://www.w3.org/2001/XMLSchema#integer"
+                }
+            ],
+            "fup8:pcTD": [
+                {
+                    "type": "numeric:integer",
+                    "property_id": 214,
+                    "property_label": "% Travaux dirigés",
+                    "is_public": true,
+                    "@value": 50,
+                    "@type": "http://www.w3.org/2001/XMLSchema#integer"
+                }
+            ],
+            "fup8:pcTP": [
+                {
+                    "type": "numeric:integer",
+                    "property_id": 215,
+                    "property_label": "% Travaux pratiques",
+                    "is_public": true,
+                    "@value": 0,
+                    "@type": "http://www.w3.org/2001/XMLSchema#integer"
+                }
+            ],
+            "fup8:sd": [
+                {
+                    "type": "numeric:integer",
+                    "property_id": 216,
+                    "property_label": "Seuil dédoublement",
+                    "is_public": true,
+                    "@value": 30,
+                    "@type": "http://www.w3.org/2001/XMLSchema#integer"
+                }
+            ],
+            "fup8:libre": [
+                {
+                    "type": "literal",
+                    "property_id": 217,
+                    "property_label": "EC Libre",
+                    "is_public": true,
+                    "@value": "Non"
+                }
+            ],
+            "fup8:nbg": [
+                {
+                    "type": "numeric:integer",
+                    "property_id": 220,
+                    "property_label": "Nombre de groupe",
+                    "is_public": true,
+                    "@value": 1,
+                    "@type": "http://www.w3.org/2001/XMLSchema#integer"
+                }
+            ],
+            "fup8:hasParcours": [
+                {
+                    "type": "resource",
+                    "property_id": 225,
+                    "property_label": "A comme Parcours",
+                    "is_public": true,
+                    "@id": "http://localhost/omk_gestForma/api/items/54",
+                    "value_resource_id": 54,
+                    "value_resource_name": "items",
+                    "url": null,
+                    "display_title": "M2 ACEHN"
+                }
+            ]
+        },
+        "events": [
+            {
+                "intervenant": "Samuel Szoniecky",
+                "code": "DMA3EDD2",
+                "cours": "Méthodes analyses statistiques",
+                "dateStart": "2025-01-16T08:00:00.000Z",
+                "jour": "jeudi 16 janvier 2025",
+                "début": "09:00",
+                "fin": "15:00",
+                "nb Heure": 6
+            },
+            {
+                "intervenant": "Samuel Szoniecky",
+                "code": "DMA3EDD2",
+                "cours": "Méthodes analyses statistiques",
+                "dateStart": "2025-01-17T08:00:00.000Z",
+                "jour": "vendredi 17 janvier 2025",
+                "début": "09:00",
+                "fin": "16:00",
+                "nb Heure": 7
+            },
+            {
+                "intervenant": "Samuel Szoniecky",
+                "code": "DMA3EDD2",
+                "cours": "Méthodes analyses statistiques",
+                "dateStart": "2025-03-21T08:00:00.000Z",
+                "jour": "vendredi 21 mars 2025",
+                "début": "09:00",
+                "fin": "16:00",
+                "nb Heure": 7
+            }
+        ],
+        "value": 20
+    },
+    {
+        "label": "DMA3EDD5",
+        "oItem": {
+            "@context": "http://localhost/omk_gestForma/api-context",
+            "@id": "http://localhost/omk_gestForma/api/items/441",
+            "@type": [
+                "o:Item",
+                "fup8:EC"
+            ],
+            "o:id": 441,
+            "o:is_public": true,
+            "o:owner": {
+                "@id": "http://localhost/omk_gestForma/api/users/1",
+                "o:id": 1
+            },
+            "o:resource_class": {
+                "@id": "http://localhost/omk_gestForma/api/resource_classes/113",
+                "o:id": 113
+            },
+            "o:resource_template": {
+                "@id": "http://localhost/omk_gestForma/api/resource_templates/4",
+                "o:id": 4
+            },
+            "o:thumbnail": null,
+            "o:title": "EC1 Visualisation et valorisation d'archives visuelles",
+            "thumbnail_display_urls": {
+                "large": null,
+                "medium": null,
+                "square": null
+            },
+            "o:created": {
+                "@value": "2024-06-11T16:15:58+00:00",
+                "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+            },
+            "o:modified": {
+                "@value": "2024-06-11T16:15:58+00:00",
+                "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+            },
+            "o:primary_media": null,
+            "o:media": [],
+            "o:item_set": [],
+            "o:site": [],
+            "dcterms:title": [
+                {
+                    "type": "literal",
+                    "property_id": 1,
+                    "property_label": "Title",
+                    "is_public": true,
+                    "@value": "EC1 Visualisation et valorisation d'archives visuelles"
+                }
+            ],
+            "fup8:code": [
+                {
+                    "type": "literal",
+                    "property_id": 206,
+                    "property_label": "Code EC",
+                    "is_public": true,
+                    "@value": "DMA3EDD5"
+                }
+            ],
+            "fup8:hasUE": [
+                {
+                    "type": "resource",
+                    "property_id": 224,
+                    "property_label": "A comme UE",
+                    "is_public": true,
+                    "@id": "http://localhost/omk_gestForma/api/items/341",
+                    "value_resource_id": 341,
+                    "value_resource_name": "items",
+                    "url": null,
+                    "display_title": "UE 1 Sociotechniques"
+                }
+            ],
+            "foaf:status": [
+                {
+                    "type": "literal",
+                    "property_id": 184,
+                    "property_label": "status",
+                    "is_public": true,
+                    "@value": "Obligatoire (O)"
+                }
+            ],
+            "fup8:ects": [
+                {
+                    "type": "numeric:integer",
+                    "property_id": 207,
+                    "property_label": "ects",
+                    "is_public": true,
+                    "@value": 6,
+                    "@type": "http://www.w3.org/2001/XMLSchema#integer"
+                }
+            ],
+            "fup8:coef": [
+                {
+                    "type": "numeric:integer",
+                    "property_id": 209,
+                    "property_label": "coefficient",
+                    "is_public": true,
+                    "@value": 3,
+                    "@type": "http://www.w3.org/2001/XMLSchema#integer"
+                }
+            ],
+            "fup8:vhch": [
+                {
+                    "type": "numeric:integer",
+                    "property_id": 211,
+                    "property_label": "Volume Horaire chargé",
+                    "is_public": true,
+                    "@value": 30,
+                    "@type": "http://www.w3.org/2001/XMLSchema#integer"
+                }
+            ],
+            "fup8:vhec": [
+                {
+                    "type": "numeric:integer",
+                    "property_id": 210,
+                    "property_label": "Volume Horaire en présentiel",
+                    "is_public": true,
+                    "@value": 30,
+                    "@type": "http://www.w3.org/2001/XMLSchema#integer"
+                }
+            ],
+            "fup8:cch": [
+                {
+                    "type": "literal",
+                    "property_id": 212,
+                    "property_label": "Choix du Créneau Horaire",
+                    "is_public": true,
+                    "@value": "3h00"
+                }
+            ],
+            "fup8:pcCM": [
+                {
+                    "type": "numeric:integer",
+                    "property_id": 213,
+                    "property_label": "% Cours magistraux",
+                    "is_public": true,
+                    "@value": 50,
+                    "@type": "http://www.w3.org/2001/XMLSchema#integer"
+                }
+            ],
+            "fup8:pcTD": [
+                {
+                    "type": "numeric:integer",
+                    "property_id": 214,
+                    "property_label": "% Travaux dirigés",
+                    "is_public": true,
+                    "@value": 50,
+                    "@type": "http://www.w3.org/2001/XMLSchema#integer"
+                }
+            ],
+            "fup8:pcTP": [
+                {
+                    "type": "numeric:integer",
+                    "property_id": 215,
+                    "property_label": "% Travaux pratiques",
+                    "is_public": true,
+                    "@value": 0,
+                    "@type": "http://www.w3.org/2001/XMLSchema#integer"
+                }
+            ],
+            "fup8:sd": [
+                {
+                    "type": "numeric:integer",
+                    "property_id": 216,
+                    "property_label": "Seuil dédoublement",
+                    "is_public": true,
+                    "@value": 30,
+                    "@type": "http://www.w3.org/2001/XMLSchema#integer"
+                }
+            ],
+            "fup8:libre": [
+                {
+                    "type": "literal",
+                    "property_id": 217,
+                    "property_label": "EC Libre",
+                    "is_public": true,
+                    "@value": "Non"
+                }
+            ],
+            "fup8:nbg": [
+                {
+                    "type": "numeric:integer",
+                    "property_id": 220,
+                    "property_label": "Nombre de groupe",
+                    "is_public": true,
+                    "@value": 1,
+                    "@type": "http://www.w3.org/2001/XMLSchema#integer"
+                }
+            ],
+            "fup8:hasParcours": [
+                {
+                    "type": "resource",
+                    "property_id": 225,
+                    "property_label": "A comme Parcours",
+                    "is_public": true,
+                    "@id": "http://localhost/omk_gestForma/api/items/54",
+                    "value_resource_id": 54,
+                    "value_resource_name": "items",
+                    "url": null,
+                    "display_title": "M2 ACEHN"
+                }
+            ]
+        },
+        "events": [
+            {
+                "intervenant": "Everardo Reyes",
+                "code": "DMA3EDD5",
+                "cours": "Datavisualisation",
+                "dateStart": "2024-10-03T07:00:00.000Z",
+                "jour": "jeudi 3 octobre 2024",
+                "début": "09:00",
+                "fin": "17:00",
+                "nb Heure": 8
+            },
+            {
+                "intervenant": "Everardo Reyes",
+                "code": "DMA3EDD5",
+                "cours": "Datavisualisation",
+                "dateStart": "2024-10-17T07:00:00.000Z",
+                "jour": "jeudi 17 octobre 2024",
+                "début": "09:00",
+                "fin": "17:00",
+                "nb Heure": 8
+            },
+            {
+                "intervenant": "Everardo Reyes",
+                "code": "DMA3EDD5",
+                "cours": "Datavisualisation",
+                "dateStart": "2024-11-14T08:00:00.000Z",
+                "jour": "jeudi 14 novembre 2024",
+                "début": "09:00",
+                "fin": "17:00",
+                "nb Heure": 8
+            },
+            {
+                "intervenant": "Everardo Reyes",
+                "code": "DMA3EDD5",
+                "cours": "Datavisualisation",
+                "dateStart": "2025-01-16T08:00:00.000Z",
+                "jour": "jeudi 16 janvier 2025",
+                "début": "09:00",
+                "fin": "15:00",
+                "nb Heure": 6
+            }
+        ],
+        "value": 30
+    },
+    {
+        "label": "DMA3EDD6",
+        "oItem": {
+            "@context": "http://localhost/omk_gestForma/api-context",
+            "@id": "http://localhost/omk_gestForma/api/items/444",
+            "@type": [
+                "o:Item",
+                "fup8:EC"
+            ],
+            "o:id": 444,
+            "o:is_public": true,
+            "o:owner": {
+                "@id": "http://localhost/omk_gestForma/api/users/1",
+                "o:id": 1
+            },
+            "o:resource_class": {
+                "@id": "http://localhost/omk_gestForma/api/resource_classes/113",
+                "o:id": 113
+            },
+            "o:resource_template": {
+                "@id": "http://localhost/omk_gestForma/api/resource_templates/4",
+                "o:id": 4
+            },
+            "o:thumbnail": null,
+            "o:title": "EC1 Design des protocoles",
+            "thumbnail_display_urls": {
+                "large": null,
+                "medium": null,
+                "square": null
+            },
+            "o:created": {
+                "@value": "2024-06-11T16:15:58+00:00",
+                "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+            },
+            "o:modified": {
+                "@value": "2024-06-11T16:15:58+00:00",
+                "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+            },
+            "o:primary_media": null,
+            "o:media": [],
+            "o:item_set": [],
+            "o:site": [],
+            "dcterms:title": [
+                {
+                    "type": "literal",
+                    "property_id": 1,
+                    "property_label": "Title",
+                    "is_public": true,
+                    "@value": "EC1 Design des protocoles"
+                }
+            ],
+            "fup8:code": [
+                {
+                    "type": "literal",
+                    "property_id": 206,
+                    "property_label": "Code EC",
+                    "is_public": true,
+                    "@value": "DMA3EDD6"
+                }
+            ],
+            "fup8:hasUE": [
+                {
+                    "type": "resource",
+                    "property_id": 224,
+                    "property_label": "A comme UE",
+                    "is_public": true,
+                    "@id": "http://localhost/omk_gestForma/api/items/343",
+                    "value_resource_id": 343,
+                    "value_resource_name": "items",
+                    "url": null,
+                    "display_title": "UE 3 Modélisation"
+                }
+            ],
+            "foaf:status": [
+                {
+                    "type": "literal",
+                    "property_id": 184,
+                    "property_label": "status",
+                    "is_public": true,
+                    "@value": "Obligatoire (O)"
+                }
+            ],
+            "fup8:ects": [
+                {
+                    "type": "numeric:integer",
+                    "property_id": 207,
+                    "property_label": "ects",
+                    "is_public": true,
+                    "@value": 6,
+                    "@type": "http://www.w3.org/2001/XMLSchema#integer"
+                }
+            ],
+            "fup8:coef": [
+                {
+                    "type": "numeric:integer",
+                    "property_id": 209,
+                    "property_label": "coefficient",
+                    "is_public": true,
+                    "@value": 3,
+                    "@type": "http://www.w3.org/2001/XMLSchema#integer"
+                }
+            ],
+            "fup8:vhch": [
+                {
+                    "type": "numeric:integer",
+                    "property_id": 211,
+                    "property_label": "Volume Horaire chargé",
+                    "is_public": true,
+                    "@value": 30,
+                    "@type": "http://www.w3.org/2001/XMLSchema#integer"
+                }
+            ],
+            "fup8:vhec": [
+                {
+                    "type": "numeric:integer",
+                    "property_id": 210,
+                    "property_label": "Volume Horaire en présentiel",
+                    "is_public": true,
+                    "@value": 30,
+                    "@type": "http://www.w3.org/2001/XMLSchema#integer"
+                }
+            ],
+            "fup8:cch": [
+                {
+                    "type": "literal",
+                    "property_id": 212,
+                    "property_label": "Choix du Créneau Horaire",
+                    "is_public": true,
+                    "@value": "3h00"
+                }
+            ],
+            "fup8:pcCM": [
+                {
+                    "type": "numeric:integer",
+                    "property_id": 213,
+                    "property_label": "% Cours magistraux",
+                    "is_public": true,
+                    "@value": 50,
+                    "@type": "http://www.w3.org/2001/XMLSchema#integer"
+                }
+            ],
+            "fup8:pcTD": [
+                {
+                    "type": "numeric:integer",
+                    "property_id": 214,
+                    "property_label": "% Travaux dirigés",
+                    "is_public": true,
+                    "@value": 50,
+                    "@type": "http://www.w3.org/2001/XMLSchema#integer"
+                }
+            ],
+            "fup8:pcTP": [
+                {
+                    "type": "numeric:integer",
+                    "property_id": 215,
+                    "property_label": "% Travaux pratiques",
+                    "is_public": true,
+                    "@value": 0,
+                    "@type": "http://www.w3.org/2001/XMLSchema#integer"
+                }
+            ],
+            "fup8:sd": [
+                {
+                    "type": "numeric:integer",
+                    "property_id": 216,
+                    "property_label": "Seuil dédoublement",
+                    "is_public": true,
+                    "@value": 30,
+                    "@type": "http://www.w3.org/2001/XMLSchema#integer"
+                }
+            ],
+            "fup8:libre": [
+                {
+                    "type": "literal",
+                    "property_id": 217,
+                    "property_label": "EC Libre",
+                    "is_public": true,
+                    "@value": "Non"
+                }
+            ],
+            "fup8:nbg": [
+                {
+                    "type": "numeric:integer",
+                    "property_id": 220,
+                    "property_label": "Nombre de groupe",
+                    "is_public": true,
+                    "@value": 1,
+                    "@type": "http://www.w3.org/2001/XMLSchema#integer"
+                }
+            ],
+            "fup8:hasParcours": [
+                {
+                    "type": "resource",
+                    "property_id": 225,
+                    "property_label": "A comme Parcours",
+                    "is_public": true,
+                    "@id": "http://localhost/omk_gestForma/api/items/54",
+                    "value_resource_id": 54,
+                    "value_resource_name": "items",
+                    "url": null,
+                    "display_title": "M2 ACEHN"
+                }
+            ]
+        },
+        "events": [
+            {
+                "intervenant": "Nicolas Sauret",
+                "code": "DMA3EDD6",
+                "cours": "Design des protocoles",
+                "dateStart": "2024-09-26T07:00:00.000Z",
+                "jour": "jeudi 26 septembre 2024",
+                "début": "09:00",
+                "fin": "15:00",
+                "nb Heure": 6
+            },
+            {
+                "intervenant": "Nicolas Sauret",
+                "code": "DMA3EDD6",
+                "cours": "Design des protocoles",
+                "dateStart": "2024-10-10T07:00:00.000Z",
+                "jour": "jeudi 10 octobre 2024",
+                "début": "09:00",
+                "fin": "15:00",
+                "nb Heure": 6
+            },
+            {
+                "intervenant": "Nicolas Sauret",
+                "code": "DMA3EDD6",
+                "cours": "Design des protocoles",
+                "dateStart": "2024-10-24T07:00:00.000Z",
+                "jour": "jeudi 24 octobre 2024",
+                "début": "09:00",
+                "fin": "15:00",
+                "nb Heure": 6
+            },
+            {
+                "intervenant": "Nicolas Sauret",
+                "code": "DMA3EDD6",
+                "cours": "Design des protocoles",
+                "dateStart": "2024-11-07T08:00:00.000Z",
+                "jour": "jeudi 7 novembre 2024",
+                "début": "09:00",
+                "fin": "15:00",
+                "nb Heure": 6
+            },
+            {
+                "intervenant": "Nicolas Sauret",
+                "code": "DMA3EDD6",
+                "cours": "Design des protocoles",
+                "dateStart": "2025-02-27T08:00:00.000Z",
+                "jour": "jeudi 27 février 2025",
+                "début": "09:00",
+                "fin": "15:00",
+                "nb Heure": 6
+            }
+        ],
+        "value": 30
+    },
+    {
+        "label": "DMA3EDD7",
+        "oItem": {
+            "@context": "http://localhost/omk_gestForma/api-context",
+            "@id": "http://localhost/omk_gestForma/api/items/445",
+            "@type": [
+                "o:Item",
+                "fup8:EC"
+            ],
+            "o:id": 445,
+            "o:is_public": true,
+            "o:owner": {
+                "@id": "http://localhost/omk_gestForma/api/users/1",
+                "o:id": 1
+            },
+            "o:resource_class": {
+                "@id": "http://localhost/omk_gestForma/api/resource_classes/113",
+                "o:id": 113
+            },
+            "o:resource_template": {
+                "@id": "http://localhost/omk_gestForma/api/resource_templates/4",
+                "o:id": 4
+            },
+            "o:thumbnail": null,
+            "o:title": "EC2 Conception universelle",
+            "thumbnail_display_urls": {
+                "large": null,
+                "medium": null,
+                "square": null
+            },
+            "o:created": {
+                "@value": "2024-06-11T16:15:58+00:00",
+                "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+            },
+            "o:modified": {
+                "@value": "2024-06-11T16:15:58+00:00",
+                "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+            },
+            "o:primary_media": null,
+            "o:media": [],
+            "o:item_set": [],
+            "o:site": [],
+            "dcterms:title": [
+                {
+                    "type": "literal",
+                    "property_id": 1,
+                    "property_label": "Title",
+                    "is_public": true,
+                    "@value": "EC2 Conception universelle"
+                }
+            ],
+            "fup8:code": [
+                {
+                    "type": "literal",
+                    "property_id": 206,
+                    "property_label": "Code EC",
+                    "is_public": true,
+                    "@value": "DMA3EDD7"
+                }
+            ],
+            "fup8:hasUE": [
+                {
+                    "type": "resource",
+                    "property_id": 224,
+                    "property_label": "A comme UE",
+                    "is_public": true,
+                    "@id": "http://localhost/omk_gestForma/api/items/343",
+                    "value_resource_id": 343,
+                    "value_resource_name": "items",
+                    "url": null,
+                    "display_title": "UE 3 Modélisation"
+                }
+            ],
+            "foaf:status": [
+                {
+                    "type": "literal",
+                    "property_id": 184,
+                    "property_label": "status",
+                    "is_public": true,
+                    "@value": "Obligatoire (O)"
+                }
+            ],
+            "fup8:ects": [
+                {
+                    "type": "numeric:integer",
+                    "property_id": 207,
+                    "property_label": "ects",
+                    "is_public": true,
+                    "@value": 6,
+                    "@type": "http://www.w3.org/2001/XMLSchema#integer"
+                }
+            ],
+            "fup8:coef": [
+                {
+                    "type": "numeric:integer",
+                    "property_id": 209,
+                    "property_label": "coefficient",
+                    "is_public": true,
+                    "@value": 3,
+                    "@type": "http://www.w3.org/2001/XMLSchema#integer"
+                }
+            ],
+            "fup8:vhch": [
+                {
+                    "type": "numeric:integer",
+                    "property_id": 211,
+                    "property_label": "Volume Horaire chargé",
+                    "is_public": true,
+                    "@value": 30,
+                    "@type": "http://www.w3.org/2001/XMLSchema#integer"
+                }
+            ],
+            "fup8:vhec": [
+                {
+                    "type": "numeric:integer",
+                    "property_id": 210,
+                    "property_label": "Volume Horaire en présentiel",
+                    "is_public": true,
+                    "@value": 30,
+                    "@type": "http://www.w3.org/2001/XMLSchema#integer"
+                }
+            ],
+            "fup8:cch": [
+                {
+                    "type": "literal",
+                    "property_id": 212,
+                    "property_label": "Choix du Créneau Horaire",
+                    "is_public": true,
+                    "@value": "3h00"
+                }
+            ],
+            "fup8:pcCM": [
+                {
+                    "type": "numeric:integer",
+                    "property_id": 213,
+                    "property_label": "% Cours magistraux",
+                    "is_public": true,
+                    "@value": 50,
+                    "@type": "http://www.w3.org/2001/XMLSchema#integer"
+                }
+            ],
+            "fup8:pcTD": [
+                {
+                    "type": "numeric:integer",
+                    "property_id": 214,
+                    "property_label": "% Travaux dirigés",
+                    "is_public": true,
+                    "@value": 50,
+                    "@type": "http://www.w3.org/2001/XMLSchema#integer"
+                }
+            ],
+            "fup8:pcTP": [
+                {
+                    "type": "numeric:integer",
+                    "property_id": 215,
+                    "property_label": "% Travaux pratiques",
+                    "is_public": true,
+                    "@value": 0,
+                    "@type": "http://www.w3.org/2001/XMLSchema#integer"
+                }
+            ],
+            "fup8:sd": [
+                {
+                    "type": "numeric:integer",
+                    "property_id": 216,
+                    "property_label": "Seuil dédoublement",
+                    "is_public": true,
+                    "@value": 30,
+                    "@type": "http://www.w3.org/2001/XMLSchema#integer"
+                }
+            ],
+            "fup8:libre": [
+                {
+                    "type": "literal",
+                    "property_id": 217,
+                    "property_label": "EC Libre",
+                    "is_public": true,
+                    "@value": "Non"
+                }
+            ],
+            "fup8:nbg": [
+                {
+                    "type": "numeric:integer",
+                    "property_id": 220,
+                    "property_label": "Nombre de groupe",
+                    "is_public": true,
+                    "@value": 1,
+                    "@type": "http://www.w3.org/2001/XMLSchema#integer"
+                }
+            ],
+            "fup8:hasParcours": [
+                {
+                    "type": "resource",
+                    "property_id": 225,
+                    "property_label": "A comme Parcours",
+                    "is_public": true,
+                    "@id": "http://localhost/omk_gestForma/api/items/54",
+                    "value_resource_id": 54,
+                    "value_resource_name": "items",
+                    "url": null,
+                    "display_title": "M2 ACEHN"
+                }
+            ]
+        },
+        "events": [
+            {
+                "intervenant": "Inés Laïtano",
+                "code": "DMA3EDD7",
+                "cours": "Conception universelle",
+                "dateStart": "2024-09-27T07:00:00.000Z",
+                "jour": "vendredi 27 septembre 2024",
+                "début": "09:00",
+                "fin": "15:00",
+                "nb Heure": 6
+            },
+            {
+                "intervenant": "Inés Laïtano",
+                "code": "DMA3EDD7",
+                "cours": "Conception universelle",
+                "dateStart": "2024-10-11T07:00:00.000Z",
+                "jour": "vendredi 11 octobre 2024",
+                "début": "09:00",
+                "fin": "15:00",
+                "nb Heure": 6
+            },
+            {
+                "intervenant": "Inés Laïtano",
+                "code": "DMA3EDD7",
+                "cours": "Conception universelle",
+                "dateStart": "2024-10-25T07:00:00.000Z",
+                "jour": "vendredi 25 octobre 2024",
+                "début": "09:00",
+                "fin": "15:00",
+                "nb Heure": 6
+            },
+            {
+                "intervenant": "Inés Laïtano",
+                "code": "DMA3EDD7",
+                "cours": "Conception universelle",
+                "dateStart": "2024-11-08T08:00:00.000Z",
+                "jour": "vendredi 8 novembre 2024",
+                "début": "09:00",
+                "fin": "15:00",
+                "nb Heure": 6
+            },
+            {
+                "intervenant": "Inés Laïtano",
+                "code": "DMA3EDD7",
+                "cours": "Conception universelle",
+                "dateStart": "2024-11-22T08:00:00.000Z",
+                "jour": "vendredi 22 novembre 2024",
+                "début": "09:00",
+                "fin": "15:00",
+                "nb Heure": 6
+            }
+        ],
+        "value": 30
+    },
+    {
+        "label": "DMA4EDA2",
+        "oItem": {
+            "@context": "http://localhost/omk_gestForma/api-context",
+            "@id": "http://localhost/omk_gestForma/api/items/464",
+            "@type": [
+                "o:Item",
+                "fup8:EC"
+            ],
+            "o:id": 464,
+            "o:is_public": true,
+            "o:owner": {
+                "@id": "http://localhost/omk_gestForma/api/users/1",
+                "o:id": 1
+            },
+            "o:resource_class": {
+                "@id": "http://localhost/omk_gestForma/api/resource_classes/113",
+                "o:id": 113
+            },
+            "o:resource_template": {
+                "@id": "http://localhost/omk_gestForma/api/resource_templates/4",
+                "o:id": 4
+            },
+            "o:thumbnail": null,
+            "o:title": "EC3 Participation critique II",
+            "thumbnail_display_urls": {
+                "large": null,
+                "medium": null,
+                "square": null
+            },
+            "o:created": {
+                "@value": "2024-06-11T16:15:59+00:00",
+                "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+            },
+            "o:modified": {
+                "@value": "2024-06-11T16:15:59+00:00",
+                "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+            },
+            "o:primary_media": null,
+            "o:media": [],
+            "o:item_set": [],
+            "o:site": [],
+            "dcterms:title": [
+                {
+                    "type": "literal",
+                    "property_id": 1,
+                    "property_label": "Title",
+                    "is_public": true,
+                    "@value": "EC3 Participation critique II"
+                }
+            ],
+            "fup8:code": [
+                {
+                    "type": "literal",
+                    "property_id": 206,
+                    "property_label": "Code EC",
+                    "is_public": true,
+                    "@value": "DMA4EDA2"
+                }
+            ],
+            "fup8:hasUE": [
+                {
+                    "type": "resource",
+                    "property_id": 224,
+                    "property_label": "A comme UE",
+                    "is_public": true,
+                    "@id": "http://localhost/omk_gestForma/api/items/352",
+                    "value_resource_id": 352,
+                    "value_resource_name": "items",
+                    "url": null,
+                    "display_title": "UE 4 Formation et recherche"
+                }
+            ],
+            "foaf:status": [
+                {
+                    "type": "literal",
+                    "property_id": 184,
+                    "property_label": "status",
+                    "is_public": true,
+                    "@value": "Obligatoire (O)"
+                }
+            ],
+            "fup8:ects": [
+                {
+                    "type": "numeric:integer",
+                    "property_id": 207,
+                    "property_label": "ects",
+                    "is_public": true,
+                    "@value": 3,
+                    "@type": "http://www.w3.org/2001/XMLSchema#integer"
+                }
+            ],
+            "fup8:coef": [
+                {
+                    "type": "numeric:integer",
+                    "property_id": 209,
+                    "property_label": "coefficient",
+                    "is_public": true,
+                    "@value": 1,
+                    "@type": "http://www.w3.org/2001/XMLSchema#integer"
+                }
+            ],
+            "fup8:vhch": [
+                {
+                    "type": "numeric:integer",
+                    "property_id": 211,
+                    "property_label": "Volume Horaire chargé",
+                    "is_public": true,
+                    "@value": 30,
+                    "@type": "http://www.w3.org/2001/XMLSchema#integer"
+                }
+            ],
+            "fup8:vhec": [
+                {
+                    "type": "numeric:integer",
+                    "property_id": 210,
+                    "property_label": "Volume Horaire en présentiel",
+                    "is_public": true,
+                    "@value": 30,
+                    "@type": "http://www.w3.org/2001/XMLSchema#integer"
+                }
+            ],
+            "fup8:cch": [
+                {
+                    "type": "literal",
+                    "property_id": 212,
+                    "property_label": "Choix du Créneau Horaire",
+                    "is_public": true,
+                    "@value": "3h00"
+                }
+            ],
+            "fup8:pcCM": [
+                {
+                    "type": "numeric:integer",
+                    "property_id": 213,
+                    "property_label": "% Cours magistraux",
+                    "is_public": true,
+                    "@value": 50,
+                    "@type": "http://www.w3.org/2001/XMLSchema#integer"
+                }
+            ],
+            "fup8:pcTD": [
+                {
+                    "type": "numeric:integer",
+                    "property_id": 214,
+                    "property_label": "% Travaux dirigés",
+                    "is_public": true,
+                    "@value": 50,
+                    "@type": "http://www.w3.org/2001/XMLSchema#integer"
+                }
+            ],
+            "fup8:pcTP": [
+                {
+                    "type": "numeric:integer",
+                    "property_id": 215,
+                    "property_label": "% Travaux pratiques",
+                    "is_public": true,
+                    "@value": 0,
+                    "@type": "http://www.w3.org/2001/XMLSchema#integer"
+                }
+            ],
+            "fup8:sd": [
+                {
+                    "type": "numeric:integer",
+                    "property_id": 216,
+                    "property_label": "Seuil dédoublement",
+                    "is_public": true,
+                    "@value": 30,
+                    "@type": "http://www.w3.org/2001/XMLSchema#integer"
+                }
+            ],
+            "fup8:libre": [
+                {
+                    "type": "literal",
+                    "property_id": 217,
+                    "property_label": "EC Libre",
+                    "is_public": true,
+                    "@value": "Non"
+                }
+            ],
+            "fup8:mutuaSrc": [
+                {
+                    "type": "literal",
+                    "property_id": 219,
+                    "property_label": "Mutualiser à partir du parcours",
+                    "is_public": true,
+                    "@value": "EC proposé dans le Master CEN2, NET2 et AVUN"
+                }
+            ],
+            "fup8:mutuaDst": [
+                {
+                    "type": "literal",
+                    "property_id": 218,
+                    "property_label": "Mutualiser avec les parcours",
+                    "is_public": true,
+                    "@value": "Entre parcours de la mention"
+                }
+            ],
+            "fup8:nbg": [
+                {
+                    "type": "numeric:integer",
+                    "property_id": 220,
+                    "property_label": "Nombre de groupe",
+                    "is_public": true,
+                    "@value": 1,
+                    "@type": "http://www.w3.org/2001/XMLSchema#integer"
+                }
+            ],
+            "fup8:hasParcours": [
+                {
+                    "type": "resource",
+                    "property_id": 225,
+                    "property_label": "A comme Parcours",
+                    "is_public": true,
+                    "@id": "http://localhost/omk_gestForma/api/items/54",
+                    "value_resource_id": 54,
+                    "value_resource_name": "items",
+                    "url": null,
+                    "display_title": "M2 ACEHN"
+                }
+            ]
+        },
+        "events": [
+            {
+                "intervenant": "Inés Laïtano",
+                "code": "DMA4EDA2",
+                "cours": "Participation critique",
+                "dateStart": "2025-01-20T08:00:00.000Z",
+                "jour": "lundi 20 janvier 2025",
+                "début": "09:00",
+                "fin": "15:00",
+                "nb Heure": 6
+            },
+            {
+                "intervenant": "Inés Laïtano",
+                "code": "DMA4EDA2",
+                "cours": "Participation critique",
+                "dateStart": "2025-01-21T08:00:00.000Z",
+                "jour": "mardi 21 janvier 2025",
+                "début": "09:00",
+                "fin": "15:00",
+                "nb Heure": 6
+            },
+            {
+                "intervenant": "Inés Laïtano",
+                "code": "DMA4EDA2",
+                "cours": "Participation critique",
+                "dateStart": "2025-01-22T08:00:00.000Z",
+                "jour": "mercredi 22 janvier 2025",
+                "début": "09:00",
+                "fin": "15:00",
+                "nb Heure": 6
+            },
+            {
+                "intervenant": "Inés Laïtano",
+                "code": "DMA4EDA2",
+                "cours": "Participation critique",
+                "dateStart": "2025-01-23T08:00:00.000Z",
+                "jour": "jeudi 23 janvier 2025",
+                "début": "09:00",
+                "fin": "15:00",
+                "nb Heure": 6
+            },
+            {
+                "intervenant": "Inés Laïtano",
+                "code": "DMA4EDA2",
+                "cours": "Participation critique",
+                "dateStart": "2025-01-24T08:00:00.000Z",
+                "jour": "vendredi 24 janvier 2025",
+                "début": "09:00",
+                "fin": "15:00",
+                "nb Heure": 6
+            }
+        ],
+        "value": 30
+    },
+    {
+        "label": "DMA4EDD1",
+        "oItem": {
+            "@context": "http://localhost/omk_gestForma/api-context",
+            "@id": "http://localhost/omk_gestForma/api/items/462",
+            "@type": [
+                "o:Item",
+                "fup8:EC"
+            ],
+            "o:id": 462,
+            "o:is_public": true,
+            "o:owner": {
+                "@id": "http://localhost/omk_gestForma/api/users/1",
+                "o:id": 1
+            },
+            "o:resource_class": {
+                "@id": "http://localhost/omk_gestForma/api/resource_classes/113",
+                "o:id": 113
+            },
+            "o:resource_template": {
+                "@id": "http://localhost/omk_gestForma/api/resource_templates/4",
+                "o:id": 4
+            },
+            "o:thumbnail": null,
+            "o:title": "EC1 Anglais scientifique et technique",
+            "thumbnail_display_urls": {
+                "large": null,
+                "medium": null,
+                "square": null
+            },
+            "o:created": {
+                "@value": "2024-06-11T16:15:59+00:00",
+                "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+            },
+            "o:modified": {
+                "@value": "2024-06-11T16:15:59+00:00",
+                "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+            },
+            "o:primary_media": null,
+            "o:media": [],
+            "o:item_set": [],
+            "o:site": [],
+            "dcterms:title": [
+                {
+                    "type": "literal",
+                    "property_id": 1,
+                    "property_label": "Title",
+                    "is_public": true,
+                    "@value": "EC1 Anglais scientifique et technique"
+                }
+            ],
+            "fup8:code": [
+                {
+                    "type": "literal",
+                    "property_id": 206,
+                    "property_label": "Code EC",
+                    "is_public": true,
+                    "@value": "DMA4EDD1"
+                }
+            ],
+            "fup8:hasUE": [
+                {
+                    "type": "resource",
+                    "property_id": 224,
+                    "property_label": "A comme UE",
+                    "is_public": true,
+                    "@id": "http://localhost/omk_gestForma/api/items/352",
+                    "value_resource_id": 352,
+                    "value_resource_name": "items",
+                    "url": null,
+                    "display_title": "UE 4 Formation et recherche"
+                }
+            ],
+            "foaf:status": [
+                {
+                    "type": "literal",
+                    "property_id": 184,
+                    "property_label": "status",
+                    "is_public": true,
+                    "@value": "Obligatoire (O)"
+                }
+            ],
+            "fup8:ects": [
+                {
+                    "type": "numeric:integer",
+                    "property_id": 207,
+                    "property_label": "ects",
+                    "is_public": true,
+                    "@value": 3,
+                    "@type": "http://www.w3.org/2001/XMLSchema#integer"
+                }
+            ],
+            "fup8:coef": [
+                {
+                    "type": "numeric:integer",
+                    "property_id": 209,
+                    "property_label": "coefficient",
+                    "is_public": true,
+                    "@value": 1,
+                    "@type": "http://www.w3.org/2001/XMLSchema#integer"
+                }
+            ],
+            "fup8:vhch": [
+                {
+                    "type": "numeric:integer",
+                    "property_id": 211,
+                    "property_label": "Volume Horaire chargé",
+                    "is_public": true,
+                    "@value": 30,
+                    "@type": "http://www.w3.org/2001/XMLSchema#integer"
+                }
+            ],
+            "fup8:vhec": [
+                {
+                    "type": "numeric:integer",
+                    "property_id": 210,
+                    "property_label": "Volume Horaire en présentiel",
+                    "is_public": true,
+                    "@value": 30,
+                    "@type": "http://www.w3.org/2001/XMLSchema#integer"
+                }
+            ],
+            "fup8:cch": [
+                {
+                    "type": "literal",
+                    "property_id": 212,
+                    "property_label": "Choix du Créneau Horaire",
+                    "is_public": true,
+                    "@value": "3h00"
+                }
+            ],
+            "fup8:pcCM": [
+                {
+                    "type": "numeric:integer",
+                    "property_id": 213,
+                    "property_label": "% Cours magistraux",
+                    "is_public": true,
+                    "@value": 50,
+                    "@type": "http://www.w3.org/2001/XMLSchema#integer"
+                }
+            ],
+            "fup8:pcTD": [
+                {
+                    "type": "numeric:integer",
+                    "property_id": 214,
+                    "property_label": "% Travaux dirigés",
+                    "is_public": true,
+                    "@value": 50,
+                    "@type": "http://www.w3.org/2001/XMLSchema#integer"
+                }
+            ],
+            "fup8:pcTP": [
+                {
+                    "type": "numeric:integer",
+                    "property_id": 215,
+                    "property_label": "% Travaux pratiques",
+                    "is_public": true,
+                    "@value": 0,
+                    "@type": "http://www.w3.org/2001/XMLSchema#integer"
+                }
+            ],
+            "fup8:sd": [
+                {
+                    "type": "numeric:integer",
+                    "property_id": 216,
+                    "property_label": "Seuil dédoublement",
+                    "is_public": true,
+                    "@value": 30,
+                    "@type": "http://www.w3.org/2001/XMLSchema#integer"
+                }
+            ],
+            "fup8:libre": [
+                {
+                    "type": "literal",
+                    "property_id": 217,
+                    "property_label": "EC Libre",
+                    "is_public": true,
+                    "@value": "Non"
+                }
+            ],
+            "fup8:nbg": [
+                {
+                    "type": "numeric:integer",
+                    "property_id": 220,
+                    "property_label": "Nombre de groupe",
+                    "is_public": true,
+                    "@value": 1,
+                    "@type": "http://www.w3.org/2001/XMLSchema#integer"
+                }
+            ],
+            "fup8:hasParcours": [
+                {
+                    "type": "resource",
+                    "property_id": 225,
+                    "property_label": "A comme Parcours",
+                    "is_public": true,
+                    "@id": "http://localhost/omk_gestForma/api/items/54",
+                    "value_resource_id": 54,
+                    "value_resource_name": "items",
+                    "url": null,
+                    "display_title": "M2 ACEHN"
+                }
+            ]
+        },
+        "events": [
+            {
+                "intervenant": "Gabrielle Godin",
+                "code": "DMA4EDD1",
+                "cours": "Anglais",
+                "dateStart": "2024-10-28T08:00:00.000Z",
+                "jour": "lundi 28 octobre 2024",
+                "début": "09:00",
+                "fin": "17:00",
+                "nb Heure": 8
+            },
+            {
+                "intervenant": "Gabrielle Godin",
+                "code": "DMA4EDD1",
+                "cours": "Anglais",
+                "dateStart": "2024-10-29T08:00:00.000Z",
+                "jour": "mardi 29 octobre 2024",
+                "début": "09:00",
+                "fin": "17:00",
+                "nb Heure": 8
+            },
+            {
+                "intervenant": "Gabrielle Godin",
+                "code": "DMA4EDD1",
+                "cours": "Anglais",
+                "dateStart": "2024-10-30T08:00:00.000Z",
+                "jour": "mercredi 30 octobre 2024",
+                "début": "09:00",
+                "fin": "17:00",
+                "nb Heure": 8
+            },
+            {
+                "intervenant": "Gabrielle Godin",
+                "code": "DMA4EDD1",
+                "cours": "Anglais",
+                "dateStart": "2024-10-31T08:00:00.000Z",
+                "jour": "jeudi 31 octobre 2024",
+                "début": "09:00",
+                "fin": "15:00",
+                "nb Heure": 6
+            }
+        ],
+        "value": 30
+    },
+    {
+        "label": "DMA4EDD2",
+        "oItem": {
+            "@context": "http://localhost/omk_gestForma/api-context",
+            "@id": "http://localhost/omk_gestForma/api/items/463",
+            "@type": [
+                "o:Item",
+                "fup8:EC"
+            ],
+            "o:id": 463,
+            "o:is_public": true,
+            "o:owner": {
+                "@id": "http://localhost/omk_gestForma/api/users/1",
+                "o:id": 1
+            },
+            "o:resource_class": {
+                "@id": "http://localhost/omk_gestForma/api/resource_classes/113",
+                "o:id": 113
+            },
+            "o:resource_template": {
+                "@id": "http://localhost/omk_gestForma/api/resource_templates/4",
+                "o:id": 4
+            },
+            "o:thumbnail": null,
+            "o:title": "EC2 Projet collaboratif tutoré",
+            "thumbnail_display_urls": {
+                "large": null,
+                "medium": null,
+                "square": null
+            },
+            "o:created": {
+                "@value": "2024-06-11T16:15:59+00:00",
+                "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+            },
+            "o:modified": {
+                "@value": "2024-06-11T16:15:59+00:00",
+                "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+            },
+            "o:primary_media": null,
+            "o:media": [],
+            "o:item_set": [],
+            "o:site": [],
+            "dcterms:title": [
+                {
+                    "type": "literal",
+                    "property_id": 1,
+                    "property_label": "Title",
+                    "is_public": true,
+                    "@value": "EC2 Projet collaboratif tutoré"
+                }
+            ],
+            "fup8:code": [
+                {
+                    "type": "literal",
+                    "property_id": 206,
+                    "property_label": "Code EC",
+                    "is_public": true,
+                    "@value": "DMA4EDD2"
+                }
+            ],
+            "fup8:hasUE": [
+                {
+                    "type": "resource",
+                    "property_id": 224,
+                    "property_label": "A comme UE",
+                    "is_public": true,
+                    "@id": "http://localhost/omk_gestForma/api/items/352",
+                    "value_resource_id": 352,
+                    "value_resource_name": "items",
+                    "url": null,
+                    "display_title": "UE 4 Formation et recherche"
+                }
+            ],
+            "foaf:status": [
+                {
+                    "type": "literal",
+                    "property_id": 184,
+                    "property_label": "status",
+                    "is_public": true,
+                    "@value": "Obligatoire (O)"
+                }
+            ],
+            "fup8:ects": [
+                {
+                    "type": "numeric:integer",
+                    "property_id": 207,
+                    "property_label": "ects",
+                    "is_public": true,
+                    "@value": 3,
+                    "@type": "http://www.w3.org/2001/XMLSchema#integer"
+                }
+            ],
+            "fup8:coef": [
+                {
+                    "type": "numeric:integer",
+                    "property_id": 209,
+                    "property_label": "coefficient",
+                    "is_public": true,
+                    "@value": 1,
+                    "@type": "http://www.w3.org/2001/XMLSchema#integer"
+                }
+            ],
+            "fup8:vhch": [
+                {
+                    "type": "numeric:integer",
+                    "property_id": 211,
+                    "property_label": "Volume Horaire chargé",
+                    "is_public": true,
+                    "@value": 30,
+                    "@type": "http://www.w3.org/2001/XMLSchema#integer"
+                }
+            ],
+            "fup8:vhec": [
+                {
+                    "type": "numeric:integer",
+                    "property_id": 210,
+                    "property_label": "Volume Horaire en présentiel",
+                    "is_public": true,
+                    "@value": 30,
+                    "@type": "http://www.w3.org/2001/XMLSchema#integer"
+                }
+            ],
+            "fup8:cch": [
+                {
+                    "type": "literal",
+                    "property_id": 212,
+                    "property_label": "Choix du Créneau Horaire",
+                    "is_public": true,
+                    "@value": "3h00"
+                }
+            ],
+            "fup8:pcCM": [
+                {
+                    "type": "numeric:integer",
+                    "property_id": 213,
+                    "property_label": "% Cours magistraux",
+                    "is_public": true,
+                    "@value": 50,
+                    "@type": "http://www.w3.org/2001/XMLSchema#integer"
+                }
+            ],
+            "fup8:pcTD": [
+                {
+                    "type": "numeric:integer",
+                    "property_id": 214,
+                    "property_label": "% Travaux dirigés",
+                    "is_public": true,
+                    "@value": 50,
+                    "@type": "http://www.w3.org/2001/XMLSchema#integer"
+                }
+            ],
+            "fup8:pcTP": [
+                {
+                    "type": "numeric:integer",
+                    "property_id": 215,
+                    "property_label": "% Travaux pratiques",
+                    "is_public": true,
+                    "@value": 0,
+                    "@type": "http://www.w3.org/2001/XMLSchema#integer"
+                }
+            ],
+            "fup8:sd": [
+                {
+                    "type": "numeric:integer",
+                    "property_id": 216,
+                    "property_label": "Seuil dédoublement",
+                    "is_public": true,
+                    "@value": 30,
+                    "@type": "http://www.w3.org/2001/XMLSchema#integer"
+                }
+            ],
+            "fup8:libre": [
+                {
+                    "type": "literal",
+                    "property_id": 217,
+                    "property_label": "EC Libre",
+                    "is_public": true,
+                    "@value": "Non"
+                }
+            ],
+            "fup8:nbg": [
+                {
+                    "type": "numeric:integer",
+                    "property_id": 220,
+                    "property_label": "Nombre de groupe",
+                    "is_public": true,
+                    "@value": 1,
+                    "@type": "http://www.w3.org/2001/XMLSchema#integer"
+                }
+            ],
+            "fup8:hasParcours": [
+                {
+                    "type": "resource",
+                    "property_id": 225,
+                    "property_label": "A comme Parcours",
+                    "is_public": true,
+                    "@id": "http://localhost/omk_gestForma/api/items/54",
+                    "value_resource_id": 54,
+                    "value_resource_name": "items",
+                    "url": null,
+                    "display_title": "M2 ACEHN"
+                }
+            ]
+        },
+        "events": [
+            {
+                "intervenant": "Samuel Szoniecky",
+                "code": "DMA4EDD2",
+                "cours": "Projet collaboratif Note d'intention",
+                "dateStart": "2024-10-18T07:00:00.000Z",
+                "jour": "vendredi 18 octobre 2024",
+                "début": "09:00",
+                "fin": "15:00",
+                "nb Heure": 6
+            },
+            {
+                "intervenant": "Samuel Szoniecky",
+                "code": "DMA4EDD2",
+                "cours": "Projet collaboratif Note d'intention",
+                "dateStart": "2024-12-13T08:00:00.000Z",
+                "jour": "vendredi 13 décembre 2024",
+                "début": "09:00",
+                "fin": "15:00",
+                "nb Heure": 6
+            },
+            {
+                "intervenant": "Nicolas Sauret",
+                "code": "DMA4EDD2",
+                "cours": "Projet collaboratif Note d'intention",
+                "dateStart": "2025-03-06T08:00:00.000Z",
+                "jour": "jeudi 6 mars 2025",
+                "début": "09:00",
+                "fin": "15:00",
+                "nb Heure": 6
+            },
+            {
+                "intervenant": "Nicolas Sauret",
+                "code": "DMA4EDD2",
+                "cours": "Projet collaboratif Note d'intention",
+                "dateStart": "2025-03-13T08:00:00.000Z",
+                "jour": "jeudi 13 mars 2025",
+                "début": "09:00",
+                "fin": "15:00",
+                "nb Heure": 6
+            },
+            {
+                "intervenant": "Nicolas Sauret",
+                "code": "DMA4EDD2",
+                "cours": "Projet collaboratif Note d'intention",
+                "dateStart": "2025-03-20T08:00:00.000Z",
+                "jour": "jeudi 20 mars 2025",
+                "début": "09:00",
+                "fin": "15:00",
+                "nb Heure": 6
+            }
+        ],
+        "value": 30
+    },
+    {
+        "label": "DMA4EDD4",
+        "oItem": {
+            "@context": "http://localhost/omk_gestForma/api-context",
+            "@id": "http://localhost/omk_gestForma/api/items/466",
+            "@type": [
+                "o:Item",
+                "fup8:EC"
+            ],
+            "o:id": 466,
+            "o:is_public": true,
+            "o:owner": {
+                "@id": "http://localhost/omk_gestForma/api/users/1",
+                "o:id": 1
+            },
+            "o:resource_class": {
+                "@id": "http://localhost/omk_gestForma/api/resource_classes/113",
+                "o:id": 113
+            },
+            "o:resource_template": {
+                "@id": "http://localhost/omk_gestForma/api/resource_templates/4",
+                "o:id": 4
+            },
+            "o:thumbnail": null,
+            "o:title": "EC2 Ethique du web et écosystèmes d'information",
+            "thumbnail_display_urls": {
+                "large": null,
+                "medium": null,
+                "square": null
+            },
+            "o:created": {
+                "@value": "2024-06-11T16:15:59+00:00",
+                "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+            },
+            "o:modified": {
+                "@value": "2024-06-11T16:15:59+00:00",
+                "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+            },
+            "o:primary_media": null,
+            "o:media": [],
+            "o:item_set": [],
+            "o:site": [],
+            "dcterms:title": [
+                {
+                    "type": "literal",
+                    "property_id": 1,
+                    "property_label": "Title",
+                    "is_public": true,
+                    "@value": "EC2 Ethique du web et écosystèmes d'information"
+                }
+            ],
+            "fup8:code": [
+                {
+                    "type": "literal",
+                    "property_id": 206,
+                    "property_label": "Code EC",
+                    "is_public": true,
+                    "@value": "DMA4EDD4"
+                }
+            ],
+            "fup8:hasUE": [
+                {
+                    "type": "resource",
+                    "property_id": 224,
+                    "property_label": "A comme UE",
+                    "is_public": true,
+                    "@id": "http://localhost/omk_gestForma/api/items/353",
+                    "value_resource_id": 353,
+                    "value_resource_name": "items",
+                    "url": null,
+                    "display_title": "UE 5 Référentiels de connaissances"
+                }
+            ],
+            "foaf:status": [
+                {
+                    "type": "literal",
+                    "property_id": 184,
+                    "property_label": "status",
+                    "is_public": true,
+                    "@value": "Obligatoire (O)"
+                }
+            ],
+            "fup8:ects": [
+                {
+                    "type": "numeric:integer",
+                    "property_id": 207,
+                    "property_label": "ects",
+                    "is_public": true,
+                    "@value": 5,
+                    "@type": "http://www.w3.org/2001/XMLSchema#integer"
+                }
+            ],
+            "fup8:coef": [
+                {
+                    "type": "numeric:integer",
+                    "property_id": 209,
+                    "property_label": "coefficient",
+                    "is_public": true,
+                    "@value": 3,
+                    "@type": "http://www.w3.org/2001/XMLSchema#integer"
+                }
+            ],
+            "fup8:vhch": [
+                {
+                    "type": "numeric:integer",
+                    "property_id": 211,
+                    "property_label": "Volume Horaire chargé",
+                    "is_public": true,
+                    "@value": 30,
+                    "@type": "http://www.w3.org/2001/XMLSchema#integer"
+                }
+            ],
+            "fup8:vhec": [
+                {
+                    "type": "numeric:integer",
+                    "property_id": 210,
+                    "property_label": "Volume Horaire en présentiel",
+                    "is_public": true,
+                    "@value": 30,
+                    "@type": "http://www.w3.org/2001/XMLSchema#integer"
+                }
+            ],
+            "fup8:cch": [
+                {
+                    "type": "literal",
+                    "property_id": 212,
+                    "property_label": "Choix du Créneau Horaire",
+                    "is_public": true,
+                    "@value": "3h00"
+                }
+            ],
+            "fup8:pcCM": [
+                {
+                    "type": "numeric:integer",
+                    "property_id": 213,
+                    "property_label": "% Cours magistraux",
+                    "is_public": true,
+                    "@value": 50,
+                    "@type": "http://www.w3.org/2001/XMLSchema#integer"
+                }
+            ],
+            "fup8:pcTD": [
+                {
+                    "type": "numeric:integer",
+                    "property_id": 214,
+                    "property_label": "% Travaux dirigés",
+                    "is_public": true,
+                    "@value": 50,
+                    "@type": "http://www.w3.org/2001/XMLSchema#integer"
+                }
+            ],
+            "fup8:pcTP": [
+                {
+                    "type": "numeric:integer",
+                    "property_id": 215,
+                    "property_label": "% Travaux pratiques",
+                    "is_public": true,
+                    "@value": 0,
+                    "@type": "http://www.w3.org/2001/XMLSchema#integer"
+                }
+            ],
+            "fup8:sd": [
+                {
+                    "type": "numeric:integer",
+                    "property_id": 216,
+                    "property_label": "Seuil dédoublement",
+                    "is_public": true,
+                    "@value": 30,
+                    "@type": "http://www.w3.org/2001/XMLSchema#integer"
+                }
+            ],
+            "fup8:libre": [
+                {
+                    "type": "literal",
+                    "property_id": 217,
+                    "property_label": "EC Libre",
+                    "is_public": true,
+                    "@value": "Non"
+                }
+            ],
+            "fup8:nbg": [
+                {
+                    "type": "numeric:integer",
+                    "property_id": 220,
+                    "property_label": "Nombre de groupe",
+                    "is_public": true,
+                    "@value": 1,
+                    "@type": "http://www.w3.org/2001/XMLSchema#integer"
+                }
+            ],
+            "fup8:hasParcours": [
+                {
+                    "type": "resource",
+                    "property_id": 225,
+                    "property_label": "A comme Parcours",
+                    "is_public": true,
+                    "@id": "http://localhost/omk_gestForma/api/items/54",
+                    "value_resource_id": 54,
+                    "value_resource_name": "items",
+                    "url": null,
+                    "display_title": "M2 ACEHN"
+                }
+            ]
+        },
+        "events": [
+            {
+                "intervenant": "Samuel Szoniecky",
+                "code": "DMA4EDD4",
+                "cours": "Ethique du web",
+                "dateStart": "2025-02-13T08:00:00.000Z",
+                "jour": "jeudi 13 février 2025",
+                "début": "09:00",
+                "fin": "15:00",
+                "nb Heure": 6
+            },
+            {
+                "intervenant": "Samuel Szoniecky",
+                "code": "DMA4EDD4",
+                "cours": "Ethique du web",
+                "dateStart": "2025-02-20T08:00:00.000Z",
+                "jour": "jeudi 20 février 2025",
+                "début": "09:00",
+                "fin": "15:00",
+                "nb Heure": 6
+            },
+            {
+                "intervenant": "Samuel Szoniecky",
+                "code": "DMA4EDD4",
+                "cours": "Ethique du web",
+                "dateStart": "2025-02-28T08:00:00.000Z",
+                "jour": "vendredi 28 février 2025",
+                "début": "09:00",
+                "fin": "15:00",
+                "nb Heure": 6
+            },
+            {
+                "intervenant": "Samuel Szoniecky",
+                "code": "DMA4EDD4",
+                "cours": "Ethique du web",
+                "dateStart": "2025-03-07T08:00:00.000Z",
+                "jour": "vendredi 7 mars 2025",
+                "début": "09:00",
+                "fin": "15:00",
+                "nb Heure": 6
+            },
+            {
+                "intervenant": "Samuel Szoniecky",
+                "code": "DMA4EDD4",
+                "cours": "Ethique du web",
+                "dateStart": "2025-03-14T08:00:00.000Z",
+                "jour": "vendredi 14 mars 2025",
+                "début": "09:00",
+                "fin": "15:00",
+                "nb Heure": 6
+            }
+        ],
+        "value": 30
+    },
+    {
+        "label": "DMA4EDD5",
+        "oItem": {
+            "@context": "http://localhost/omk_gestForma/api-context",
+            "@id": "http://localhost/omk_gestForma/api/items/468",
+            "@type": [
+                "o:Item",
+                "fup8:EC"
+            ],
+            "o:id": 468,
+            "o:is_public": true,
+            "o:owner": {
+                "@id": "http://localhost/omk_gestForma/api/users/1",
+                "o:id": 1
+            },
+            "o:resource_class": {
+                "@id": "http://localhost/omk_gestForma/api/resource_classes/113",
+                "o:id": 113
+            },
+            "o:resource_template": {
+                "@id": "http://localhost/omk_gestForma/api/resource_templates/4",
+                "o:id": 4
+            },
+            "o:thumbnail": null,
+            "o:title": "EC2 Méthodologie pour la conduite d'études",
+            "thumbnail_display_urls": {
+                "large": null,
+                "medium": null,
+                "square": null
+            },
+            "o:created": {
+                "@value": "2024-06-11T16:15:59+00:00",
+                "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+            },
+            "o:modified": {
+                "@value": "2024-06-11T16:15:59+00:00",
+                "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+            },
+            "o:primary_media": null,
+            "o:media": [],
+            "o:item_set": [],
+            "o:site": [],
+            "dcterms:title": [
+                {
+                    "type": "literal",
+                    "property_id": 1,
+                    "property_label": "Title",
+                    "is_public": true,
+                    "@value": "EC2 Méthodologie pour la conduite d'études"
+                }
+            ],
+            "fup8:code": [
+                {
+                    "type": "literal",
+                    "property_id": 206,
+                    "property_label": "Code EC",
+                    "is_public": true,
+                    "@value": "DMA4EDD5"
+                }
+            ],
+            "fup8:hasUE": [
+                {
+                    "type": "resource",
+                    "property_id": 224,
+                    "property_label": "A comme UE",
+                    "is_public": true,
+                    "@id": "http://localhost/omk_gestForma/api/items/354",
+                    "value_resource_id": 354,
+                    "value_resource_name": "items",
+                    "url": null,
+                    "display_title": "UE 6 Professionnalisation et recherche"
+                }
+            ],
+            "foaf:status": [
+                {
+                    "type": "literal",
+                    "property_id": 184,
+                    "property_label": "status",
+                    "is_public": true,
+                    "@value": "Obligatoire (O)"
+                }
+            ],
+            "fup8:ects": [
+                {
+                    "type": "numeric:integer",
+                    "property_id": 207,
+                    "property_label": "ects",
+                    "is_public": true,
+                    "@value": 5,
+                    "@type": "http://www.w3.org/2001/XMLSchema#integer"
+                }
+            ],
+            "fup8:coef": [
+                {
+                    "type": "numeric:integer",
+                    "property_id": 209,
+                    "property_label": "coefficient",
+                    "is_public": true,
+                    "@value": 3,
+                    "@type": "http://www.w3.org/2001/XMLSchema#integer"
+                }
+            ],
+            "fup8:vhch": [
+                {
+                    "type": "numeric:integer",
+                    "property_id": 211,
+                    "property_label": "Volume Horaire chargé",
+                    "is_public": true,
+                    "@value": 30,
+                    "@type": "http://www.w3.org/2001/XMLSchema#integer"
+                }
+            ],
+            "fup8:vhec": [
+                {
+                    "type": "numeric:integer",
+                    "property_id": 210,
+                    "property_label": "Volume Horaire en présentiel",
+                    "is_public": true,
+                    "@value": 30,
+                    "@type": "http://www.w3.org/2001/XMLSchema#integer"
+                }
+            ],
+            "fup8:cch": [
+                {
+                    "type": "literal",
+                    "property_id": 212,
+                    "property_label": "Choix du Créneau Horaire",
+                    "is_public": true,
+                    "@value": "3h00"
+                }
+            ],
+            "fup8:pcCM": [
+                {
+                    "type": "numeric:integer",
+                    "property_id": 213,
+                    "property_label": "% Cours magistraux",
+                    "is_public": true,
+                    "@value": 0,
+                    "@type": "http://www.w3.org/2001/XMLSchema#integer"
+                }
+            ],
+            "fup8:pcTD": [
+                {
+                    "type": "numeric:integer",
+                    "property_id": 214,
+                    "property_label": "% Travaux dirigés",
+                    "is_public": true,
+                    "@value": 100,
+                    "@type": "http://www.w3.org/2001/XMLSchema#integer"
+                }
+            ],
+            "fup8:pcTP": [
+                {
+                    "type": "numeric:integer",
+                    "property_id": 215,
+                    "property_label": "% Travaux pratiques",
+                    "is_public": true,
+                    "@value": 0,
+                    "@type": "http://www.w3.org/2001/XMLSchema#integer"
+                }
+            ],
+            "fup8:sd": [
+                {
+                    "type": "numeric:integer",
+                    "property_id": 216,
+                    "property_label": "Seuil dédoublement",
+                    "is_public": true,
+                    "@value": 30,
+                    "@type": "http://www.w3.org/2001/XMLSchema#integer"
+                }
+            ],
+            "fup8:libre": [
+                {
+                    "type": "literal",
+                    "property_id": 217,
+                    "property_label": "EC Libre",
+                    "is_public": true,
+                    "@value": "Non"
+                }
+            ],
+            "fup8:nbg": [
+                {
+                    "type": "numeric:integer",
+                    "property_id": 220,
+                    "property_label": "Nombre de groupe",
+                    "is_public": true,
+                    "@value": 1,
+                    "@type": "http://www.w3.org/2001/XMLSchema#integer"
+                }
+            ],
+            "fup8:hasParcours": [
+                {
+                    "type": "resource",
+                    "property_id": 225,
+                    "property_label": "A comme Parcours",
+                    "is_public": true,
+                    "@id": "http://localhost/omk_gestForma/api/items/54",
+                    "value_resource_id": 54,
+                    "value_resource_name": "items",
+                    "url": null,
+                    "display_title": "M2 ACEHN"
+                }
+            ]
+        },
+        "events": [
+            {
+                "intervenant": "Orélie Desfriches-Doria",
+                "code": "DMA4EDD5",
+                "cours": "Méthodologie pour la conduite d'études",
+                "dateStart": "2025-01-31T08:00:00.000Z",
+                "jour": "vendredi 31 janvier 2025",
+                "début": "09:00",
+                "fin": "17:00",
+                "nb Heure": 8
+            },
+            {
+                "intervenant": "Orélie Desfriches-Doria",
+                "code": "DMA4EDD5",
+                "cours": "Méthodologie pour la conduite d'études",
+                "dateStart": "2025-02-07T08:00:00.000Z",
+                "jour": "vendredi 7 février 2025",
+                "début": "09:00",
+                "fin": "17:00",
+                "nb Heure": 8
+            },
+            {
+                "intervenant": "Orélie Desfriches-Doria",
+                "code": "DMA4EDD5",
+                "cours": "Méthodologie pour la conduite d'études",
+                "dateStart": "2025-02-14T08:00:00.000Z",
+                "jour": "vendredi 14 février 2025",
+                "début": "09:00",
+                "fin": "16:00",
+                "nb Heure": 7
+            },
+            {
+                "intervenant": "Orélie Desfriches-Doria",
+                "code": "DMA4EDD5",
+                "cours": "Méthodologie pour la conduite d'études",
+                "dateStart": "2025-02-21T08:00:00.000Z",
+                "jour": "vendredi 21 février 2025",
+                "début": "09:00",
+                "fin": "16:00",
+                "nb Heure": 7
+            }
+        ],
+        "value": 30
+    },
+    {
+        "label": "DMA4EDD7",
+        "oItem": {
+            "@context": "http://localhost/omk_gestForma/api-context",
+            "@id": "http://localhost/omk_gestForma/api/items/465",
+            "@type": [
+                "o:Item",
+                "fup8:EC"
+            ],
+            "o:id": 465,
+            "o:is_public": true,
+            "o:owner": {
+                "@id": "http://localhost/omk_gestForma/api/users/1",
+                "o:id": 1
+            },
+            "o:resource_class": {
+                "@id": "http://localhost/omk_gestForma/api/resource_classes/113",
+                "o:id": 113
+            },
+            "o:resource_template": {
+                "@id": "http://localhost/omk_gestForma/api/resource_templates/4",
+                "o:id": 4
+            },
+            "o:thumbnail": null,
+            "o:title": "EC1 Communs et intelligence collective",
+            "thumbnail_display_urls": {
+                "large": null,
+                "medium": null,
+                "square": null
+            },
+            "o:created": {
+                "@value": "2024-06-11T16:15:59+00:00",
+                "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+            },
+            "o:modified": {
+                "@value": "2024-06-11T16:15:59+00:00",
+                "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+            },
+            "o:primary_media": null,
+            "o:media": [],
+            "o:item_set": [],
+            "o:site": [],
+            "dcterms:title": [
+                {
+                    "type": "literal",
+                    "property_id": 1,
+                    "property_label": "Title",
+                    "is_public": true,
+                    "@value": "EC1 Communs et intelligence collective"
+                }
+            ],
+            "fup8:code": [
+                {
+                    "type": "literal",
+                    "property_id": 206,
+                    "property_label": "Code EC",
+                    "is_public": true,
+                    "@value": "DMA4EDD7"
+                }
+            ],
+            "fup8:hasUE": [
+                {
+                    "type": "resource",
+                    "property_id": 224,
+                    "property_label": "A comme UE",
+                    "is_public": true,
+                    "@id": "http://localhost/omk_gestForma/api/items/353",
+                    "value_resource_id": 353,
+                    "value_resource_name": "items",
+                    "url": null,
+                    "display_title": "UE 5 Référentiels de connaissances"
+                }
+            ],
+            "foaf:status": [
+                {
+                    "type": "literal",
+                    "property_id": 184,
+                    "property_label": "status",
+                    "is_public": true,
+                    "@value": "Obligatoire (O)"
+                }
+            ],
+            "fup8:ects": [
+                {
+                    "type": "numeric:integer",
+                    "property_id": 207,
+                    "property_label": "ects",
+                    "is_public": true,
+                    "@value": 6,
+                    "@type": "http://www.w3.org/2001/XMLSchema#integer"
+                }
+            ],
+            "fup8:coef": [
+                {
+                    "type": "numeric:integer",
+                    "property_id": 209,
+                    "property_label": "coefficient",
+                    "is_public": true,
+                    "@value": 3,
+                    "@type": "http://www.w3.org/2001/XMLSchema#integer"
+                }
+            ],
+            "fup8:vhch": [
+                {
+                    "type": "numeric:integer",
+                    "property_id": 211,
+                    "property_label": "Volume Horaire chargé",
+                    "is_public": true,
+                    "@value": 30,
+                    "@type": "http://www.w3.org/2001/XMLSchema#integer"
+                }
+            ],
+            "fup8:vhec": [
+                {
+                    "type": "numeric:integer",
+                    "property_id": 210,
+                    "property_label": "Volume Horaire en présentiel",
+                    "is_public": true,
+                    "@value": 30,
+                    "@type": "http://www.w3.org/2001/XMLSchema#integer"
+                }
+            ],
+            "fup8:cch": [
+                {
+                    "type": "literal",
+                    "property_id": 212,
+                    "property_label": "Choix du Créneau Horaire",
+                    "is_public": true,
+                    "@value": "3h00"
+                }
+            ],
+            "fup8:pcCM": [
+                {
+                    "type": "numeric:integer",
+                    "property_id": 213,
+                    "property_label": "% Cours magistraux",
+                    "is_public": true,
+                    "@value": 50,
+                    "@type": "http://www.w3.org/2001/XMLSchema#integer"
+                }
+            ],
+            "fup8:pcTD": [
+                {
+                    "type": "numeric:integer",
+                    "property_id": 214,
+                    "property_label": "% Travaux dirigés",
+                    "is_public": true,
+                    "@value": 50,
+                    "@type": "http://www.w3.org/2001/XMLSchema#integer"
+                }
+            ],
+            "fup8:pcTP": [
+                {
+                    "type": "numeric:integer",
+                    "property_id": 215,
+                    "property_label": "% Travaux pratiques",
+                    "is_public": true,
+                    "@value": 0,
+                    "@type": "http://www.w3.org/2001/XMLSchema#integer"
+                }
+            ],
+            "fup8:sd": [
+                {
+                    "type": "numeric:integer",
+                    "property_id": 216,
+                    "property_label": "Seuil dédoublement",
+                    "is_public": true,
+                    "@value": 30,
+                    "@type": "http://www.w3.org/2001/XMLSchema#integer"
+                }
+            ],
+            "fup8:libre": [
+                {
+                    "type": "literal",
+                    "property_id": 217,
+                    "property_label": "EC Libre",
+                    "is_public": true,
+                    "@value": "Non"
+                }
+            ],
+            "fup8:nbg": [
+                {
+                    "type": "numeric:integer",
+                    "property_id": 220,
+                    "property_label": "Nombre de groupe",
+                    "is_public": true,
+                    "@value": 1,
+                    "@type": "http://www.w3.org/2001/XMLSchema#integer"
+                }
+            ],
+            "fup8:hasParcours": [
+                {
+                    "type": "resource",
+                    "property_id": 225,
+                    "property_label": "A comme Parcours",
+                    "is_public": true,
+                    "@id": "http://localhost/omk_gestForma/api/items/54",
+                    "value_resource_id": 54,
+                    "value_resource_name": "items",
+                    "url": null,
+                    "display_title": "M2 ACEHN"
+                }
+            ]
+        },
+        "events": [
+            {
+                "intervenant": "Nicolas Sauret",
+                "code": "DMA4EDD7",
+                "cours": "Communs et intelligence collective",
+                "dateStart": "2024-11-21T08:00:00.000Z",
+                "jour": "jeudi 21 novembre 2024",
+                "début": "09:00",
+                "fin": "15:00",
+                "nb Heure": 6
+            },
+            {
+                "intervenant": "Nicolas Sauret",
+                "code": "DMA4EDD7",
+                "cours": "Communs et intelligence collective",
+                "dateStart": "2024-11-28T08:00:00.000Z",
+                "jour": "jeudi 28 novembre 2024",
+                "début": "09:00",
+                "fin": "15:00",
+                "nb Heure": 6
+            },
+            {
+                "intervenant": "Nicolas Sauret",
+                "code": "DMA4EDD7",
+                "cours": "Communs et intelligence collective",
+                "dateStart": "2024-12-05T08:00:00.000Z",
+                "jour": "jeudi 5 décembre 2024",
+                "début": "09:00",
+                "fin": "15:00",
+                "nb Heure": 6
+            },
+            {
+                "intervenant": "Nicolas Sauret",
+                "code": "DMA4EDD7",
+                "cours": "Communs et intelligence collective",
+                "dateStart": "2024-12-12T08:00:00.000Z",
+                "jour": "jeudi 12 décembre 2024",
+                "début": "09:00",
+                "fin": "15:00",
+                "nb Heure": 6
+            },
+            {
+                "intervenant": "Nicolas Sauret",
+                "code": "DMA4EDD7",
+                "cours": "Communs et intelligence collective",
+                "dateStart": "2025-02-06T08:00:00.000Z",
+                "jour": "jeudi 6 février 2025",
+                "début": "09:00",
+                "fin": "15:00",
+                "nb Heure": 6
+            }
+        ],
+        "value": 30
+    },
+    {
+        "label": "DMA4EDD8",
+        "oItem": {
+            "@context": "http://localhost/omk_gestForma/api-context",
+            "@id": "http://localhost/omk_gestForma/api/items/467",
+            "@type": [
+                "o:Item",
+                "fup8:EC"
+            ],
+            "o:id": 467,
+            "o:is_public": true,
+            "o:owner": {
+                "@id": "http://localhost/omk_gestForma/api/users/1",
+                "o:id": 1
+            },
+            "o:resource_class": {
+                "@id": "http://localhost/omk_gestForma/api/resource_classes/113",
+                "o:id": 113
+            },
+            "o:resource_template": {
+                "@id": "http://localhost/omk_gestForma/api/resource_templates/4",
+                "o:id": 4
+            },
+            "o:thumbnail": null,
+            "o:title": "EC1 Veille informationnelle",
+            "thumbnail_display_urls": {
+                "large": null,
+                "medium": null,
+                "square": null
+            },
+            "o:created": {
+                "@value": "2024-06-11T16:15:59+00:00",
+                "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+            },
+            "o:modified": {
+                "@value": "2024-06-11T16:15:59+00:00",
+                "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+            },
+            "o:primary_media": null,
+            "o:media": [],
+            "o:item_set": [],
+            "o:site": [],
+            "dcterms:title": [
+                {
+                    "type": "literal",
+                    "property_id": 1,
+                    "property_label": "Title",
+                    "is_public": true,
+                    "@value": "EC1 Veille informationnelle"
+                }
+            ],
+            "fup8:code": [
+                {
+                    "type": "literal",
+                    "property_id": 206,
+                    "property_label": "Code EC",
+                    "is_public": true,
+                    "@value": "DMA4EDD8"
+                }
+            ],
+            "fup8:hasUE": [
+                {
+                    "type": "resource",
+                    "property_id": 224,
+                    "property_label": "A comme UE",
+                    "is_public": true,
+                    "@id": "http://localhost/omk_gestForma/api/items/354",
+                    "value_resource_id": 354,
+                    "value_resource_name": "items",
+                    "url": null,
+                    "display_title": "UE 6 Professionnalisation et recherche"
+                }
+            ],
+            "foaf:status": [
+                {
+                    "type": "literal",
+                    "property_id": 184,
+                    "property_label": "status",
+                    "is_public": true,
+                    "@value": "Obligatoire (O)"
+                }
+            ],
+            "fup8:ects": [
+                {
+                    "type": "numeric:integer",
+                    "property_id": 207,
+                    "property_label": "ects",
+                    "is_public": true,
+                    "@value": 5,
+                    "@type": "http://www.w3.org/2001/XMLSchema#integer"
+                }
+            ],
+            "fup8:coef": [
+                {
+                    "type": "numeric:integer",
+                    "property_id": 209,
+                    "property_label": "coefficient",
+                    "is_public": true,
+                    "@value": 7,
+                    "@type": "http://www.w3.org/2001/XMLSchema#integer"
+                }
+            ],
+            "fup8:vhch": [
+                {
+                    "type": "numeric:integer",
+                    "property_id": 211,
+                    "property_label": "Volume Horaire chargé",
+                    "is_public": true,
+                    "@value": 20,
+                    "@type": "http://www.w3.org/2001/XMLSchema#integer"
+                }
+            ],
+            "fup8:vhec": [
+                {
+                    "type": "numeric:integer",
+                    "property_id": 210,
+                    "property_label": "Volume Horaire en présentiel",
+                    "is_public": true,
+                    "@value": 20,
+                    "@type": "http://www.w3.org/2001/XMLSchema#integer"
+                }
+            ],
+            "fup8:cch": [
+                {
+                    "type": "literal",
+                    "property_id": 212,
+                    "property_label": "Choix du Créneau Horaire",
+                    "is_public": true,
+                    "@value": "3h00"
+                }
+            ],
+            "fup8:pcCM": [
+                {
+                    "type": "numeric:integer",
+                    "property_id": 213,
+                    "property_label": "% Cours magistraux",
+                    "is_public": true,
+                    "@value": 0,
+                    "@type": "http://www.w3.org/2001/XMLSchema#integer"
+                }
+            ],
+            "fup8:pcTD": [
+                {
+                    "type": "numeric:integer",
+                    "property_id": 214,
+                    "property_label": "% Travaux dirigés",
+                    "is_public": true,
+                    "@value": 100,
+                    "@type": "http://www.w3.org/2001/XMLSchema#integer"
+                }
+            ],
+            "fup8:pcTP": [
+                {
+                    "type": "numeric:integer",
+                    "property_id": 215,
+                    "property_label": "% Travaux pratiques",
+                    "is_public": true,
+                    "@value": 0,
+                    "@type": "http://www.w3.org/2001/XMLSchema#integer"
+                }
+            ],
+            "fup8:sd": [
+                {
+                    "type": "numeric:integer",
+                    "property_id": 216,
+                    "property_label": "Seuil dédoublement",
+                    "is_public": true,
+                    "@value": 30,
+                    "@type": "http://www.w3.org/2001/XMLSchema#integer"
+                }
+            ],
+            "fup8:libre": [
+                {
+                    "type": "literal",
+                    "property_id": 217,
+                    "property_label": "EC Libre",
+                    "is_public": true,
+                    "@value": "Non"
+                }
+            ],
+            "fup8:nbg": [
+                {
+                    "type": "numeric:integer",
+                    "property_id": 220,
+                    "property_label": "Nombre de groupe",
+                    "is_public": true,
+                    "@value": 0,
+                    "@type": "http://www.w3.org/2001/XMLSchema#integer"
+                }
+            ],
+            "fup8:hasParcours": [
+                {
+                    "type": "resource",
+                    "property_id": 225,
+                    "property_label": "A comme Parcours",
+                    "is_public": true,
+                    "@id": "http://localhost/omk_gestForma/api/items/54",
+                    "value_resource_id": 54,
+                    "value_resource_name": "items",
+                    "url": null,
+                    "display_title": "M2 ACEHN"
+                }
+            ]
+        },
+        "events": [
+            {
+                "intervenant": "Mathieu Andro",
+                "code": "DMA4EDD8",
+                "cours": "Veille informationnelle",
+                "dateStart": "2024-10-04T07:00:00.000Z",
+                "jour": "vendredi 4 octobre 2024",
+                "début": "09:00",
+                "fin": "15:00",
+                "nb Heure": 6
+            },
+            {
+                "intervenant": "Mathieu Andro",
+                "code": "DMA4EDD8",
+                "cours": "Veille informationnelle",
+                "dateStart": "2024-11-15T08:00:00.000Z",
+                "jour": "vendredi 15 novembre 2024",
+                "début": "09:00",
+                "fin": "15:00",
+                "nb Heure": 6
+            },
+            {
+                "intervenant": "Mathieu Andro",
+                "code": "DMA4EDD8",
+                "cours": "Veille informationnelle",
+                "dateStart": "2024-11-29T08:00:00.000Z",
+                "jour": "vendredi 29 novembre 2024",
+                "début": "09:00",
+                "fin": "15:00",
+                "nb Heure": 6
+            },
+            {
+                "intervenant": "Mathieu Andro",
+                "code": "DMA4EDD8",
+                "cours": "Veille informationnelle",
+                "dateStart": "2024-12-06T08:00:00.000Z",
+                "jour": "vendredi 6 décembre 2024",
+                "début": "09:00",
+                "fin": "15:00",
+                "nb Heure": 6
+            },
+            {
+                "intervenant": "Mathieu Andro",
+                "code": "DMA4EDD8",
+                "cours": "Veille informationnelle",
+                "dateStart": "2025-01-30T08:00:00.000Z",
+                "jour": "jeudi 30 janvier 2025",
+                "début": "09:00",
+                "fin": "15:00",
+                "nb Heure": 6
+            }
+        ],
+        "value": 30
+    },
+    {
+        "label": "Jury",
+        "oItem": {
+            "@context": "http://localhost/omk_gestForma/api-context",
+            "@id": "http://localhost/omk_gestForma/api/items/470",
+            "@type": [
+                "o:Item",
+                "fup8:EC"
+            ],
+            "o:id": 470,
+            "o:is_public": true,
+            "o:owner": {
+                "@id": "http://localhost/omk_gestForma/api/users/1",
+                "o:id": 1
+            },
+            "o:resource_class": {
+                "@id": "http://localhost/omk_gestForma/api/resource_classes/113",
+                "o:id": 113
+            },
+            "o:resource_template": {
+                "@id": "http://localhost/omk_gestForma/api/resource_templates/4",
+                "o:id": 4
+            },
+            "o:thumbnail": null,
+            "o:title": "Jury",
+            "thumbnail_display_urls": {
+                "large": null,
+                "medium": null,
+                "square": null
+            },
+            "o:created": {
+                "@value": "2024-06-14T06:36:18+00:00",
+                "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+            },
+            "o:modified": {
+                "@value": "2024-06-14T06:38:06+00:00",
+                "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+            },
+            "o:primary_media": null,
+            "o:media": [],
+            "o:item_set": [],
+            "o:site": [],
+            "dcterms:title": [
+                {
+                    "type": "literal",
+                    "property_id": 1,
+                    "property_label": "Title",
+                    "is_public": true,
+                    "@value": "Jury"
+                }
+            ],
+            "fup8:code": [
+                {
+                    "type": "literal",
+                    "property_id": 206,
+                    "property_label": "Code EC",
+                    "is_public": true,
+                    "@value": "Jury"
+                }
+            ]
+        },
+        "events": [
+            {
+                "intervenant": "Equipe pédagogique ACEHN",
+                "code": "Jury",
+                "cours": "Jury Note d'intention",
+                "dateStart": "2024-12-19T08:00:00.000Z",
+                "jour": "jeudi 19 décembre 2024",
+                "début": "09:00",
+                "fin": "15:00",
+                "nb Heure": 6
+            },
+            {
+                "intervenant": "Equipe pédagogique ACEHN",
+                "code": "Jury",
+                "cours": "Jury projet collaboratif",
+                "dateStart": "2025-03-27T08:00:00.000Z",
+                "jour": "jeudi 27 mars 2025",
+                "début": "09:00",
+                "fin": "15:00",
+                "nb Heure": 6
+            },
+            {
+                "intervenant": "Equipe pédagogique ACEHN",
+                "code": "Jury",
+                "cours": "Soutenance mémoire",
+                "dateStart": "2025-05-15T07:00:00.000Z",
+                "jour": "jeudi 15 mai 2025",
+                "début": "09:00",
+                "fin": "16:00",
+                "nb Heure": 7
+            }
+        ],
+        "value": 19
+    }
+]
