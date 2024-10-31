@@ -10,6 +10,7 @@ let ldr = new loader();
 ldr.show();
 let aUrl = new appUrl({'url':new URL(document.location)}),
 rsParcours, rsEC, rsEnseignants, rsInterventions, rsJours, rsCours, rsGantt, agenda,
+editorEvent,
 optDate = {
     weekday: "long",
     year: "numeric",
@@ -449,7 +450,7 @@ function getCellEditor(headers){
     })
   }
 
-  function showEvent(e,d){
+  async function showEvent(e,d){
     let ids = e.currentTarget.id.split('_'),
         cour = rsGantt[ids[1]],
         tache = cour.events[ids[2]];
@@ -467,20 +468,24 @@ function getCellEditor(headers){
                     <input type="text" class="form-control" id="inptCours" value="${tache.cours}">
                 </div>
                 <div class="mb-3">
-                    <label for="inptDescription" class="form-label">Description</label>
-                    <textarea class="form-control" id="inptDescription" rows="6">${tache.gEvent.description ? tache.gEvent.description : ''}</textarea>
-                </div>
-                <div class="mb-3">
                     <label for="inptLocalisation" class="form-label">Localisation</label>
                     <input type="text" class="form-control" id="inptLocalisation" value="${tache.gEvent.location ? tache.gEvent.location : ''}">
                 </div>
                 <input type="hidden" id="idEvent" name="idEvent" value="${e.currentTarget.id}" />
+                <div id="eventEditor">
+                ${tache.gEvent.description ? tache.gEvent.description : ''}
+                </div>
             </div>
         </div>`;
         mMessage.setBody(body);
         mMessage.setBoutons([{'name':"Fermer"},{'name':"Modifier",'fct':patchEvent,'class':'btn-danger'}])                
         mMessage.show();
 
+        editorEvent = await ClassicEditor
+            .create( document.querySelector( '#eventEditor' ) )
+            .catch( error => {
+                console.error( error );
+            } );
   }
 
   function patchEvent(){
@@ -492,7 +497,7 @@ function getCellEditor(headers){
         tache = cour.events[ids[2]],
         inpCours = body.select('#inptCours').node().value,
         inpLocalisation = body.select('#inptLocalisation').node().value,
-        inptDescription = body.select('#inptDescription').node().value,
+        inptDescription = editorEvent.getData(),
         event = gapi.client.calendar.events.get({"calendarId": agenda.id, "eventId": tache.gEvent.id});
         
     if(inpCours!=tache.cours){

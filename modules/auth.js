@@ -4,7 +4,7 @@ export class auth {
         var me = this;
         this.modal;
         this.m;
-        this.navbar = params.navbar ? params.navbar : 'navbarMain';
+        this.navbar = params.navbar ? params.navbar : false;
         this.apiOmk = params.apiOmk ? params.apiOmk : false; 
         this.mail = params.mail ? params.mail : false;
         this.ident = params.ident ? params.ident : false;
@@ -27,7 +27,7 @@ export class auth {
             if(me.apiOmk){
                 me.apiOmk += me.apiOmk.slice(-1)=='/' ? "" : "/";
                 me.omk = new omk({'api':me.apiOmk});
-                createNavBar();
+                if(me.navbar)createNavBar();
                 me.getUser();
             }  
             if(me.gCLIENT_ID){
