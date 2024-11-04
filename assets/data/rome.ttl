@@ -130,6 +130,11 @@ rome:hasDomaineProfessionnel a rdf:Property ;
     rdfs:domain o:Resource ;
     vs:term_status "experimental" .
 
+rome:grandDomaineProfessionnel a rdfs:Class ;
+    rdfs:label "Grand domaine professionnel" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
 rome:grandDomaine a rdf:Property ;
     rdfs:label "Grand domaine professionnel" ;
     rdfs:domain o:Resource ;

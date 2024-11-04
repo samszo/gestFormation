@@ -19,7 +19,7 @@ optDate = {
   },
 a = new auth({'navbar':d3.select('#navbarMain'),
         mail:'acehn@univ-paris8.fr',
-        apiOmk:'http://localhost/omk_gestForma/api/',
+        apiOmk:'http://localhost/omk_acehn/api/',
         //apiOmk:'../api/',
         ident: 'Fe82ZlMwNP8KR88BKWzGNnF7eS5qChwr',
         key:'Jo5RZc9S3qr79GAe2TZk9UBakWcZbP48',
@@ -46,7 +46,8 @@ d3.select('#btnRefreshData').on('click', () => {
     d3.select(".list-group-item.active").attr('class',"list-group-item").attr("aria-current",false);
     setCalHeatmap(rsJours);
     showInterventions(rsInterventions);  
-    createGantt(rsCours);  
+    createGantt(rsCours);
+    showStatsRome();  
 });
 
 
@@ -134,7 +135,7 @@ function selectCalendar(e,a){
 
 function selectParcours(e,p){
     console.log(p);
-    d3.select('#contentFormations').html('<iframe src='+a.omk.getItemAdminLink(p)+'></iframe>');
+    d3.select('#contentFormations').html('<iframe src='+a.omk.getAdminLink(p)+'></iframe>');
     //récupère les events
     try {
         var request = gapi.client.calendar.events.list({
@@ -229,6 +230,7 @@ function initEvents(items){
     setCalHeatmap(rsJours);
     showInterventions(rsInterventions);
     createGantt(rsCours);
+    showStatsRome();  
     
 }
 
@@ -254,7 +256,7 @@ function showListe(s,data){
         .on('click',selectItemListe);
     li.append('a').attr('class',"mb-1")
         .attr('target','_blank')
-        .attr('href',d=>d.oItem ? a.omk.getItemAdminLink(d.oItem) : '')    
+        .attr('href',d=>d.oItem ? a.omk.getAdminLink(d.oItem) : '')    
         .text(d=>d.oItem ? 'Voir les détails' : '')
 }
 function selectItemListe(e,d){
@@ -311,6 +313,17 @@ function setCalHeatmap(jours){
       });    
     calHM.paint(calOpt);
 }
+
+function showStatsRome(){
+    d3.select('#statsRome').select('div').remove();
+    //récupère les données
+    let url = a.omk.api.replace('/api/','/s/gestion-formation/data-visualization/dataset/3');
+    d3.json(url).then(rs=>{
+        let grpRomeLink = Array.from(d3.groups(rs.links, e => e.link_label));
+        console.log(grpRomeLink);
+        //calcul les compétences les plus liées
+    })
+}  
 
 function showInterventions(rs){
     d3.select('#tableMain').select('div').remove();
