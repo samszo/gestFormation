@@ -7,7 +7,7 @@ export class omk {
         this.ident = params.ident ? params.ident : false;
         this.mail = params.mail ? params.mail : false;
         this.api = params.api ? params.api : false;
-        this.vocabs = params.vocabs ? params.vocabs : ['dcterms','fup8','rome'];
+        this.vocabs = params.vocabs ? params.vocabs : ['dcterms','fup8','rome','rncp'];
         this.loader = new loader();
         this.user = false;
         this.props = [];
@@ -18,7 +18,7 @@ export class omk {
         this.rts
         this.anythingLLM = false;
         this.queries = [];
-        let perPage = 100, types={'items':'o:item','media':'o:media'};
+        let perPage = 1000, types={'items':'o:item','media':'o:media'};
                 
         this.init = function () {
             //récupères les propriétés
@@ -120,7 +120,7 @@ export class omk {
         }
 
 
-        this.updateRessource = function (id, data, type='items', fd=null, m='PUT',cb=false, dataOri=false){
+        this.updateRessource = async function (id, data, type='items', fd=null, m='PUT',cb=false, dataOri=false){
             let oriData, newData, url = me.api+type+'/'+id+'?key_identity='+me.ident+'&key_credential='+me.key;
             if(data){
                 //récupère les données originales
@@ -132,7 +132,7 @@ export class omk {
                         //vérifie si la propriété est dans les données originales                        
                         if(oriData[p]){
                             //m=="PUT" : on ajoute les nouvelles valeurs
-                            if(m=="PUT")oriData[p]=oriData[p].concat(newData[p]);
+                            if(m=="PUT")oriData[p]= Array.isArray(oriData[p]) ? oriData[p].concat(newData[p]) : newData[p];
                             //m=="PATCH" : on modifie les valeurs
                             if(m=="PATCH")oriData[p]=newData[p];          
                         }else{
@@ -142,11 +142,10 @@ export class omk {
                     }
                 }
             }
-            postData({'u':url,'m':m}, fd ? fd : oriData).then((rs) => {
-                me.items[rs['o:id']]=rs;
-                if(cb)cb(rs);
-            });
-
+            let rs = await postData({'u':url,'m':m}, fd ? fd : oriData);
+            me.items[rs['o:id']]=rs;
+            if(cb)cb(rs)
+            else return rs;
         }        
 
         this.getItem = function (id, cb=false){
@@ -242,7 +241,7 @@ export class omk {
 
         }
 
-        this.createItem = function (data, cb=false, verifDoublons){
+        this.createItem = async function (data, cb=false, verifDoublons){
             if(verifDoublons){
                 let items = me.searchItems(verifDoublons);
                 if(items.length){
@@ -250,11 +249,11 @@ export class omk {
                     return items[0];
                 }
             }
-            let url = me.api+'items?key_identity='+me.ident+'&key_credential='+me.key;
-            postData({'u':url,'m':'POST'}, me.formatData(data)).then((rs) => {
-                me.items[rs['o:id']]=rs;
-                if(cb)cb(rs);
-            });
+            let url = me.api+'items?key_identity='+me.ident+'&key_credential='+me.key,
+            rs = await postData({'u':url,'m':'POST'}, me.formatData(data));
+            me.items[rs['o:id']]=rs;
+            if(cb)cb(rs);
+            return rs;
         }
 
         this.getConcept = async function (concept){
@@ -272,6 +271,27 @@ export class omk {
                     "skos:prefLabel":concept,
                 };
             return await postData({'u':url,'m':'POST'}, me.formatData(data));
+        }
+        this.getsetResource = async function (r){
+            if(me.items[r.index])return me.items[r.index];
+            //vérifie l'existence de la ressource
+            let query = "resource_class_id[]="+me.getClassByTerm(r.c)['o:id'], i=0;
+            if(!r.verif)r.verif=r.dt;
+            for (const k in r.verif) {
+                query += "&property["+i+"][joiner]=and&property["+i+"][property]="
+                +me.getPropId(k)
+                +"&property["+i+"][type]=eq&property["+i+"][text]="+r.verif[k];
+            }
+            let items = me.searchItems(query);
+            if(items.length){
+                me.items[r.index]=items[0];
+                return items[0];
+            } 
+            let url = me.api+'items?key_identity='+me.ident+'&key_credential='+me.key;
+            r.dt['o:resource_class']=r.c;
+            r.dt['o:resource_template']=r.rt;
+            me.items[r.index] = await postData({'u':url,'m':'POST'}, me.formatData(r.dt));
+            return me.items[r.index];
         }
 
         this.formatData = function (data,type="o:Item"){
@@ -306,6 +326,7 @@ export class omk {
                     default:
                         if(!fd[k])fd[k]=[];
                         p = me.props.filter(prp=>prp['o:term']==k)[0];
+                        if(!p)throw new Error("Cette propriété n'existe pas : "+k);
                         if(Array.isArray(v)){
                             fd[k] = v.map(val=>formatValue(p,val));
                         }else                        
@@ -321,8 +342,11 @@ export class omk {
         function formatValue(p,v){
             if(typeof v === 'object' && v.rid)
                 return {"property_id": p['o:id'], "value_resource_id" : v.rid, "type" : "resource" };    
-            else if(typeof v === 'object' && v.a)
-                return {"property_id": p['o:id'], "@value" : v.v, "type" : "literal", "@annotation":v.a};    
+            else if(typeof v === 'object' && v.a){
+                let value = formatValue(p,v.v);
+                value["@annotation"]=v.a;
+                return value;
+            }
             else if(typeof v === 'object' && v.u)
                 return {"property_id": p['o:id'], "@id" : v.u, "o:label":v.l, "type" : "uri" };    
             else if(typeof v === 'object')

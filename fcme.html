@@ -5,41 +5,76 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formations -> Competences -> Métiers -> Emplois</title>
     <script src="assets/js/d3.min.js"></script>
+    <style>
+    .btnAddToOmk {
+        cursor: pointer;
+    }
+    </style>
 </head>
 <body>
     <header>
         <h1>Formations -> Competences -> Métiers -> Emplois</h1>
+        <div>
+            <label for="tokenInput">Entrez le token France Travail API :</label>
+            <input type="text" id="tokenInput" placeholder="Entrez le token" required>
+            <button id="btnToken" type="button">Valider le token</button>
+        </div>
+        
     </header>
     <nav>
         <ul>
-            <li><a href="#section1">Importer les métiers</a></li>
+            <li><a href="#section1">Importer les métiers ROME</a></li>
+            <li><a href="#section10">Mettre à jour les compétences ROME</a></li>
             <li><a href="#section11">Relier les appellations au parcours</a></li>
-            <li><a href="#section2">Stats ROME</a></li>
+            <li><a href="#section12">Stats ROME</a></li>
+            <li><a href="#section2">Importer les fiches RNCP</a></li>
         </ul>
     </nav>
     <main>
         <section id="section1">
             <h2>Importer les métiers</h2>
-            <form>
-                <label for="urlInput">Entrez l'URL de la liste des métiers :</label>
+            <div>
+                <label for="urlInput">Entrez l'URL de la liste des métiers ROME :</label>
                 <input type="url" id="urlInput" name="urlInput" required>
                 <button id="btnListeMetiers" type="button">Soumettre</button>
-            </form>
+            </div>
             <div id="btnSave"></div>
             <div id="resultSave"></div>
         </section>
+        <section id="section10">
+            <h2>Mettre à jour les compétences ROME</h2>
+            <button id="btnUpdateRomeComp" type="button">Enregistrer</button>
+            <button id="btnCorrectRomeAppComp" type="button">Corriger les compétences des appellations</button>
+            <div id="resultUpdateRomeComp"></div>
+        </section>
         <section id="section11">
             <h2>Relier les appellations au parcours</h2>
-            <h3 id="titreParcours"></h3>
-            <div id="tableRelations"></div>
-            <button id="btnCreateRelation" type="button">Rechercher les relations</button>
+            <div>
+                <label for="inputCodeRome">Entrez le code ROME d'un métier</label>
+                <input type="text" id="inputCodeRome" name="inputCodeRome" required>
+            </div>    
+            <div>
+                <label for="ddListeParcours">Sélectionner un parcours :</label>
+                <select id="ddListeParcours"></select>
+                <h3 id="titreParcours"></h3>
+            </div>    
+            <button id="btnCreaRelaAppParc" type="button">Rechercher les relations</button>
+            <div id="tableRelaAppParc"></div>
             <div id="resultSaveRelation"></div>
         </section>
-
-        <section id="section2">
+        <section id="section12">
             <h2>Statistiques des éléments ROME</h2>
             <button id="btnCalcStats" type="button">Calculer</button>
             <div id="statsRome"></div>
+        </section>
+
+        <section id="section2">
+            <h2>Importer les fiches RNCP</h2>
+            <div>
+                <button id="btnImportRNCP" type="button">Lancer l'importation</button>
+                <button id="btnImportRNCPUpdateMetier" type="button">Mettre à jour les métiers ROME</button>
+            </div>
+            <div id="resultImportRNCP"></div>
         </section>
     </main>
     <footer>
@@ -50,53 +85,107 @@
 
         let a = new auth({
             mail:'acehn@univ-paris8.fr',
-            apiOmk:'http://localhost/omk_acehn/api/',
+            apiOmk:'http://localhost/omk_gestForma/api/',
             ident: 'Fe82ZlMwNP8KR88BKWzGNnF7eS5qChwr',
             key:'Jo5RZc9S3qr79GAe2TZk9UBakWcZbP48',
         }),
         token = "nubA5iauEhEpKrNrVQCYWmYy6xE",
         divResult = d3.select("#resultSave"),
-        aCreer, refRome=[], romes, appChoisies, appToPar, appToFind, appFind,
-        idParcours = 54, itemParcours;
-        a.omk.getItem(idParcours,i=>{
-            itemParcours=i;
-            d3.select("#titreParcours").text(itemParcours['o:title']);
-        });
+        aCreer, refRome=[], romes, metiersChoisis, appChoisies, appToPar, appToFind, appFind,
+        idParcours, itemParcours,updateMetiers=false, competences,
+        //chargement des refs RNCP
+        //les CSV ne sont pas complets on charge aussi les xml
+        objRNCP = {}, refsRNCP = [
+            {"nom":"standard","url":"assets/data/rncp/export_fiches_CSV_Standard_2024_11_06.csv"},
+            {"nom":"rome","url":"assets/data/rncp/export_fiches_CSV_Rome_2024_11_06.csv"},
+            {"nom":"formacode","url":"assets/data/rncp/export_fiches_CSV_Formacode_2024_11_06.csv"},
+            {"nom":"rncp","url":"assets/data/rncp/export_fiches_RNCP_V4_0_2024-11-07.xml"},
+            {"nom":"rs","url":"assets/data/rncp/export_fiches_RS_V4_0_2024-11-07.xml"},
+            ];
+        Promise.all(refsRNCP.map((r,i)=> i<3 ? d3.csv(r.url) : d3.xml(r.url))).then((values) => {
+            refsRNCP.forEach((d,i)=>{
+                objRNCP[d.nom]=values[i];
+            });
+            console.log(objRNCP);
+        })
 
+        a.omk.searchItems("resource_class_id=111", data=>{
+                d3.select("#ddListeParcours")
+                .on("change",e=>{
+                    idParcours = d3.select(e.currentTarget).property("value");
+                    itemParcours = data.find(d => d['o:id'] == idParcours);
+                    d3.select("#titreParcours").text("Parcours sélectioné : "+itemParcours['o:title']);
+                })                
+                .selectAll("option")
+                    .data(data)
+                    .enter()
+                    .append("option")
+                    .attr("value", d => d['o:id'])
+                    .text(d => d['o:title']);
+        }, false)
+        d3.select("#btnCorrectRomeAppComp").on("click",correctAppelationCompetence);
         d3.select("#btnCalcStats").on("click",showStatsRome);
-
-        const tokenInput = document.createElement('input');
-        tokenInput.type = 'text';
-        tokenInput.id = 'tokenInput';
-        tokenInput.placeholder = 'Entrez le token';
-        document.body.insertBefore(tokenInput, document.body.firstChild);
-
-        const tokenButton = document.createElement('button');
-        tokenButton.textContent = 'Valider le token';
-        tokenButton.addEventListener('click', () => {
+        d3.select("#btnToken").on("click",() => {
             token = tokenInput.value;
             console.log('Token mis à jour:', token);
         });
-        document.body.insertBefore(tokenButton, tokenInput.nextSibling);
-        //getTokenFranceTravail();
 
+        d3.select("#btnListeMetiers").on("click",()=>{
+            let url = document.getElementById('urlInput').value;
+            updateMetiers = false;
+            url = url ? url : "https://docs.google.com/spreadsheets/d/e/2PACX-1vRhP76IjszUi5BS5ixEaE_vnbwHk7ruGrKf_94B1qikeMUegwuR6x_nJCyG7VQG8w5y8G3iBfs_EHA0/pub?gid=0&single=true&output=csv";
+            d3.csv(url).then(function(data) {
+                console.log(data);
+                metiersChoisis = data;
+            }).catch(function(error) {
+                console.error('Error fetching the JSON:', error);
+            });
+        });        
+        d3.select("#btnUpdateRomeComp").on("click",()=>{
+            d3.select("#resultUpdateRomeComp").selectAll('div').remove();
+            a.omk.getAllItems("resource_class_id[]="+a.omk.getClassByTerm("rome:competence")["o:id"],
+            //a.omk.searchItems("resource_class_id[]="+a.omk.getClassByTerm("rome:competence")["o:id"],
+                data=>{
+                    competences = data;
+                    updateRomeComp(0);
+                });            
+        });        
+                
+        d3.select("#btnImportRNCP").on("click",()=>{
+            saveFichesRNCP();
+        });        
+
+        d3.select("#btnImportRNCPUpdateMetier").on("click",()=>{
+            //on complète l'importation des métiers
+            d3.select("#resultImportRNCP").selectAll('div').remove();
+            updateMetiers = true;
+            a.omk.getAllItems("property[0][joiner]=and&property[0][property]=408&property[0][type]=nex&resource_class_id[]=170",
+                metiers=>{
+                    romes = metiers.map(m=>{
+                        return {'code':m["rome:code"][0]["@value"],'id':m['o:id']}
+                        })
+                    //récupère les informations de chaque code
+                    aCreer={'appelations':[],'metiers':[]};
+                    createMetiersFromRNCP(0);
+                });            
+        });        
+                  
+        //getTokenFranceTravail();
         //affiche le bouton de création
         d3.select("#btnSave").append("button")
             .text("Recherche les éléments ROME")
             .on("click",e=>{
                 console.log("Recherche les éléments ROME");
-                aCreer.metiers.forEach(m=>{
-                    //récupère les code ROME
-                    romes = d3.groups(data, r => r['code ROME (V.3)']).map(r=>{
-                    return {
-                        'code':r[0]
-                        }
-                    });                
-                    console.log(romes);
-                    //récupère les informations de chaque code
-                    aCreer={'appelations':[],'metiers':[]};
-                    getMetierFranceTravail(0);
-                })
+                //récupère les code ROME
+                romes = d3.groups(metiersChoisis, r => r['code ROME (V.3)']).map(r=>{
+                return {
+                    'code':r[0]
+                    }
+                });                
+                console.log(romes);
+                //récupère les informations de chaque code
+                aCreer={'appelations':[],'metiers':[]};
+                getMetierFranceTravail(0);
             })
         d3.select("#btnSave").append("button")
             .text("Création des métiers")
@@ -114,98 +203,374 @@
                     createAppelation(app);
                 })
             })
-        d3.select("#btnCreateRelation").on("click",e=>{
-            //relie les appelations au parcours
-            appToPar = [];
-            appToFind = [];
-            appChoisies.forEach(ac=>{
-                if(refRome.length==0){
-                    appToFind.push(ac);
+        d3.select("#btnCreaRelaAppParc").on("click",e=>{
+
+            let codeRome = document.getElementById('inputCodeRome').value;
+            //récupère les informations sur ce code
+            let q = "resource_class_id[]=170&property[0][joiner]=and&property[0][property]=407&property[0][type]=eq&property[0][text]="+codeRome;
+            a.omk.getAllItems(q,data=>{
+                if(data.length==0){
+                    d3.select("#resultSaveRelation").append('div')
+                        .text("Le code ROME n'est pas dans la base. Merci de l'importer.");                    
                 }else{
-                    for (const k in refRome) {
-                        if(k.substr(0,17)=='rome:appellation_'){
-                            if(ac['libellé métier']==refRome[k]['o:title']){
-                                appToPar.push({'rid':refRome[k]['o:id']});
-                            }else{
-                                appToFind.push(ac);
-                                console.log('application pas trouvée : '+refRome[k]['o:title']);
-                            }
-                        }
-                    }
+                    chercheApplication(data[0]);
                 }
-            })
-            if(appToPar.length>0)a.omk.updateRessource(idParcours,appToPar); 
-            if(appToFind.length>0)chercheApplication(0);
-        })
-        document.getElementById('btnListeMetiers').addEventListener('click', function() {
-            let url = document.getElementById('urlInput').value;
-            url = url ? url : "https://docs.google.com/spreadsheets/d/e/2PACX-1vRhP76IjszUi5BS5ixEaE_vnbwHk7ruGrKf_94B1qikeMUegwuR6x_nJCyG7VQG8w5y8G3iBfs_EHA0/pub?gid=0&single=true&output=csv";
-            d3.csv(url).then(function(data) {
-                console.log(data);
-                appChoisies = data;
-            }).catch(function(error) {
-                console.error('Error fetching the JSON:', error);
             });
-        });        
+        })
 
-        function chercheApplication(num){
-            if(num==0){
-                appFind=[];
-                let table = d3.select("#tableRelations").append("table");
-                let thead = table.append("thead");
-                let tbody = table.append("tbody").attr('id','tbodyAppToFind');
-
-                thead.append("tr")
-                    .selectAll("th")
-                    .data(["Libellé ONISEP", "Appellations ROME", "Metiers", "Sélectionner"])
-                    .enter()
-                    .append("th")
-                    .text(d => d);
+        async function getRomeCompValues(data){
+            let dt = {};
+            dt['o:resource_class']="rome:competence";
+            dt['o:resource_template']='ROME Référence';
+            dt["rome:code"]=data.code;
+            dt["rome:definition"]=data.definition;                    
+            dt["rome:libelle"]=data.libelle;
+            dt["rome:type"]=data.type;
+            dt["rome:riasecMineur"]=data.riasecMineur;
+            dt["rome:riasecMajeur"]=data.riasecMajeur;
+            if(data.competenceEsco)
+                dt["rome:appellationEsco"]={'l':data.competenceEsco.libelle,'u':data.competenceEsco.uri}; 
+            dt["rome:transferable"]=data.transferable;
+            dt["rome:qualiteProfessionnelle"]=data.qualiteProfessionnelle;
+            dt["rome:sousCategorie"]=data.sousCategorie;
+            dt["rome:codeArborescence"]=data.codeArborescence;
+            if(data.macroCompetence){
+                let mc = await getsetRomeComp(data.macroCompetence);
+                dt["rome:hasMacroCompetence"]={'rid':mc['o:id']};
             }
+            if(data.objectif){
+                let o = await getsetRomeObjectif(data.objectif);
+                dt["rome:hasObjectif"]={'rid':o['o:id']};                                   
+            }
+            dt["rome:codeOgr"]=data.codeOgr;
+            dt["rome:maturite"]=data.maturite;
+            dt["rome:obsolete"]=data.obsolete;
+            dt["rome:dateFin"]=data.dateFin;
+            dt["rome:transitionEcologique"]=data.transitionEcologique;
+            dt["rome:transitionNumerique"]=data.transitionNumerique;
+            if(data.categorieSavoir){
+                let cs = await getsetRomeCatSavoir(data.categorieSavoir);
+                dt["rome:hasCategorieSavoir"]={'rid':cs['o:id']};                                   
+            }          
+            return dt;            
+        }
 
-            let url = "https://api.francetravail.io/partenaire/rome-metiers/v1/metiers/appellation/requete?q="
-                +appToFind[num]['libellé métier'];
-            fetch(url, {
+        async function getsetRomeComp(c){
+            if(a.omk.items['rome:competence'+c.code])return a.omk.items['rome:competence'+c.code];
+            let dt = await getRomeCompValues(c),
+                data = {'rt':'ROME Référence','c':'rome:competence',
+                            'dt':dt,	                            
+                            'verif':{'rome:code':dt['rome:code']},
+                            'index':'rome:competence'+dt['rome:code']};
+            return await a.omk.getsetResource(data);
+        }
+
+        async function getsetRomeCatSavoir(cs){
+            if(a.omk.items['rome:categorieSavoir'+cs.code])return a.omk.items['rome:categorieSavoir'+cs.code];
+            let dt = {'rt':'ROME Référence','c':'rome:categorieSavoir',
+                    'dt':{"rome:libelle":cs.libelle,
+                    "rome:code":cs.code
+                },	                            
+                'verif':{'rome:code':cs.code},
+                'index':'rome:competence'+cs.code};
+            return await a.omk.getsetResource(dt);
+        }
+        async function getsetRomeObjectif(o){
+            if(a.omk.items['rome:objectif'+o.code])return a.omk.items['rome:objectif'+o.code];
+
+            let dtDC = {'rt':'ROME Référence','c':'rome:domaineCompetence',
+                'dt':{"rome:libelle":o.enjeu.domaineCompetence.libelle,
+                    "rome:code":o.enjeu.domaineCompetence.code,
+                    "rome:codeArborescence":o.enjeu.domaineCompetence.codeArborescence,
+                },	                            
+                'verif':{'rome:code':o.enjeu.domaineCompetence.code},
+                'index':'rome:domaineCompetence'+o.enjeu.domaineCompetence.code},
+            DC = await a.omk.getsetResource(dtDC),                        
+            dtE = {'rt':'ROME Référence','c':'rome:enjeu',
+                'dt':{"rome:libelle":o.enjeu.libelle,
+                    "rome:code":o.enjeu.code,
+                    "rome:codeArborescence":o.enjeu.codeArborescence,
+                    "rome:hasDomaineCompetence":{'rid':DC["o:id"]}
+                },	                            
+                'verif':{'rome:code':o.enjeu.code},
+                'index':'rome:enjeu'+o.enjeu.code},
+            E = await a.omk.getsetResource(dtE),
+            dtO = {'rt':'ROME Référence','c':'rome:objectif',
+                'dt':{"rome:libelle":o.libelle,
+                    "rome:code":o.code,
+                    "rome:codeArborescence":o.codeArborescence,
+                    "rome:hasEnjeu":{'rid':E["o:id"]}
+                    },	                            
+                'verif':{'rome:code':o.code},
+                'index':'rome:objectif'+o.code};                        
+            return await a.omk.getsetResource(dtO);  
+        }
+   
+
+        async function updateRomeComp(num){
+            let c = competences[num], data, url = "https://api.francetravail.io/partenaire/rome-competences/v1/competences/competence/"+c["rome:code"][0]["@value"],
+
+            reponse = await fetch(url, {
                 method: 'GET',
                 headers: {
                     'Accept': 'application/json',
                     'Authorization': 'Bearer '+token
                 }
             })
-            .then(response => response.json())
-            .then(data => {
-                data.resultats.forEach(d=>d['libellé métier']=appToFind[num]['libellé métier'])
-                appFind = appFind.concat(data.resultats);
-                if(num < appToFind.length-1){
-                    setTimeout(() => {
-                        chercheApplication(num + 1);
-                    }, 2000);
-                }else{
-                    showAppToParcours(appFind,num);
-                    divResult.append('div').text("Affichage des applications faites");
-                } 
-
-            })
             .catch(error => {
                 console.error('Error fetching the data:', error);
+                return false;
+            });
+
+            if(!reponse.ok){
+                console.log(reponse);
+                return false;
+            }else{
+                data = await reponse.json();
+            }
+            console.log(data);
+            let dt = await getRomeCompValues(data),          
+            d = await a.omk.updateRessource(c["o:id"], dt, 'items', null, 'PATCH',false,c);
+            divResult.append('div').text("Compétence mise à jour "+d["o:id"]+" : "+d["o:title"]);
+            setTimeout(() => {
+                if(competences.length>num)updateRomeComp(num+1);
+            }, 2000);
+
+        }
+
+        async function createMetiersFromRNCP(iRome){
+            getMetierFranceTravail(iRome).then(m=>{
+                if(m){
+                    let arrPromise = [];
+                    Promise.all(aCreer.appelations.map(app=>promiseCreateAppelation(app))).then((values) => {
+                        aCreer.metiers.forEach(m=>{
+                            createMetier(m,d=>{
+                                aCreer={'appelations':[],'metiers':[]};
+                                console.log(d);
+                                divResult.append('div').text("Metier crée "+d["o:id"]+" : "+d["o:title"]);
+                                createMetiersFromRNCP(iRome+1);
+                            },romes[iRome].id);
+                        })
+                    });      
+                }else{
+                    setTimeout(() => {
+                        createMetiersFromRNCP(iRome+1);
+                    }, 2000);
+                }      
             });
         }
-        function showAppToParcours(data,num){
-            let rows = d3.select('#tbodyAppToFind').selectAll("tr")
-                .data(data)
+
+        function saveFichesRNCP(){
+            //récupére toutes les fiches RNCP
+            let fiches = objRNCP.rncp.getElementsByTagName("FICHE"),
+            //ne prend en compte que celles qui sont 
+            //en lien avec un formacode ou un metier
+            //et ne sont pas déjà
+            //enregistrés dans la base omk
+            metiers = a.omk.searchItems("resource_class_id="+a.omk.getClassByTerm('rome:metier')['o:id'])
+                .map(c=>c['rome:code'][0]['@value']),
+            formacodes = a.omk.searchItems("resource_class_id="+a.omk.getClassByTerm('rome:formacode')['o:id'])
+                .map(c=>c['rome:code'][0]['@value']),
+            fichesOmk = a.omk.searchItems("resource_class_id="+a.omk.getClassByTerm('rncp:FICHE')['o:id'])
+                .map(c=>c['rncp:NUMERO_FICHE'][0]['@value']),
+            fichesToSave = objRNCP.formacode.filter(fc=>formacodes.includes(fc.Formacode_Code))
+                .map(fc=>fc.Numero_Fiche);
+            fichesToSave = fichesToSave.concat(
+                objRNCP.rome.filter(fc=>metiers.includes(fc.Codes_Rome_Code))
+                    .map(fc=>fc.Numero_Fiche)
+                );
+            //supprime les doublons
+            //merci à https://stackoverflow.com/questions/9229645/remove-duplicate-values-from-js-array
+            let uniqFichesToSave = [...new Set(fichesToSave)], nbSave=0
+                , nbFiche = fiches.length, nbFicheAtraiter = uniqFichesToSave.length;
+            for (var i = 0; i < nbFiche; i++) {   
+                var numFiche = getFicheValue(fiches[i],'NUMERO_FICHE');
+                if(fichesOmk.includes(numFiche)){
+                    console.log(i+' / '+nbFicheAtraiter+' DEJA TRAITE : '+numFiche);
+                }else if(uniqFichesToSave.includes(numFiche)){
+                    saveFiche(fiches[i]);
+                    nbSave++;
+                    console.log(nbSave+' / '+nbFicheAtraiter+' TRAITE : '+numFiche);
+                }else{
+                    console.log(i+' / '+nbFiche+' NON TRAITE : '+numFiche);
+                }
+            }               
+        }
+        function getFicheValue(f,p){
+            var node, childNodes = f.childNodes;
+            for(var i = 0; i < childNodes.length; i++)
+            {
+                node = childNodes[i];
+                if(node.nodeType !== Node.TEXT_NODE && node.nodeName==p) return node.textContent;
+            }            
+            return "";
+        }
+        function saveFicheFromFormacode(c){
+            //récupère la fiche correspondante
+            let fiches = objRNCP.formacode.filter(fc=>fc.Formacode_Code==c["rome:code"][0]['@value']);
+            fiches.forEach(f=>{
+                //récupère les infos de la fiche dans le xml
+                //let fiche = xmlSearchFiche(objRNCP.rncp,'//*[ancestor::FICHE[//FORMACODE/CODE[text()="'+f.Formacode_Code+'"]]]');
+                let fiche = xmlSearchFiche(objRNCP.rncp,'//*[ancestor::FICHE[//NUMERO_FICHE[text()="'+f.Formacode_Code+'"]]]');
+                //enregistre la fiche dans omk
+                saveFiche(fiche,c);
+            })
+        }
+        function saveFiche(fiche,oOmk=false){
+            //console.log(fiche);
+            let ressources = [], childs, children = fiche.children, dt = {
+                            'o:resource_class':'rncp:FICHE',
+                            'o:resource_template':'RNCP fiche'
+                        },
+                divResultat = d3.select('#resultImportRNCP');
+            for (let i = 0; i < children.length; i++) {
+                //construction de l'item omk
+                switch (children[i].nodeName) {
+                    //pour les éléments ROME on enregistre uniquement le CODE car le libellé varie
+                    case "FORMACODES":
+                        childs = children[i].children;
+                        for (let j = 0; j < childs.length; j++) {
+                            ressources.push({'rt':'ROME Référence','c':'rome:formacode',
+                            'dt':{'rome:code':childs[j].children[0].textContent},
+                            'p':'rome:hasFormacode', 
+                            'index':children[i].nodeName+childs[j].children[0].textContent
+                            });
+                        }
+                        break; 
+                    case "CODES_ROME":
+                        childs = children[i].children;
+                        for (let j = 0; j < childs.length; j++) {
+                            ressources.push({'rt':'ROME Référence','c':'rome:metier',
+                            'dt':{'rome:code':childs[j].children[0].textContent},
+                            'p':'rome:hasMetier',
+                            'index':children[i].nodeName+childs[j].children[0].textContent                        });
+                            }
+                        break;                         
+                    case "CODES_NSF":
+                        childs = children[i].children;
+                        for (let j = 0; j < childs.length; j++) {
+                            ressources.push({'rt':'RNCP élément','c':'rncp:NSF','p':'rncp:hasNSF',
+                                'dt':{'rncp:CODE':childs[j].children[0].textContent,
+                                'rncp:LIBELLE':childs[j].children[1].textContent},
+                                'index':children[i].nodeName+childs[j].children[0].textContent
+                            });
+                        }
+                        break;                      
+                    case "NOMENCLATURE_EUROPE":
+                        ressources.push({'rt':'RNCP élément','c':'rncp:NOMENCLATURE_EUROPE',
+                            'dt':{'rncp:NIVEAU':getFicheValue(children[i],'NIVEAU'),'rncp:LIBELLE':getFicheValue(children[i],'LIBELLE')},
+                            'p':'rncp:hasNOMENCLATURE_EUROPE', 
+                            'index':children[i].nodeName+getFicheValue(children[i],'NIVEAU')});
+                        break;  
+                    case "PARTENAIRES":
+                        childs = children[i].children;
+                        for (let j = 0; j < childs.length; j++) {
+                            ressources.push({'rt':'RNCP élément','c':'rncp:PARTENAIRE',
+                            'dt':{
+                                'rncp:NOM_PARTENAIRE':getFicheValue(childs[j],'NOM_PARTENAIRE'),
+                                'rncp:SIRET_PARTENAIRE':getFicheValue(childs[j],'SIRET_PARTENAIRE'),
+                                'rncp:HABILITATION_PARTENAIRE':getFicheValue(childs[j],'HABILITATION_PARTENAIRE'),
+                                'rncp:ETAT_HABILITATION':getFicheValue(childs[j],'ETAT_HABILITATION'),
+                            },
+                            'verif':{'rncp:NOM_PARTENAIRE':getFicheValue(childs[j],'NOM_PARTENAIRE')},
+                            'p':'rncp:hasPARTENAIRE', 
+                            'index':children[i].nodeName+getFicheValue(children[i],'NOM_PARTENAIRE')});
+                        }
+                        break;                                                  
+                    case "BLOCS_COMPETENCES":
+                        childs = children[i].children;
+                        for (let j = 0; j < childs.length; j++) {
+                            ressources.push({'rt':'RNCP élément','c':'rncp:BLOC_COMPETENCES',
+                            'dt':{'rncp:CODE':getFicheValue(childs[j],'CODE'),
+                                'rncp:LIBELLE':getFicheValue(childs[j],'LIBELLE'),
+                                'rncp:LISTE_COMPETENCES':getFicheValue(childs[j],'LISTE_COMPETENCES'),
+                                'rncp:MODALITES_EVALUATION':getFicheValue(childs[j],'MODALITES_EVALUATION'),
+                                'rncp:PREREQUIS_ENTREE_FORMATION':getFicheValue(childs[j],'PREREQUIS_ENTREE_FORMATION'),
+                                'rncp:PREREQUIS_VALIDATION_CERTIFICATION':getFicheValue(childs[j],'PREREQUIS_VALIDATION_CERTIFICATION'),
+                            },
+                            'verif':{'rncp:CODE':getFicheValue(childs[j],'CODE')},
+                            'p':'rncp:hasBLOC_COMPETENCES', 
+                            'index':children[i].nodeName+getFicheValue(childs[j],'CODE')});
+                        }
+                        break;                                                        
+                    default:
+                        //on ne prend que les propriétés qui sont dans le vocabulaire
+                        if(a.omk.getPropByTerm("rncp:"+children[i].nodeName)){
+                            dt["rncp:"+children[i].nodeName]=children[i].textContent;
+                        }
+                        break;
+                }
+            }
+            //console.log(dt);
+            //récupération des ressources
+            let arrPromise = [];
+            ressources.forEach(r=>{
+                arrPromise.push(a.omk.getsetResource(r));
+            })
+            Promise.all(arrPromise).then((values) => {
+                ressources.forEach((r,i)=>{
+                    if(!dt[r.p])dt[r.p]=[];
+                    dt[r.p].push({'rid':values[i]['o:id']});
+                });
+                //création de la fiche
+                a.omk.createItem(dt, i=>{
+                    divResultat.append('div').text("fiche crée "+i["o:id"]+" : "+i["o:title"]);
+                }, "property[0][property]="+a.omk.getPropId("rncp:NUMERO_FICHE")
+                +"&property[0][type]=eq&property[0][text]="+dt["rncp:NUMERO_FICHE"]);
+            });
+        }
+
+        function xmlSearchFiche(xmlDoc, path){
+            var nsResolver = xmlDoc.createNSResolver(
+                xmlDoc.ownerDocument == null
+                    ? xmlDoc.documentElement
+                    : xmlDoc.ownerDocument.documentElement,
+                );
+            var fiches = xmlDoc.evaluate(
+                path,
+                xmlDoc,
+                nsResolver,
+                XPathResult.ANY_TYPE,
+                null,
+            ); 
+            return fiches;                        
+        }
+
+        function chercheApplication(m){
+            let table = d3.select("#tableRelaAppParc").append("table");
+            let thead = table.append("thead");
+            let tbody = table.append("tbody").attr('id','tbodyAppToFind');
+
+            thead.append("tr")
+                .selectAll("th")
+                .data(["Métier ROME", "Appellations ROME", "Ajouter au parcours"])
                 .enter()
-                .append("tr");
+                .append("th")
+                .text(d => d);
+            let rows = d3.select('#tbodyAppToFind').selectAll("tr")
+                .data(m["rome:hasAppellation"])
+                .enter()
+                .append("tr")
+                .on("click",addAppelationToParcours);
 
             rows.selectAll("td")
-                .data(d => [d['libellé métier'], d.libelle, d.metier.code + " : "+ d.metier.libelle, ""])
+                .data((d,i) => [m['o:title'], d.display_title, "Cliquer sur la ligne pour ajouter"])
                 .enter()
                 .append("td")
-                .html((d, i) => {
-                    return i === 2 ? `<input type="checkbox" value="false">` : d;
-                });                
+                .text((d, i) => {
+                    return d;
+                });
         }    
 
-        function createMetier(m){
+        function addAppelationToParcours(e,d){
+            let dt = {"rome:hasAppellation":{'rid':d.value_resource_id}};
+            a.omk.updateRessource(itemParcours['o:id'],dt,'items',null,'PUT',i=>{
+                itemParcours=i;
+                d3.select(e.currentTarget).style('background-color','green');
+            },itemParcours);            
+        }
+
+        function createMetier(m,cb=false,update=false){
             //remplace les codes par leur identifiants omk            
             let aRemplacer = [
                 {'p':"rome:hasAppellation",'r':"rome:appellation"},
@@ -221,65 +586,121 @@
                 {'p':"rome:hasDomaineProfessionnel",'r':"rome:domaineProfessionnel"},
             ];
             aRemplacer.forEach(ar=>{
-                m[ar.p].forEach((c,i)=>{
-                    let o = refRome[ar.r+"_"+c];
-                    m[ar.p][i]={"rid":o["o:id"]};
-                })
+                if(m[ar.p]){
+                    m[ar.p].forEach((c,i)=>{
+                        let o = refRome[ar.r+"_"+c];
+                        /*PAs de fréquence pour les compétences
+                        if(ar.r=="rome:competence")m[ar.p][i]=addCompetence(c,o);  
+                        else 
+                        */
+                        m[ar.p][i]={"rid":o["o:id"]};
+                    })
+                }
             })
             m['o:resource_class']="rome:metier";
             m['o:resource_template']='ROME Référence';
-            a.omk.createItem(m,i=>{
-                divResult.append('div').text("métier crée "+i["o:id"]+" : "+i["o:title"]);
-                refRome['metier_'+m['rome:code']] = i;
-            });
+            if(update){
+                a.omk.updateRessource(update, m, 'items', null, 'PUT',d=>{
+                        divResult.append('div').text("Métiers mis à jour "+d["o:id"]+" : "+d["o:title"]);
+                        refRome['metier_'+m['rome:code']] = d;
+                        if(cb)cb(d);
+                    });
+            }else{
+                a.omk.createItem(m,i=>{
+                    divResult.append('div').text("métier crée "+i["o:id"]+" : "+i["o:title"]);
+                    refRome['metier_'+m['rome:code']] = i;
+                    if(cb)cb(i);
+                });
+            }
         }
 
-        function createAppelation(app){
+        async function createAppelation(app){
             //remplace les codes compétences par leur identifiants omk
             let compNew=JSON.parse(JSON.stringify(app["rome:hasCompetenceCle"]));
             app["rome:hasCompetenceCle"]=[];
             compNew.forEach(c=>{
-                let o = refRome["rome:competence_"+c.code],
-                    anno = {'rome:frequence':[],'rome:hasCompetence':[]}, 
-                    comp = {};
-                //création de l'annotation
-                anno['rome:frequence'].push({
-                    "@value": c.frequence+"",
-                    "type": "literal",
-                    "property_id": a.omk.getPropId('rome:frequence'),
-                });
-                anno['rome:hasCompetence'].push({
-                    "value_resource_id": o['o:id'],
-                    "type": "resource:item",
-                    "property_id": a.omk.getPropId('rome:hasCompetence'),
-                });
-                comp.v=o['o:title']+' : '+c.frequence;
-                comp.a=anno;
-                app["rome:hasCompetenceCle"].push(comp);                        
+                app["rome:hasCompetenceCle"].push(addCompetence(c));  
             })
             app['o:resource_template']='ROME Référence';
-            a.omk.createItem(app,i=>{
-                divResult.append('div').text("appelations crée "+i["o:id"]+" : "+i["o:title"]);
-                refRome['appelations_'+app['rome:code']] = i;
+            let i = await a.omk.createItem(app),
+            message = "appelations crée "+i["o:id"]+" : "+i["o:title"];
+            //console.log(message)
+            divResult.append('div').text(message);
+            refRome['rome:appellation_'+app['rome:code']] = i;
+            return i;
+        }
+
+        function promiseCreateAppelation(app){
+            return new Promise((resolve, reject) => {
+                createAppelation(app).then((value) => {
+                    return resolve(value);
+                }, (error) => { reject(error); });
             });
         }
 
-        async function getMetierFranceTravail(i){
-            let url = "https://api.francetravail.io/partenaire/rome-metiers/v1/metiers/metier/"+romes[i].code;
-            fetch(url, {
+        function correctAppelationCompetence(){
+            //récupère toutes les appellations            
+            let q = "filter%5B0%5D%5Bjoin%5D=and&filter%5B0%5D%5Bfield%5D%5B%5D=rome%3AhasCompetenceCle&filter%5B0%5D%5Btype%5D=nresq&filter%5B0%5D%5Bval%5D=resource_class_id%255B%255D%3D173&resource_class_id%5B%5D="+a.omk.getClassByTerm("rome:appellation")['o:id'];
+            a.omk.getAllItems(q,apps=>{
+            //a.omk.searchItems(q,apps=>{
+                apps.forEach(async app=>{
+                    let dt = {"rome:hasCompetenceCle":[]};
+                    if(app["rome:hasCompetenceCle"]){
+                        app["rome:hasCompetenceCle"].forEach(c=>{
+                            if(c.type=="literal")
+                                dt["rome:hasCompetenceCle"].push(addCompetence({'frequence':c["@annotation"]["rome:frequence"][0]["@value"]},{'o:id':c["@annotation"]["rome:hasCompetence"][0].value_resource_id}));  
+                        });
+                        if(dt["rome:hasCompetenceCle"].length){
+                            a.omk.updateRessource(app["o:id"], dt, 'items', null, 'PATCH',d=>{
+                                divResult.append('div').text("Appellation corrigée mise à jour "+d["o:id"]+" : "+d["o:title"]);
+                            },app);
+                        }
+                    }
+                })
+            })
+        }
+        
+        function addCompetence(c,o=false){
+            o = o ? o : refRome["rome:competence_"+c.code];
+            let anno = {'rome:frequence':[]}, 
+                comp = {};
+            //création de l'annotation
+            anno['rome:frequence'].push({
+                "@value": c.frequence+"",
+                "type": "literal",
+                "property_id": a.omk.getPropId('rome:frequence'),
+            });
+            comp.v={'rid':o['o:id']};
+            comp.a=anno;
+            return comp;            
+        }
+
+       async function getMetierFranceTravail(i,cb=false){
+            if(i>=romes.length)return false;
+            let url = "https://api.francetravail.io/partenaire/rome-metiers/v1/metiers/metier/"+romes[i].code,
+            reponse = await fetch(url, {
                 method: 'GET',
                 headers: {
                     'Accept': 'application/json',
                     'Authorization': 'Bearer '+token
                 }
             })
-            .then(response => response.json())
-            .then(data => {
-                saveMetier(data,i);
-            })
             .catch(error => {
                 console.error('Error fetching the data:', error);
+                return false;
             });
+
+            if(reponse.statusText=="Too Many Requests"){
+                setTimeout(async () => {
+                    return await getMetierFranceTravail(i,cb);
+                }, 2000);  
+            }else if (!reponse.ok){
+                console.log(reponse);
+                return false;
+            }else{
+                const data = await reponse.json();
+                return await saveMetier(data,i,cb);
+            }
         }
 
         function getAppelations(m){
@@ -314,15 +735,17 @@
                     if(app.appellationEsco)dtApp['appellationEsco']={'u':app.appellationEsco.uri,'l':app.appellationEsco.libelle};
                     aCreer.appelations.push(dtApp);                     
                 }else{
-                    refRome['rome:appellation_'+app.code]=iApp[0];
-                    divResult.append('div').text("Appellation existante : "+iApp[0]["o:id"]+" : "+iApp[0]["o:title"]);                
+                    if(iApp[0]){
+                        refRome['rome:appellation_'+app.code]=iApp[0];
+                        divResult.append('div').text("Appellation existante : "+iApp[0]["o:id"]+" : "+iApp[0]["o:title"]);                
+                    }
                 }            
             }) 
         }
-        function saveMetier(m,i){
+        async function saveMetier(m,i,cb){
             console.log("saveMetier",m);
             //vérifie si le métier existe
-            let iMetier = a.omk.searchItems(paramsVerifCodeRome('rome:metier',m.code));
+            let iMetier = updateMetiers ? [] : a.omk.searchItems(paramsVerifCodeRome('rome:metier',m.code));
             if(iMetier.length==0){ 
 
                 let dtMetier = {
@@ -422,11 +845,15 @@
                 getAppelations(m);
                 divResult.append('div').text("Métier existant : "+iMetier[0]["o:id"]+" : "+iMetier[0]["o:id"]);                
             }
-            if(i < romes.length-1){
+            if(!updateMetiers && i < romes.length-1){
                 setTimeout(() => {
                     getMetierFranceTravail(i + 1);
                 }, 2000);
-            }else divResult.append('div').text("Traitement métier terminé");                
+            }else{
+                if(cb)cb();
+                divResult.append('div').text("Préparation du métier terminé");
+                return m;
+            }                 
 
         }
 
@@ -484,9 +911,15 @@
                     return i;
                 });
             }else{
+                if(updateMetiers && c=="rome:formacode"){
+                    //on met à jour le formacode importer via RNCP
+                    a.omk.updateRessource(i[0]["o:id"], {"rome:libelle":r.libelle}, 'items', null, 'PUT',d=>{
+                        divResult.append('div').text(c+" mis à jour "+d["o:id"]+" : "+d["o:title"]);
+                    },i[0]);
+                }
                 divResult.append('div').text(c+" existante "+i[0]["o:id"]+" : "+i[0]["o:title"]);
                 refRome[c+'_'+r.code] = i[0];
-                return i[0];
+                return i[0];                    
             }
         }
 

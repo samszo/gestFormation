@@ -25,7 +25,7 @@ rome:label a rdf:Property ;
     vs:term_status "experimental" .
 
 rome:appellationEsco a rdf:Property ;
-    rdfs:label "Appellation ESCO (en provenance du référentiel 'ESCO')" ;
+    rdfs:label "Appellation ESCO (European Skills, Competences, Qualifications and Occupations)" ;
     rdfs:domain o:Resource ;
     vs:term_status "experimental" .
 
@@ -108,7 +108,6 @@ rome:transitionNumerique a rdf:Property ;
     rdfs:label "Le métier est lié à la transition numérique" ;
     rdfs:domain o:Resource ;
     vs:term_status "experimental" .
-
 
 rome:transitionDemographique a rdf:Property ;
     rdfs:label "Le métier est lié à la transition démographique" ;
@@ -274,3 +273,79 @@ rome:categorie a rdf:Property ;
     rdfs:label "Catégorie" ;
     rdfs:domain o:Resource ;
     vs:term_status "experimental" .
+
+rome:hasMetier a rdf:Property ;
+    rdfs:label "A comme métier" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+rome:hasMacroCompetence a rdf:Property ;
+    rdfs:label "A comme macro compétence" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+rome:transferable a rdf:Property ;
+    rdfs:label "Transférable" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+rome:qualiteProfessionnelle a rdf:Property ;
+    rdfs:label "Qualité professionnelle" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+rome:sousCategorie a rdf:Property ;
+    rdfs:label "Sous catégorie" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+rome:objectif a rdfs:Class ;
+    rdfs:label "Objectif" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+rome:hasObjectif a rdf:Property ;
+    rdfs:label "A comme objectif" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+rome:enjeu a rdfs:Class ;
+    rdfs:label "Enjeu" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+rome:hasEnjeu a rdf:Property ;
+    rdfs:label "A comme enjeu" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+rome:codeArborescence a rdf:Property ;
+    rdfs:label "Code arborescence" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+rome:domaineCompetence a rdfs:Class ;
+    rdfs:label "Domaine de compétence" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+rome:hasDomaineCompetence a rdf:Property ;
+    rdfs:label "A comme domaine de compétence" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+rome:maturite a rdf:Property ;
+    rdfs:label "Maturité" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+rome:categorieSavoir a rdfs:Class ;
+    rdfs:label "Catégorie de savoir" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+rome:hasCategorieSavoir a rdf:Property ;
+    rdfs:label "A comme catégorie de savoir" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+

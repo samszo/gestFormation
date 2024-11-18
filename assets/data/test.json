@@ -1,0 +1,3128 @@
+{
+    "obsolete": false,
+    "code": "K1601",
+    "libelle": "Documentaliste",
+    "definition": "Recherche et gère des sources et des informations documentaires selon les besoins de sa structure. Met à disposition un fonds documentaire physique et numérique (documents écrits, enregistrés) et en facilite l'accès à différents publics (particuliers, professionnels, chercheurs, ...).\\nPeut constituer et gérer un fonds de jeux et de jouets destinés à des publics divers (enfants, adultes, personnes âgées, ...).\\nPeut réaliser l'acquisition et la valorisation de documents.\\nPeut diriger une équipe, un service et animer un réseau de bibliothèques.",
+    "accesEmploi": "Ce métier est accessible à partir d'un diplôme de niveau Bac +2 (L2, BTS, ...) en sciences de l'information.\\nIl est également accessible avec un Master dans un secteur spécifique (sciences, histoire, économie, droit, ...) accompagné de formations aux techniques de gestion documentaire ou aux archives.\\nLa maîtrise des technologies de l'information (accès, stockage, numérisation, diffusion, ...) est requise.",
+    "riasecMajeur": "C",
+    "riasecMineur": "E",
+    "codeIsco": "2622",
+    "domaineProfessionnel": {
+      "code": "K16",
+      "libelle": "Culture et gestion documentaire",
+      "grandDomaine": {
+        "libelle": "Services à la personne et à la collectivité",
+        "code": "K"
+      }
+    },
+    "appellations": [
+      {
+        "code": "11275",
+        "libelle": "Assistant / Assistante documentaliste",
+        "libelleCourt": "Assistant / Assistante documentaliste",
+        "classification": "SYNONYME",
+        "competencesCles": [
+          {
+            "competence": {
+              "type": "COMPETENCE-DETAILLEE",
+              "code": "121319",
+              "libelle": "Actualiser des documents et fonds documentaires",
+              "codeOgr": "121319"
+            },
+            "frequence": 100
+          },
+          {
+            "competence": {
+              "type": "COMPETENCE-DETAILLEE",
+              "code": "121718",
+              "libelle": "Classer des documents",
+              "codeOgr": "121718"
+            },
+            "frequence": 99
+          },
+          {
+            "competence": {
+              "type": "COMPETENCE-DETAILLEE",
+              "code": "123389",
+              "libelle": "Sélectionner des informations documentaires",
+              "codeOgr": "123389"
+            },
+            "frequence": 100
+          },
+          {
+            "competence": {
+              "type": "MACRO-SAVOIR-FAIRE",
+              "code": "300119",
+              "libelle": "Réaliser une veille documentaire",
+              "codeOgr": "300119"
+            },
+            "frequence": 83
+          },
+          {
+            "competence": {
+              "type": "MACRO-SAVOIR-FAIRE",
+              "code": "300259",
+              "libelle": "Participer à un inventaire",
+              "codeOgr": "300259"
+            },
+            "frequence": 67
+          }
+        ]
+      },
+      {
+        "code": "20508",
+        "libelle": "Veilleur / Veilleuse documentaire",
+        "libelleCourt": "Veilleur / Veilleuse documentaire",
+        "classification": "SYNONYME",
+        "competencesCles": [
+          {
+            "competence": {
+              "type": "COMPETENCE-DETAILLEE",
+              "code": "121319",
+              "libelle": "Actualiser des documents et fonds documentaires",
+              "codeOgr": "121319"
+            },
+            "frequence": 86
+          },
+          {
+            "competence": {
+              "type": "COMPETENCE-DETAILLEE",
+              "code": "121718",
+              "libelle": "Classer des documents",
+              "codeOgr": "121718"
+            },
+            "frequence": 86
+          },
+          {
+            "competence": {
+              "type": "COMPETENCE-DETAILLEE",
+              "code": "123389",
+              "libelle": "Sélectionner des informations documentaires",
+              "codeOgr": "123389"
+            },
+            "frequence": 86
+          },
+          {
+            "competence": {
+              "type": "MACRO-SAVOIR-FAIRE",
+              "code": "300119",
+              "libelle": "Réaliser une veille documentaire",
+              "codeOgr": "300119"
+            },
+            "frequence": 100
+          }
+        ]
+      },
+      {
+        "code": "11508",
+        "libelle": "Bibliothéconomiste",
+        "libelleCourt": "Bibliothéconomiste",
+        "classification": "SYNONYME",
+        "competencesCles": [
+          {
+            "competence": {
+              "type": "COMPETENCE-DETAILLEE",
+              "code": "121661",
+              "libelle": "Négocier des partenariats",
+              "codeOgr": "121661"
+            },
+            "frequence": 100
+          },
+          {
+            "competence": {
+              "type": "MACRO-SAVOIR-FAIRE",
+              "code": "300426",
+              "libelle": "Utiliser les outils numériques",
+              "codeOgr": "300426"
+            },
+            "frequence": 100
+          },
+          {
+            "competence": {
+              "type": "MACRO-SAVOIR-FAIRE",
+              "code": "300440",
+              "libelle": "Animer, coordonner une équipe",
+              "codeOgr": "300440"
+            },
+            "frequence": 100
+          },
+          {
+            "competence": {
+              "type": "MACRO-SAVOIR-FAIRE",
+              "code": "300453",
+              "libelle": "Organiser le partage et la capitalisation de l'information",
+              "codeOgr": "300453"
+            },
+            "frequence": 100
+          },
+          {
+            "competence": {
+              "type": "MACRO-SAVOIR-FAIRE",
+              "code": "300469",
+              "libelle": "Préparer et animer une réunion, un groupe de travail, un atelier",
+              "codeOgr": "300469"
+            },
+            "frequence": 100
+          }
+        ]
+      },
+      {
+        "code": "11901",
+        "libelle": "Chargé / Chargée d'études documentaires",
+        "libelleCourt": "Chargé / Chargée d'études documentaires",
+        "classification": "SYNONYME",
+        "competencesCles": [
+          {
+            "competence": {
+              "type": "COMPETENCE-DETAILLEE",
+              "code": "121319",
+              "libelle": "Actualiser des documents et fonds documentaires",
+              "codeOgr": "121319"
+            },
+            "frequence": 100
+          },
+          {
+            "competence": {
+              "type": "COMPETENCE-DETAILLEE",
+              "code": "121718",
+              "libelle": "Classer des documents",
+              "codeOgr": "121718"
+            },
+            "frequence": 92
+          },
+          {
+            "competence": {
+              "type": "COMPETENCE-DETAILLEE",
+              "code": "123389",
+              "libelle": "Sélectionner des informations documentaires",
+              "codeOgr": "123389"
+            },
+            "frequence": 100
+          },
+          {
+            "competence": {
+              "type": "MACRO-SAVOIR-FAIRE",
+              "code": "300119",
+              "libelle": "Réaliser une veille documentaire",
+              "codeOgr": "300119"
+            },
+            "frequence": 92
+          },
+          {
+            "competence": {
+              "type": "MACRO-SAVOIR-FAIRE",
+              "code": "300259",
+              "libelle": "Participer à un inventaire",
+              "codeOgr": "300259"
+            },
+            "frequence": 84
+          }
+        ]
+      },
+      {
+        "code": "14513",
+        "libelle": "Documentaliste bibliothécaire",
+        "libelleCourt": "Documentaliste bibliothécaire",
+        "classification": "SYNONYME",
+        "competencesCles": [
+          {
+            "competence": {
+              "type": "COMPETENCE-DETAILLEE",
+              "code": "121265",
+              "libelle": "Renseigner un public sur l'utilisation de supports et outils documentaires",
+              "codeOgr": "121265"
+            },
+            "frequence": 92
+          },
+          {
+            "competence": {
+              "type": "COMPETENCE-DETAILLEE",
+              "code": "121319",
+              "libelle": "Actualiser des documents et fonds documentaires",
+              "codeOgr": "121319"
+            },
+            "frequence": 91
+          },
+          {
+            "competence": {
+              "type": "COMPETENCE-DETAILLEE",
+              "code": "121718",
+              "libelle": "Classer des documents",
+              "codeOgr": "121718"
+            },
+            "frequence": 75
+          },
+          {
+            "competence": {
+              "type": "COMPETENCE-DETAILLEE",
+              "code": "123389",
+              "libelle": "Sélectionner des informations documentaires",
+              "codeOgr": "123389"
+            },
+            "frequence": 92
+          },
+          {
+            "competence": {
+              "type": "MACRO-SAVOIR-FAIRE",
+              "code": "300119",
+              "libelle": "Réaliser une veille documentaire",
+              "codeOgr": "300119"
+            },
+            "frequence": 79
+          }
+        ]
+      },
+      {
+        "code": "10843",
+        "libelle": "Aide documentaliste",
+        "libelleCourt": "Aide documentaliste",
+        "classification": "SYNONYME",
+        "competencesCles": [
+          {
+            "competence": {
+              "type": "COMPETENCE-DETAILLEE",
+              "code": "121265",
+              "libelle": "Renseigner un public sur l'utilisation de supports et outils documentaires",
+              "codeOgr": "121265"
+            },
+            "frequence": 96
+          },
+          {
+            "competence": {
+              "type": "COMPETENCE-DETAILLEE",
+              "code": "121319",
+              "libelle": "Actualiser des documents et fonds documentaires",
+              "codeOgr": "121319"
+            },
+            "frequence": 98
+          },
+          {
+            "competence": {
+              "type": "COMPETENCE-DETAILLEE",
+              "code": "121718",
+              "libelle": "Classer des documents",
+              "codeOgr": "121718"
+            },
+            "frequence": 100
+          },
+          {
+            "competence": {
+              "type": "COMPETENCE-DETAILLEE",
+              "code": "123389",
+              "libelle": "Sélectionner des informations documentaires",
+              "codeOgr": "123389"
+            },
+            "frequence": 78
+          },
+          {
+            "competence": {
+              "type": "MACRO-SAVOIR-FAIRE",
+              "code": "300119",
+              "libelle": "Réaliser une veille documentaire",
+              "codeOgr": "300119"
+            },
+            "frequence": 83
+          }
+        ]
+      },
+      {
+        "code": "14211",
+        "libelle": "Directeur / Directrice de bibliothèque",
+        "libelleCourt": "Directeur / Directrice de bibliothèque",
+        "classification": "SYNONYME",
+        "competencesCles": [
+          {
+            "competence": {
+              "type": "COMPETENCE-DETAILLEE",
+              "code": "121319",
+              "libelle": "Actualiser des documents et fonds documentaires",
+              "codeOgr": "121319"
+            },
+            "frequence": 89
+          },
+          {
+            "competence": {
+              "type": "COMPETENCE-DETAILLEE",
+              "code": "121718",
+              "libelle": "Classer des documents",
+              "codeOgr": "121718"
+            },
+            "frequence": 81
+          },
+          {
+            "competence": {
+              "type": "COMPETENCE-DETAILLEE",
+              "code": "123389",
+              "libelle": "Sélectionner des informations documentaires",
+              "codeOgr": "123389"
+            },
+            "frequence": 93
+          },
+          {
+            "competence": {
+              "type": "COMPETENCE-DETAILLEE",
+              "code": "123390",
+              "libelle": "Mettre à disposition d'un public des fonds documentaires",
+              "codeOgr": "123390"
+            },
+            "frequence": 93
+          },
+          {
+            "competence": {
+              "type": "MACRO-SAVOIR-FAIRE",
+              "code": "300119",
+              "libelle": "Réaliser une veille documentaire",
+              "codeOgr": "300119"
+            },
+            "frequence": 74
+          }
+        ]
+      },
+      {
+        "code": "38584",
+        "libelle": "Responsable de ludothèque",
+        "libelleCourt": "Responsable de ludothèque",
+        "classification": "SYNONYME",
+        "competencesCles": [
+          {
+            "competence": {
+              "type": "COMPETENCE-DETAILLEE",
+              "code": "108128",
+              "libelle": "Enregistrer et suivre les prêts de documents",
+              "codeOgr": "108128"
+            },
+            "frequence": 100
+          },
+          {
+            "competence": {
+              "type": "COMPETENCE-DETAILLEE",
+              "code": "121265",
+              "libelle": "Renseigner un public sur l'utilisation de supports et outils documentaires",
+              "codeOgr": "121265"
+            },
+            "frequence": 100
+          },
+          {
+            "competence": {
+              "type": "COMPETENCE-DETAILLEE",
+              "code": "121319",
+              "libelle": "Actualiser des documents et fonds documentaires",
+              "codeOgr": "121319"
+            },
+            "frequence": 91
+          },
+          {
+            "competence": {
+              "type": "COMPETENCE-DETAILLEE",
+              "code": "121718",
+              "libelle": "Classer des documents",
+              "codeOgr": "121718"
+            },
+            "frequence": 93
+          },
+          {
+            "competence": {
+              "type": "COMPETENCE-DETAILLEE",
+              "code": "123389",
+              "libelle": "Sélectionner des informations documentaires",
+              "codeOgr": "123389"
+            },
+            "frequence": 80
+          }
+        ]
+      },
+      {
+        "code": "14228",
+        "libelle": "Directeur / Directrice de centre documentaire",
+        "libelleCourt": "Directeur / Directrice de centre documentaire",
+        "classification": "SYNONYME",
+        "competencesCles": [
+          {
+            "competence": {
+              "type": "COMPETENCE-DETAILLEE",
+              "code": "121319",
+              "libelle": "Actualiser des documents et fonds documentaires",
+              "codeOgr": "121319"
+            },
+            "frequence": 91
+          },
+          {
+            "competence": {
+              "type": "COMPETENCE-DETAILLEE",
+              "code": "121718",
+              "libelle": "Classer des documents",
+              "codeOgr": "121718"
+            },
+            "frequence": 93
+          },
+          {
+            "competence": {
+              "type": "COMPETENCE-DETAILLEE",
+              "code": "123389",
+              "libelle": "Sélectionner des informations documentaires",
+              "codeOgr": "123389"
+            },
+            "frequence": 85
+          },
+          {
+            "competence": {
+              "type": "MACRO-SAVOIR-FAIRE",
+              "code": "300119",
+              "libelle": "Réaliser une veille documentaire",
+              "codeOgr": "300119"
+            },
+            "frequence": 79
+          }
+        ]
+      },
+      {
+        "code": "19025",
+        "libelle": "Responsable du service documentation",
+        "libelleCourt": "Responsable du service documentation",
+        "classification": "SYNONYME",
+        "competencesCles": [
+          {
+            "competence": {
+              "type": "COMPETENCE-DETAILLEE",
+              "code": "121319",
+              "libelle": "Actualiser des documents et fonds documentaires",
+              "codeOgr": "121319"
+            },
+            "frequence": 79
+          },
+          {
+            "competence": {
+              "type": "COMPETENCE-DETAILLEE",
+              "code": "121718",
+              "libelle": "Classer des documents",
+              "codeOgr": "121718"
+            },
+            "frequence": 69
+          },
+          {
+            "competence": {
+              "type": "COMPETENCE-DETAILLEE",
+              "code": "123389",
+              "libelle": "Sélectionner des informations documentaires",
+              "codeOgr": "123389"
+            },
+            "frequence": 95
+          },
+          {
+            "competence": {
+              "type": "MACRO-SAVOIR-FAIRE",
+              "code": "300119",
+              "libelle": "Réaliser une veille documentaire",
+              "codeOgr": "300119"
+            },
+            "frequence": 64
+          }
+        ]
+      },
+      {
+        "code": "18335",
+        "libelle": "Record manager",
+        "libelleCourt": "Record manager",
+        "classification": "SYNONYME",
+        "competencesCles": [
+          {
+            "competence": {
+              "type": "COMPETENCE-DETAILLEE",
+              "code": "121319",
+              "libelle": "Actualiser des documents et fonds documentaires",
+              "codeOgr": "121319"
+            },
+            "frequence": 100
+          },
+          {
+            "competence": {
+              "type": "COMPETENCE-DETAILLEE",
+              "code": "121718",
+              "libelle": "Classer des documents",
+              "codeOgr": "121718"
+            },
+            "frequence": 100
+          },
+          {
+            "competence": {
+              "type": "COMPETENCE-DETAILLEE",
+              "code": "123389",
+              "libelle": "Sélectionner des informations documentaires",
+              "codeOgr": "123389"
+            },
+            "frequence": 100
+          },
+          {
+            "competence": {
+              "type": "MACRO-SAVOIR-FAIRE",
+              "code": "300119",
+              "libelle": "Réaliser une veille documentaire",
+              "codeOgr": "300119"
+            },
+            "frequence": 100
+          },
+          {
+            "competence": {
+              "type": "MACRO-SAVOIR-FAIRE",
+              "code": "300259",
+              "libelle": "Participer à un inventaire",
+              "codeOgr": "300259"
+            },
+            "frequence": 100
+          }
+        ]
+      },
+      {
+        "code": "14515",
+        "libelle": "Documentaliste scientifique",
+        "libelleCourt": "Documentaliste scientifique",
+        "classification": "SYNONYME",
+        "competencesCles": [
+          {
+            "competence": {
+              "type": "COMPETENCE-DETAILLEE",
+              "code": "121319",
+              "libelle": "Actualiser des documents et fonds documentaires",
+              "codeOgr": "121319"
+            },
+            "frequence": 92
+          },
+          {
+            "competence": {
+              "type": "COMPETENCE-DETAILLEE",
+              "code": "121718",
+              "libelle": "Classer des documents",
+              "codeOgr": "121718"
+            },
+            "frequence": 84
+          },
+          {
+            "competence": {
+              "type": "COMPETENCE-DETAILLEE",
+              "code": "123389",
+              "libelle": "Sélectionner des informations documentaires",
+              "codeOgr": "123389"
+            },
+            "frequence": 100
+          },
+          {
+            "competence": {
+              "type": "MACRO-SAVOIR-FAIRE",
+              "code": "300118",
+              "libelle": "Gérer une base documentaire",
+              "codeOgr": "300118"
+            },
+            "frequence": 75
+          },
+          {
+            "competence": {
+              "type": "MACRO-SAVOIR-FAIRE",
+              "code": "300119",
+              "libelle": "Réaliser une veille documentaire",
+              "codeOgr": "300119"
+            },
+            "frequence": 84
+          }
+        ]
+      },
+      {
+        "code": "15323",
+        "libelle": "Gestionnaire de bases de données et de ressources documentaires",
+        "libelleCourt": "Gestionnaire de bases de données et ressources documentaires",
+        "classification": "SYNONYME",
+        "competencesCles": [
+          {
+            "competence": {
+              "type": "COMPETENCE-DETAILLEE",
+              "code": "121319",
+              "libelle": "Actualiser des documents et fonds documentaires",
+              "codeOgr": "121319"
+            },
+            "frequence": 93
+          },
+          {
+            "competence": {
+              "type": "COMPETENCE-DETAILLEE",
+              "code": "121718",
+              "libelle": "Classer des documents",
+              "codeOgr": "121718"
+            },
+            "frequence": 93
+          },
+          {
+            "competence": {
+              "type": "COMPETENCE-DETAILLEE",
+              "code": "123389",
+              "libelle": "Sélectionner des informations documentaires",
+              "codeOgr": "123389"
+            },
+            "frequence": 93
+          },
+          {
+            "competence": {
+              "type": "MACRO-SAVOIR-FAIRE",
+              "code": "300119",
+              "libelle": "Réaliser une veille documentaire",
+              "codeOgr": "300119"
+            },
+            "frequence": 82
+          },
+          {
+            "competence": {
+              "type": "MACRO-SAVOIR-FAIRE",
+              "code": "300259",
+              "libelle": "Participer à un inventaire",
+              "codeOgr": "300259"
+            },
+            "frequence": 80
+          }
+        ]
+      },
+      {
+        "code": "200204",
+        "libelle": "Catalogueur / Catalogueuse",
+        "libelleCourt": "Catalogueur / Catalogueuse",
+        "classification": "SYNONYME",
+        "competencesCles": [
+          {
+            "competence": {
+              "type": "COMPETENCE-DETAILLEE",
+              "code": "121319",
+              "libelle": "Actualiser des documents et fonds documentaires",
+              "codeOgr": "121319"
+            },
+            "frequence": 100
+          },
+          {
+            "competence": {
+              "type": "COMPETENCE-DETAILLEE",
+              "code": "121718",
+              "libelle": "Classer des documents",
+              "codeOgr": "121718"
+            },
+            "frequence": 89
+          },
+          {
+            "competence": {
+              "type": "COMPETENCE-DETAILLEE",
+              "code": "123389",
+              "libelle": "Sélectionner des informations documentaires",
+              "codeOgr": "123389"
+            },
+            "frequence": 78
+          },
+          {
+            "competence": {
+              "type": "MACRO-SAVOIR-FAIRE",
+              "code": "300119",
+              "libelle": "Réaliser une veille documentaire",
+              "codeOgr": "300119"
+            },
+            "frequence": 56
+          },
+          {
+            "competence": {
+              "type": "MACRO-SAVOIR-FAIRE",
+              "code": "300259",
+              "libelle": "Participer à un inventaire",
+              "codeOgr": "300259"
+            },
+            "frequence": 56
+          }
+        ]
+      },
+      {
+        "code": "18166",
+        "libelle": "Professeur / Professeure documentaliste",
+        "libelleCourt": "Professeur / Professeure documentaliste",
+        "classification": "SYNONYME",
+        "competencesCles": [
+          {
+            "competence": {
+              "type": "COMPETENCE-DETAILLEE",
+              "code": "121265",
+              "libelle": "Renseigner un public sur l'utilisation de supports et outils documentaires",
+              "codeOgr": "121265"
+            },
+            "frequence": 100
+          },
+          {
+            "competence": {
+              "type": "COMPETENCE-DETAILLEE",
+              "code": "121319",
+              "libelle": "Actualiser des documents et fonds documentaires",
+              "codeOgr": "121319"
+            },
+            "frequence": 87
+          },
+          {
+            "competence": {
+              "type": "COMPETENCE-DETAILLEE",
+              "code": "121718",
+              "libelle": "Classer des documents",
+              "codeOgr": "121718"
+            },
+            "frequence": 95
+          },
+          {
+            "competence": {
+              "type": "COMPETENCE-DETAILLEE",
+              "code": "123389",
+              "libelle": "Sélectionner des informations documentaires",
+              "codeOgr": "123389"
+            },
+            "frequence": 89
+          },
+          {
+            "competence": {
+              "type": "MACRO-SAVOIR-FAIRE",
+              "code": "300119",
+              "libelle": "Réaliser une veille documentaire",
+              "codeOgr": "300119"
+            },
+            "frequence": 87
+          }
+        ]
+      },
+      {
+        "code": "11874",
+        "libelle": "Chargé / Chargée de veille documentaire",
+        "libelleCourt": "Chargé / Chargée de veille documentaire",
+        "classification": "SYNONYME",
+        "competencesCles": [
+          {
+            "competence": {
+              "type": "COMPETENCE-DETAILLEE",
+              "code": "121319",
+              "libelle": "Actualiser des documents et fonds documentaires",
+              "codeOgr": "121319"
+            },
+            "frequence": 80
+          },
+          {
+            "competence": {
+              "type": "COMPETENCE-DETAILLEE",
+              "code": "121718",
+              "libelle": "Classer des documents",
+              "codeOgr": "121718"
+            },
+            "frequence": 73
+          },
+          {
+            "competence": {
+              "type": "COMPETENCE-DETAILLEE",
+              "code": "123389",
+              "libelle": "Sélectionner des informations documentaires",
+              "codeOgr": "123389"
+            },
+            "frequence": 100
+          },
+          {
+            "competence": {
+              "type": "COMPETENCE-DETAILLEE",
+              "code": "123390",
+              "libelle": "Mettre à disposition d'un public des fonds documentaires",
+              "codeOgr": "123390"
+            },
+            "frequence": 76
+          },
+          {
+            "competence": {
+              "type": "MACRO-SAVOIR-FAIRE",
+              "code": "300119",
+              "libelle": "Réaliser une veille documentaire",
+              "codeOgr": "300119"
+            },
+            "frequence": 90
+          }
+        ]
+      },
+      {
+        "code": "11889",
+        "libelle": "Chargé / Chargée des ressources documentaires",
+        "libelleCourt": "Chargé / Chargée des ressources documentaires",
+        "classification": "SYNONYME",
+        "competencesCles": [
+          {
+            "competence": {
+              "type": "COMPETENCE-DETAILLEE",
+              "code": "121319",
+              "libelle": "Actualiser des documents et fonds documentaires",
+              "codeOgr": "121319"
+            },
+            "frequence": 93
+          },
+          {
+            "competence": {
+              "type": "COMPETENCE-DETAILLEE",
+              "code": "121718",
+              "libelle": "Classer des documents",
+              "codeOgr": "121718"
+            },
+            "frequence": 94
+          },
+          {
+            "competence": {
+              "type": "COMPETENCE-DETAILLEE",
+              "code": "123389",
+              "libelle": "Sélectionner des informations documentaires",
+              "codeOgr": "123389"
+            },
+            "frequence": 85
+          },
+          {
+            "competence": {
+              "type": "COMPETENCE-DETAILLEE",
+              "code": "123390",
+              "libelle": "Mettre à disposition d'un public des fonds documentaires",
+              "codeOgr": "123390"
+            },
+            "frequence": 84
+          },
+          {
+            "competence": {
+              "type": "MACRO-SAVOIR-FAIRE",
+              "code": "300119",
+              "libelle": "Réaliser une veille documentaire",
+              "codeOgr": "300119"
+            },
+            "frequence": 75
+          }
+        ]
+      },
+      {
+        "code": "11393",
+        "libelle": "Attaché / Attachée de conservation des archives",
+        "libelleCourt": "Attaché / Attachée de conservation des archives",
+        "classification": "SYNONYME",
+        "competencesCles": [
+          {
+            "competence": {
+              "type": "COMPETENCE-DETAILLEE",
+              "code": "121319",
+              "libelle": "Actualiser des documents et fonds documentaires",
+              "codeOgr": "121319"
+            },
+            "frequence": 100
+          },
+          {
+            "competence": {
+              "type": "COMPETENCE-DETAILLEE",
+              "code": "121718",
+              "libelle": "Classer des documents",
+              "codeOgr": "121718"
+            },
+            "frequence": 100
+          },
+          {
+            "competence": {
+              "type": "COMPETENCE-DETAILLEE",
+              "code": "123389",
+              "libelle": "Sélectionner des informations documentaires",
+              "codeOgr": "123389"
+            },
+            "frequence": 80
+          },
+          {
+            "competence": {
+              "type": "MACRO-SAVOIR-FAIRE",
+              "code": "300119",
+              "libelle": "Réaliser une veille documentaire",
+              "codeOgr": "300119"
+            },
+            "frequence": 100
+          },
+          {
+            "competence": {
+              "type": "MACRO-SAVOIR-FAIRE",
+              "code": "300259",
+              "libelle": "Participer à un inventaire",
+              "codeOgr": "300259"
+            },
+            "frequence": 100
+          }
+        ]
+      },
+      {
+        "code": "11857",
+        "libelle": "Chargé / Chargée de recherche d'information",
+        "libelleCourt": "Chargé / Chargée de recherche d'information",
+        "classification": "SYNONYME",
+        "competencesCles": [
+          {
+            "competence": {
+              "type": "COMPETENCE-DETAILLEE",
+              "code": "121319",
+              "libelle": "Actualiser des documents et fonds documentaires",
+              "codeOgr": "121319"
+            },
+            "frequence": 86
+          },
+          {
+            "competence": {
+              "type": "COMPETENCE-DETAILLEE",
+              "code": "121718",
+              "libelle": "Classer des documents",
+              "codeOgr": "121718"
+            },
+            "frequence": 58
+          },
+          {
+            "competence": {
+              "type": "COMPETENCE-DETAILLEE",
+              "code": "123389",
+              "libelle": "Sélectionner des informations documentaires",
+              "codeOgr": "123389"
+            },
+            "frequence": 86
+          },
+          {
+            "competence": {
+              "type": "MACRO-SAVOIR-FAIRE",
+              "code": "300119",
+              "libelle": "Réaliser une veille documentaire",
+              "codeOgr": "300119"
+            },
+            "frequence": 72
+          }
+        ]
+      },
+      {
+        "code": "11506",
+        "libelle": "Bibliothécaire",
+        "libelleCourt": "Bibliothécaire",
+        "classification": "SYNONYME",
+        "competencesCles": [
+          {
+            "competence": {
+              "type": "COMPETENCE-DETAILLEE",
+              "code": "121265",
+              "libelle": "Renseigner un public sur l'utilisation de supports et outils documentaires",
+              "codeOgr": "121265"
+            },
+            "frequence": 95
+          },
+          {
+            "competence": {
+              "type": "COMPETENCE-DETAILLEE",
+              "code": "121319",
+              "libelle": "Actualiser des documents et fonds documentaires",
+              "codeOgr": "121319"
+            },
+            "frequence": 96
+          },
+          {
+            "competence": {
+              "type": "COMPETENCE-DETAILLEE",
+              "code": "121718",
+              "libelle": "Classer des documents",
+              "codeOgr": "121718"
+            },
+            "frequence": 93
+          },
+          {
+            "competence": {
+              "type": "COMPETENCE-DETAILLEE",
+              "code": "123389",
+              "libelle": "Sélectionner des informations documentaires",
+              "codeOgr": "123389"
+            },
+            "frequence": 73
+          },
+          {
+            "competence": {
+              "type": "MACRO-SAVOIR-FAIRE",
+              "code": "300119",
+              "libelle": "Réaliser une veille documentaire",
+              "codeOgr": "300119"
+            },
+            "frequence": 85
+          }
+        ]
+      },
+      {
+        "code": "11507",
+        "libelle": "Bibliothécaire documentaliste",
+        "libelleCourt": "Bibliothécaire documentaliste",
+        "classification": "SYNONYME",
+        "competencesCles": [
+          {
+            "competence": {
+              "type": "COMPETENCE-DETAILLEE",
+              "code": "121265",
+              "libelle": "Renseigner un public sur l'utilisation de supports et outils documentaires",
+              "codeOgr": "121265"
+            },
+            "frequence": 88
+          },
+          {
+            "competence": {
+              "type": "COMPETENCE-DETAILLEE",
+              "code": "121319",
+              "libelle": "Actualiser des documents et fonds documentaires",
+              "codeOgr": "121319"
+            },
+            "frequence": 93
+          },
+          {
+            "competence": {
+              "type": "COMPETENCE-DETAILLEE",
+              "code": "121718",
+              "libelle": "Classer des documents",
+              "codeOgr": "121718"
+            },
+            "frequence": 88
+          },
+          {
+            "competence": {
+              "type": "COMPETENCE-DETAILLEE",
+              "code": "123389",
+              "libelle": "Sélectionner des informations documentaires",
+              "codeOgr": "123389"
+            },
+            "frequence": 83
+          },
+          {
+            "competence": {
+              "type": "MACRO-SAVOIR-FAIRE",
+              "code": "300119",
+              "libelle": "Réaliser une veille documentaire",
+              "codeOgr": "300119"
+            },
+            "frequence": 85
+          }
+        ]
+      },
+      {
+        "code": "13878",
+        "libelle": "Cyber documentaliste",
+        "libelleCourt": "Cyber documentaliste",
+        "classification": "SYNONYME",
+        "competencesCles": [
+          {
+            "competence": {
+              "type": "COMPETENCE-DETAILLEE",
+              "code": "121319",
+              "libelle": "Actualiser des documents et fonds documentaires",
+              "codeOgr": "121319"
+            },
+            "frequence": 100
+          },
+          {
+            "competence": {
+              "type": "COMPETENCE-DETAILLEE",
+              "code": "121718",
+              "libelle": "Classer des documents",
+              "codeOgr": "121718"
+            },
+            "frequence": 100
+          },
+          {
+            "competence": {
+              "type": "COMPETENCE-DETAILLEE",
+              "code": "123389",
+              "libelle": "Sélectionner des informations documentaires",
+              "codeOgr": "123389"
+            },
+            "frequence": 100
+          },
+          {
+            "competence": {
+              "type": "MACRO-SAVOIR-FAIRE",
+              "code": "300119",
+              "libelle": "Réaliser une veille documentaire",
+              "codeOgr": "300119"
+            },
+            "frequence": 100
+          },
+          {
+            "competence": {
+              "type": "MACRO-SAVOIR-FAIRE",
+              "code": "300458",
+              "libelle": "Structurer, synthétiser des informations",
+              "codeOgr": "300458"
+            },
+            "frequence": 100
+          }
+        ]
+      },
+      {
+        "code": "13505",
+        "libelle": "Conservateur / Conservatrice d'archives",
+        "libelleCourt": "Conservateur / Conservatrice d'archives",
+        "classification": "SYNONYME",
+        "competencesCles": [
+          {
+            "competence": {
+              "type": "SAVOIR",
+              "code": "108131",
+              "libelle": "Techniques de conservation de documents",
+              "codeOgr": "108131"
+            },
+            "frequence": 100
+          },
+          {
+            "competence": {
+              "type": "SAVOIR",
+              "code": "119509",
+              "libelle": "Logiciel de gestion documentaire",
+              "codeOgr": "119509"
+            },
+            "frequence": 80
+          },
+          {
+            "competence": {
+              "type": "COMPETENCE-DETAILLEE",
+              "code": "121319",
+              "libelle": "Actualiser des documents et fonds documentaires",
+              "codeOgr": "121319"
+            },
+            "frequence": 80
+          },
+          {
+            "competence": {
+              "type": "COMPETENCE-DETAILLEE",
+              "code": "121718",
+              "libelle": "Classer des documents",
+              "codeOgr": "121718"
+            },
+            "frequence": 93
+          },
+          {
+            "competence": {
+              "type": "COMPETENCE-DETAILLEE",
+              "code": "123389",
+              "libelle": "Sélectionner des informations documentaires",
+              "codeOgr": "123389"
+            },
+            "frequence": 85
+          }
+        ]
+      },
+      {
+        "code": "14374",
+        "libelle": "Directeur / Directrice des ressources documentaires",
+        "libelleCourt": "Directeur / Directrice des ressources documentaires",
+        "classification": "SYNONYME",
+        "competencesCles": [
+          {
+            "competence": {
+              "type": "COMPETENCE-DETAILLEE",
+              "code": "121319",
+              "libelle": "Actualiser des documents et fonds documentaires",
+              "codeOgr": "121319"
+            },
+            "frequence": 72
+          },
+          {
+            "competence": {
+              "type": "COMPETENCE-DETAILLEE",
+              "code": "121718",
+              "libelle": "Classer des documents",
+              "codeOgr": "121718"
+            },
+            "frequence": 72
+          },
+          {
+            "competence": {
+              "type": "COMPETENCE-DETAILLEE",
+              "code": "123389",
+              "libelle": "Sélectionner des informations documentaires",
+              "codeOgr": "123389"
+            },
+            "frequence": 72
+          },
+          {
+            "competence": {
+              "type": "MACRO-SAVOIR-FAIRE",
+              "code": "300119",
+              "libelle": "Réaliser une veille documentaire",
+              "codeOgr": "300119"
+            },
+            "frequence": 58
+          }
+        ]
+      },
+      {
+        "code": "14295",
+        "libelle": "Directeur / Directrice de médiathèque",
+        "libelleCourt": "Directeur / Directrice de médiathèque",
+        "classification": "SYNONYME",
+        "competencesCles": [
+          {
+            "competence": {
+              "type": "COMPETENCE-DETAILLEE",
+              "code": "108128",
+              "libelle": "Enregistrer et suivre les prêts de documents",
+              "codeOgr": "108128"
+            },
+            "frequence": 89
+          },
+          {
+            "competence": {
+              "type": "COMPETENCE-DETAILLEE",
+              "code": "121265",
+              "libelle": "Renseigner un public sur l'utilisation de supports et outils documentaires",
+              "codeOgr": "121265"
+            },
+            "frequence": 96
+          },
+          {
+            "competence": {
+              "type": "COMPETENCE-DETAILLEE",
+              "code": "121319",
+              "libelle": "Actualiser des documents et fonds documentaires",
+              "codeOgr": "121319"
+            },
+            "frequence": 96
+          },
+          {
+            "competence": {
+              "type": "COMPETENCE-DETAILLEE",
+              "code": "121718",
+              "libelle": "Classer des documents",
+              "codeOgr": "121718"
+            },
+            "frequence": 96
+          },
+          {
+            "competence": {
+              "type": "MACRO-SAVOIR-FAIRE",
+              "code": "300119",
+              "libelle": "Réaliser une veille documentaire",
+              "codeOgr": "300119"
+            },
+            "frequence": 80
+          }
+        ]
+      },
+      {
+        "code": "15722",
+        "libelle": "Ingénieur / Ingénieure documentaire",
+        "libelleCourt": "Ingénieur / Ingénieure documentaire",
+        "classification": "SYNONYME",
+        "competencesCles": [
+          {
+            "competence": {
+              "type": "COMPETENCE-DETAILLEE",
+              "code": "121319",
+              "libelle": "Actualiser des documents et fonds documentaires",
+              "codeOgr": "121319"
+            },
+            "frequence": 100
+          },
+          {
+            "competence": {
+              "type": "COMPETENCE-DETAILLEE",
+              "code": "121718",
+              "libelle": "Classer des documents",
+              "codeOgr": "121718"
+            },
+            "frequence": 100
+          },
+          {
+            "competence": {
+              "type": "COMPETENCE-DETAILLEE",
+              "code": "123389",
+              "libelle": "Sélectionner des informations documentaires",
+              "codeOgr": "123389"
+            },
+            "frequence": 100
+          },
+          {
+            "competence": {
+              "type": "MACRO-SAVOIR-FAIRE",
+              "code": "300119",
+              "libelle": "Réaliser une veille documentaire",
+              "codeOgr": "300119"
+            },
+            "frequence": 93
+          }
+        ]
+      },
+      {
+        "code": "15745",
+        "libelle": "Ingénieur / Ingénieure en bibliothéconomie",
+        "libelleCourt": "Ingénieur / Ingénieure en bibliothéconomie",
+        "classification": "SYNONYME",
+        "competencesCles": [
+          {
+            "competence": {
+              "type": "COMPETENCE-DETAILLEE",
+              "code": "121319",
+              "libelle": "Actualiser des documents et fonds documentaires",
+              "codeOgr": "121319"
+            },
+            "frequence": 91
+          },
+          {
+            "competence": {
+              "type": "COMPETENCE-DETAILLEE",
+              "code": "121718",
+              "libelle": "Classer des documents",
+              "codeOgr": "121718"
+            },
+            "frequence": 93
+          },
+          {
+            "competence": {
+              "type": "COMPETENCE-DETAILLEE",
+              "code": "123389",
+              "libelle": "Sélectionner des informations documentaires",
+              "codeOgr": "123389"
+            },
+            "frequence": 85
+          },
+          {
+            "competence": {
+              "type": "MACRO-SAVOIR-FAIRE",
+              "code": "300119",
+              "libelle": "Réaliser une veille documentaire",
+              "codeOgr": "300119"
+            },
+            "frequence": 79
+          }
+        ]
+      },
+      {
+        "code": "15329",
+        "libelle": "Gestionnaire de documents d'entreprise",
+        "libelleCourt": "Gestionnaire de documents d'entreprise",
+        "classification": "SYNONYME",
+        "competencesCles": [
+          {
+            "competence": {
+              "type": "COMPETENCE-DETAILLEE",
+              "code": "121319",
+              "libelle": "Actualiser des documents et fonds documentaires",
+              "codeOgr": "121319"
+            },
+            "frequence": 84
+          },
+          {
+            "competence": {
+              "type": "COMPETENCE-DETAILLEE",
+              "code": "121718",
+              "libelle": "Classer des documents",
+              "codeOgr": "121718"
+            },
+            "frequence": 92
+          },
+          {
+            "competence": {
+              "type": "COMPETENCE-DETAILLEE",
+              "code": "123389",
+              "libelle": "Sélectionner des informations documentaires",
+              "codeOgr": "123389"
+            },
+            "frequence": 84
+          },
+          {
+            "competence": {
+              "type": "MACRO-SAVOIR-FAIRE",
+              "code": "300119",
+              "libelle": "Réaliser une veille documentaire",
+              "codeOgr": "300119"
+            },
+            "frequence": 81
+          },
+          {
+            "competence": {
+              "type": "MACRO-SAVOIR-FAIRE",
+              "code": "300458",
+              "libelle": "Structurer, synthétiser des informations",
+              "codeOgr": "300458"
+            },
+            "frequence": 87
+          }
+        ]
+      },
+      {
+        "code": "15364",
+        "libelle": "Gestionnaire en documentation",
+        "libelleCourt": "Gestionnaire en documentation",
+        "classification": "SYNONYME",
+        "competencesCles": [
+          {
+            "competence": {
+              "type": "COMPETENCE-DETAILLEE",
+              "code": "121319",
+              "libelle": "Actualiser des documents et fonds documentaires",
+              "codeOgr": "121319"
+            },
+            "frequence": 97
+          },
+          {
+            "competence": {
+              "type": "COMPETENCE-DETAILLEE",
+              "code": "121718",
+              "libelle": "Classer des documents",
+              "codeOgr": "121718"
+            },
+            "frequence": 98
+          },
+          {
+            "competence": {
+              "type": "COMPETENCE-DETAILLEE",
+              "code": "123389",
+              "libelle": "Sélectionner des informations documentaires",
+              "codeOgr": "123389"
+            },
+            "frequence": 96
+          },
+          {
+            "competence": {
+              "type": "MACRO-SAVOIR-FAIRE",
+              "code": "300119",
+              "libelle": "Réaliser une veille documentaire",
+              "codeOgr": "300119"
+            },
+            "frequence": 82
+          },
+          {
+            "competence": {
+              "type": "MACRO-SAVOIR-FAIRE",
+              "code": "300259",
+              "libelle": "Participer à un inventaire",
+              "codeOgr": "300259"
+            },
+            "frequence": 60
+          }
+        ]
+      },
+      {
+        "code": "14493",
+        "libelle": "Discothécaire",
+        "libelleCourt": "Discothécaire",
+        "classification": "SYNONYME",
+        "competencesCles": [
+          {
+            "competence": {
+              "type": "COMPETENCE-DETAILLEE",
+              "code": "121319",
+              "libelle": "Actualiser des documents et fonds documentaires",
+              "codeOgr": "121319"
+            },
+            "frequence": 91
+          },
+          {
+            "competence": {
+              "type": "COMPETENCE-DETAILLEE",
+              "code": "121718",
+              "libelle": "Classer des documents",
+              "codeOgr": "121718"
+            },
+            "frequence": 93
+          },
+          {
+            "competence": {
+              "type": "COMPETENCE-DETAILLEE",
+              "code": "123389",
+              "libelle": "Sélectionner des informations documentaires",
+              "codeOgr": "123389"
+            },
+            "frequence": 85
+          },
+          {
+            "competence": {
+              "type": "MACRO-SAVOIR-FAIRE",
+              "code": "300119",
+              "libelle": "Réaliser une veille documentaire",
+              "codeOgr": "300119"
+            },
+            "frequence": 79
+          }
+        ]
+      },
+      {
+        "code": "14511",
+        "libelle": "Documentaliste",
+        "libelleCourt": "Documentaliste",
+        "classification": "PRINCIPALE",
+        "competencesCles": [
+          {
+            "competence": {
+              "type": "COMPETENCE-DETAILLEE",
+              "code": "121319",
+              "libelle": "Actualiser des documents et fonds documentaires",
+              "codeOgr": "121319"
+            },
+            "frequence": 98
+          },
+          {
+            "competence": {
+              "type": "COMPETENCE-DETAILLEE",
+              "code": "121718",
+              "libelle": "Classer des documents",
+              "codeOgr": "121718"
+            },
+            "frequence": 98
+          },
+          {
+            "competence": {
+              "type": "COMPETENCE-DETAILLEE",
+              "code": "123389",
+              "libelle": "Sélectionner des informations documentaires",
+              "codeOgr": "123389"
+            },
+            "frequence": 97
+          },
+          {
+            "competence": {
+              "type": "MACRO-SAVOIR-FAIRE",
+              "code": "300118",
+              "libelle": "Gérer une base documentaire",
+              "codeOgr": "300118"
+            },
+            "frequence": 68
+          },
+          {
+            "competence": {
+              "type": "MACRO-SAVOIR-FAIRE",
+              "code": "300119",
+              "libelle": "Réaliser une veille documentaire",
+              "codeOgr": "300119"
+            },
+            "frequence": 80
+          }
+        ]
+      },
+      {
+        "code": "14512",
+        "libelle": "Documentaliste archiviste",
+        "libelleCourt": "Documentaliste archiviste",
+        "classification": "SYNONYME",
+        "competencesCles": [
+          {
+            "competence": {
+              "type": "COMPETENCE-DETAILLEE",
+              "code": "121319",
+              "libelle": "Actualiser des documents et fonds documentaires",
+              "codeOgr": "121319"
+            },
+            "frequence": 100
+          },
+          {
+            "competence": {
+              "type": "COMPETENCE-DETAILLEE",
+              "code": "121718",
+              "libelle": "Classer des documents",
+              "codeOgr": "121718"
+            },
+            "frequence": 100
+          },
+          {
+            "competence": {
+              "type": "COMPETENCE-DETAILLEE",
+              "code": "123389",
+              "libelle": "Sélectionner des informations documentaires",
+              "codeOgr": "123389"
+            },
+            "frequence": 93
+          },
+          {
+            "competence": {
+              "type": "MACRO-SAVOIR-FAIRE",
+              "code": "300119",
+              "libelle": "Réaliser une veille documentaire",
+              "codeOgr": "300119"
+            },
+            "frequence": 93
+          },
+          {
+            "competence": {
+              "type": "MACRO-SAVOIR-FAIRE",
+              "code": "300259",
+              "libelle": "Participer à un inventaire",
+              "codeOgr": "300259"
+            },
+            "frequence": 93
+          }
+        ]
+      },
+      {
+        "code": "14514",
+        "libelle": "Documentaliste juridique",
+        "libelleCourt": "Documentaliste juridique",
+        "classification": "SYNONYME",
+        "competencesCles": [
+          {
+            "competence": {
+              "type": "COMPETENCE-DETAILLEE",
+              "code": "121319",
+              "libelle": "Actualiser des documents et fonds documentaires",
+              "codeOgr": "121319"
+            },
+            "frequence": 94
+          },
+          {
+            "competence": {
+              "type": "COMPETENCE-DETAILLEE",
+              "code": "121718",
+              "libelle": "Classer des documents",
+              "codeOgr": "121718"
+            },
+            "frequence": 63
+          },
+          {
+            "competence": {
+              "type": "COMPETENCE-DETAILLEE",
+              "code": "123389",
+              "libelle": "Sélectionner des informations documentaires",
+              "codeOgr": "123389"
+            },
+            "frequence": 94
+          },
+          {
+            "competence": {
+              "type": "MACRO-SAVOIR-FAIRE",
+              "code": "300118",
+              "libelle": "Gérer une base documentaire",
+              "codeOgr": "300118"
+            },
+            "frequence": 57
+          },
+          {
+            "competence": {
+              "type": "MACRO-SAVOIR-FAIRE",
+              "code": "300119",
+              "libelle": "Réaliser une veille documentaire",
+              "codeOgr": "300119"
+            },
+            "frequence": 57
+          }
+        ]
+      },
+      {
+        "code": "16228",
+        "libelle": "Ludothécaire",
+        "libelleCourt": "Ludothécaire",
+        "classification": "SYNONYME",
+        "competencesCles": [
+          {
+            "competence": {
+              "type": "COMPETENCE-DETAILLEE",
+              "code": "121265",
+              "libelle": "Renseigner un public sur l'utilisation de supports et outils documentaires",
+              "codeOgr": "121265"
+            },
+            "frequence": 86
+          },
+          {
+            "competence": {
+              "type": "COMPETENCE-DETAILLEE",
+              "code": "121319",
+              "libelle": "Actualiser des documents et fonds documentaires",
+              "codeOgr": "121319"
+            },
+            "frequence": 81
+          },
+          {
+            "competence": {
+              "type": "COMPETENCE-DETAILLEE",
+              "code": "121718",
+              "libelle": "Classer des documents",
+              "codeOgr": "121718"
+            },
+            "frequence": 76
+          },
+          {
+            "competence": {
+              "type": "COMPETENCE-DETAILLEE",
+              "code": "123389",
+              "libelle": "Sélectionner des informations documentaires",
+              "codeOgr": "123389"
+            },
+            "frequence": 52
+          },
+          {
+            "competence": {
+              "type": "MACRO-SAVOIR-FAIRE",
+              "code": "300119",
+              "libelle": "Réaliser une veille documentaire",
+              "codeOgr": "300119"
+            },
+            "frequence": 74
+          }
+        ]
+      },
+      {
+        "code": "15507",
+        "libelle": "Iconographe",
+        "libelleCourt": "Iconographe",
+        "classification": "SYNONYME",
+        "competencesCles": [
+          {
+            "competence": {
+              "type": "COMPETENCE-DETAILLEE",
+              "code": "121319",
+              "libelle": "Actualiser des documents et fonds documentaires",
+              "codeOgr": "121319"
+            },
+            "frequence": 100
+          },
+          {
+            "competence": {
+              "type": "COMPETENCE-DETAILLEE",
+              "code": "121718",
+              "libelle": "Classer des documents",
+              "codeOgr": "121718"
+            },
+            "frequence": 88
+          },
+          {
+            "competence": {
+              "type": "COMPETENCE-DETAILLEE",
+              "code": "123389",
+              "libelle": "Sélectionner des informations documentaires",
+              "codeOgr": "123389"
+            },
+            "frequence": 75
+          },
+          {
+            "competence": {
+              "type": "MACRO-SAVOIR-FAIRE",
+              "code": "300118",
+              "libelle": "Gérer une base documentaire",
+              "codeOgr": "300118"
+            },
+            "frequence": 88
+          },
+          {
+            "competence": {
+              "type": "MACRO-SAVOIR-FAIRE",
+              "code": "300119",
+              "libelle": "Réaliser une veille documentaire",
+              "codeOgr": "300119"
+            },
+            "frequence": 75
+          }
+        ]
+      },
+      {
+        "code": "16609",
+        "libelle": "Médiathécaire",
+        "libelleCourt": "Médiathécaire",
+        "classification": "SYNONYME",
+        "competencesCles": [
+          {
+            "competence": {
+              "type": "COMPETENCE-DETAILLEE",
+              "code": "121265",
+              "libelle": "Renseigner un public sur l'utilisation de supports et outils documentaires",
+              "codeOgr": "121265"
+            },
+            "frequence": 99
+          },
+          {
+            "competence": {
+              "type": "COMPETENCE-DETAILLEE",
+              "code": "121319",
+              "libelle": "Actualiser des documents et fonds documentaires",
+              "codeOgr": "121319"
+            },
+            "frequence": 99
+          },
+          {
+            "competence": {
+              "type": "COMPETENCE-DETAILLEE",
+              "code": "121718",
+              "libelle": "Classer des documents",
+              "codeOgr": "121718"
+            },
+            "frequence": 95
+          },
+          {
+            "competence": {
+              "type": "COMPETENCE-DETAILLEE",
+              "code": "123389",
+              "libelle": "Sélectionner des informations documentaires",
+              "codeOgr": "123389"
+            },
+            "frequence": 74
+          },
+          {
+            "competence": {
+              "type": "MACRO-SAVOIR-FAIRE",
+              "code": "300119",
+              "libelle": "Réaliser une veille documentaire",
+              "codeOgr": "300119"
+            },
+            "frequence": 83
+          }
+        ]
+      },
+      {
+        "code": "16970",
+        "libelle": "Net surfeur / Net surfeuse",
+        "libelleCourt": "Net surfeur / Net surfeuse",
+        "classification": "SYNONYME",
+        "competencesCles": [
+          {
+            "competence": {
+              "type": "COMPETENCE-DETAILLEE",
+              "code": "121319",
+              "libelle": "Actualiser des documents et fonds documentaires",
+              "codeOgr": "121319"
+            },
+            "frequence": 100
+          },
+          {
+            "competence": {
+              "type": "COMPETENCE-DETAILLEE",
+              "code": "121718",
+              "libelle": "Classer des documents",
+              "codeOgr": "121718"
+            },
+            "frequence": 100
+          },
+          {
+            "competence": {
+              "type": "COMPETENCE-DETAILLEE",
+              "code": "123389",
+              "libelle": "Sélectionner des informations documentaires",
+              "codeOgr": "123389"
+            },
+            "frequence": 100
+          },
+          {
+            "competence": {
+              "type": "MACRO-SAVOIR-FAIRE",
+              "code": "300119",
+              "libelle": "Réaliser une veille documentaire",
+              "codeOgr": "300119"
+            },
+            "frequence": 100
+          }
+        ]
+      },
+      {
+        "code": "18803",
+        "libelle": "Responsable de photothèque",
+        "libelleCourt": "Responsable de photothèque",
+        "classification": "SYNONYME",
+        "competencesCles": [
+          {
+            "competence": {
+              "type": "COMPETENCE-DETAILLEE",
+              "code": "121319",
+              "libelle": "Actualiser des documents et fonds documentaires",
+              "codeOgr": "121319"
+            },
+            "frequence": 91
+          },
+          {
+            "competence": {
+              "type": "COMPETENCE-DETAILLEE",
+              "code": "121718",
+              "libelle": "Classer des documents",
+              "codeOgr": "121718"
+            },
+            "frequence": 93
+          },
+          {
+            "competence": {
+              "type": "COMPETENCE-DETAILLEE",
+              "code": "123389",
+              "libelle": "Sélectionner des informations documentaires",
+              "codeOgr": "123389"
+            },
+            "frequence": 85
+          },
+          {
+            "competence": {
+              "type": "MACRO-SAVOIR-FAIRE",
+              "code": "300119",
+              "libelle": "Réaliser une veille documentaire",
+              "codeOgr": "300119"
+            },
+            "frequence": 79
+          }
+        ]
+      },
+      {
+        "code": "18922",
+        "libelle": "Responsable des archives",
+        "libelleCourt": "Responsable des archives",
+        "classification": "SYNONYME",
+        "competencesCles": [
+          {
+            "competence": {
+              "type": "COMPETENCE-DETAILLEE",
+              "code": "121319",
+              "libelle": "Actualiser des documents et fonds documentaires",
+              "codeOgr": "121319"
+            },
+            "frequence": 94
+          },
+          {
+            "competence": {
+              "type": "COMPETENCE-DETAILLEE",
+              "code": "121718",
+              "libelle": "Classer des documents",
+              "codeOgr": "121718"
+            },
+            "frequence": 97
+          },
+          {
+            "competence": {
+              "type": "COMPETENCE-DETAILLEE",
+              "code": "123389",
+              "libelle": "Sélectionner des informations documentaires",
+              "codeOgr": "123389"
+            },
+            "frequence": 100
+          },
+          {
+            "competence": {
+              "type": "MACRO-SAVOIR-FAIRE",
+              "code": "300119",
+              "libelle": "Réaliser une veille documentaire",
+              "codeOgr": "300119"
+            },
+            "frequence": 87
+          },
+          {
+            "competence": {
+              "type": "MACRO-SAVOIR-FAIRE",
+              "code": "300259",
+              "libelle": "Participer à un inventaire",
+              "codeOgr": "300259"
+            },
+            "frequence": 83
+          }
+        ]
+      },
+      {
+        "code": "18941",
+        "libelle": "Responsable des ressources documentaires",
+        "libelleCourt": "Responsable des ressources documentaires",
+        "classification": "SYNONYME",
+        "competencesCles": [
+          {
+            "competence": {
+              "type": "COMPETENCE-DETAILLEE",
+              "code": "121319",
+              "libelle": "Actualiser des documents et fonds documentaires",
+              "codeOgr": "121319"
+            },
+            "frequence": 100
+          },
+          {
+            "competence": {
+              "type": "COMPETENCE-DETAILLEE",
+              "code": "121718",
+              "libelle": "Classer des documents",
+              "codeOgr": "121718"
+            },
+            "frequence": 93
+          },
+          {
+            "competence": {
+              "type": "COMPETENCE-DETAILLEE",
+              "code": "123389",
+              "libelle": "Sélectionner des informations documentaires",
+              "codeOgr": "123389"
+            },
+            "frequence": 95
+          },
+          {
+            "competence": {
+              "type": "MACRO-SAVOIR-FAIRE",
+              "code": "300119",
+              "libelle": "Réaliser une veille documentaire",
+              "codeOgr": "300119"
+            },
+            "frequence": 70
+          }
+        ]
+      },
+      {
+        "code": "10394",
+        "libelle": "Agent / Agente de bibliothèque",
+        "libelleCourt": "Agent / Agente de bibliothèque",
+        "classification": "SYNONYME",
+        "competencesCles": [
+          {
+            "competence": {
+              "type": "COMPETENCE-DETAILLEE",
+              "code": "121265",
+              "libelle": "Renseigner un public sur l'utilisation de supports et outils documentaires",
+              "codeOgr": "121265"
+            },
+            "frequence": 93
+          },
+          {
+            "competence": {
+              "type": "COMPETENCE-DETAILLEE",
+              "code": "121319",
+              "libelle": "Actualiser des documents et fonds documentaires",
+              "codeOgr": "121319"
+            },
+            "frequence": 89
+          },
+          {
+            "competence": {
+              "type": "COMPETENCE-DETAILLEE",
+              "code": "121718",
+              "libelle": "Classer des documents",
+              "codeOgr": "121718"
+            },
+            "frequence": 90
+          },
+          {
+            "competence": {
+              "type": "COMPETENCE-DETAILLEE",
+              "code": "123389",
+              "libelle": "Sélectionner des informations documentaires",
+              "codeOgr": "123389"
+            },
+            "frequence": 63
+          },
+          {
+            "competence": {
+              "type": "MACRO-SAVOIR-FAIRE",
+              "code": "300119",
+              "libelle": "Réaliser une veille documentaire",
+              "codeOgr": "300119"
+            },
+            "frequence": 71
+          }
+        ]
+      },
+      {
+        "code": "11296",
+        "libelle": "Assistant / Assistante ludothécaire",
+        "libelleCourt": "Assistant / Assistante ludothécaire",
+        "classification": "SYNONYME",
+        "competencesCles": [
+          {
+            "competence": {
+              "type": "COMPETENCE-DETAILLEE",
+              "code": "121265",
+              "libelle": "Renseigner un public sur l'utilisation de supports et outils documentaires",
+              "codeOgr": "121265"
+            },
+            "frequence": 80
+          },
+          {
+            "competence": {
+              "type": "COMPETENCE-DETAILLEE",
+              "code": "121319",
+              "libelle": "Actualiser des documents et fonds documentaires",
+              "codeOgr": "121319"
+            },
+            "frequence": 91
+          },
+          {
+            "competence": {
+              "type": "COMPETENCE-DETAILLEE",
+              "code": "121718",
+              "libelle": "Classer des documents",
+              "codeOgr": "121718"
+            },
+            "frequence": 93
+          },
+          {
+            "competence": {
+              "type": "COMPETENCE-DETAILLEE",
+              "code": "123389",
+              "libelle": "Sélectionner des informations documentaires",
+              "codeOgr": "123389"
+            },
+            "frequence": 85
+          },
+          {
+            "competence": {
+              "type": "MACRO-SAVOIR-FAIRE",
+              "code": "300119",
+              "libelle": "Réaliser une veille documentaire",
+              "codeOgr": "300119"
+            },
+            "frequence": 79
+          }
+        ]
+      },
+      {
+        "code": "11133",
+        "libelle": "Archiviste",
+        "libelleCourt": "Archiviste",
+        "classification": "SYNONYME",
+        "competencesCles": [
+          {
+            "competence": {
+              "type": "COMPETENCE-DETAILLEE",
+              "code": "121319",
+              "libelle": "Actualiser des documents et fonds documentaires",
+              "codeOgr": "121319"
+            },
+            "frequence": 89
+          },
+          {
+            "competence": {
+              "type": "COMPETENCE-DETAILLEE",
+              "code": "121718",
+              "libelle": "Classer des documents",
+              "codeOgr": "121718"
+            },
+            "frequence": 98
+          },
+          {
+            "competence": {
+              "type": "COMPETENCE-DETAILLEE",
+              "code": "123389",
+              "libelle": "Sélectionner des informations documentaires",
+              "codeOgr": "123389"
+            },
+            "frequence": 90
+          },
+          {
+            "competence": {
+              "type": "MACRO-SAVOIR-FAIRE",
+              "code": "300119",
+              "libelle": "Réaliser une veille documentaire",
+              "codeOgr": "300119"
+            },
+            "frequence": 79
+          },
+          {
+            "competence": {
+              "type": "MACRO-SAVOIR-FAIRE",
+              "code": "300259",
+              "libelle": "Participer à un inventaire",
+              "codeOgr": "300259"
+            },
+            "frequence": 85
+          }
+        ]
+      },
+      {
+        "code": "11134",
+        "libelle": "Archiviste paléographe",
+        "libelleCourt": "Archiviste paléographe",
+        "classification": "SYNONYME",
+        "competencesCles": [
+          {
+            "competence": {
+              "type": "COMPETENCE-DETAILLEE",
+              "code": "121319",
+              "libelle": "Actualiser des documents et fonds documentaires",
+              "codeOgr": "121319"
+            },
+            "frequence": 100
+          },
+          {
+            "competence": {
+              "type": "COMPETENCE-DETAILLEE",
+              "code": "121718",
+              "libelle": "Classer des documents",
+              "codeOgr": "121718"
+            },
+            "frequence": 100
+          },
+          {
+            "competence": {
+              "type": "COMPETENCE-DETAILLEE",
+              "code": "123389",
+              "libelle": "Sélectionner des informations documentaires",
+              "codeOgr": "123389"
+            },
+            "frequence": 100
+          },
+          {
+            "competence": {
+              "type": "MACRO-SAVOIR-FAIRE",
+              "code": "300119",
+              "libelle": "Réaliser une veille documentaire",
+              "codeOgr": "300119"
+            },
+            "frequence": 100
+          }
+        ]
+      },
+      {
+        "code": "11135",
+        "libelle": "Archiviste-documentaliste",
+        "libelleCourt": "Archiviste-documentaliste",
+        "classification": "SYNONYME",
+        "competencesCles": [
+          {
+            "competence": {
+              "type": "COMPETENCE-DETAILLEE",
+              "code": "121319",
+              "libelle": "Actualiser des documents et fonds documentaires",
+              "codeOgr": "121319"
+            },
+            "frequence": 99
+          },
+          {
+            "competence": {
+              "type": "COMPETENCE-DETAILLEE",
+              "code": "121718",
+              "libelle": "Classer des documents",
+              "codeOgr": "121718"
+            },
+            "frequence": 100
+          },
+          {
+            "competence": {
+              "type": "COMPETENCE-DETAILLEE",
+              "code": "123389",
+              "libelle": "Sélectionner des informations documentaires",
+              "codeOgr": "123389"
+            },
+            "frequence": 100
+          },
+          {
+            "competence": {
+              "type": "MACRO-SAVOIR-FAIRE",
+              "code": "300119",
+              "libelle": "Réaliser une veille documentaire",
+              "codeOgr": "300119"
+            },
+            "frequence": 88
+          },
+          {
+            "competence": {
+              "type": "MACRO-SAVOIR-FAIRE",
+              "code": "300259",
+              "libelle": "Participer à un inventaire",
+              "codeOgr": "300259"
+            },
+            "frequence": 90
+          }
+        ]
+      },
+      {
+        "code": "11189",
+        "libelle": "Assistant / Assistante archiviste",
+        "libelleCourt": "Assistant / Assistante archiviste",
+        "classification": "SYNONYME",
+        "competencesCles": [
+          {
+            "competence": {
+              "type": "COMPETENCE-DETAILLEE",
+              "code": "121319",
+              "libelle": "Actualiser des documents et fonds documentaires",
+              "codeOgr": "121319"
+            },
+            "frequence": 76
+          },
+          {
+            "competence": {
+              "type": "COMPETENCE-DETAILLEE",
+              "code": "121718",
+              "libelle": "Classer des documents",
+              "codeOgr": "121718"
+            },
+            "frequence": 92
+          },
+          {
+            "competence": {
+              "type": "COMPETENCE-DETAILLEE",
+              "code": "123389",
+              "libelle": "Sélectionner des informations documentaires",
+              "codeOgr": "123389"
+            },
+            "frequence": 81
+          },
+          {
+            "competence": {
+              "type": "MACRO-SAVOIR-FAIRE",
+              "code": "300119",
+              "libelle": "Réaliser une veille documentaire",
+              "codeOgr": "300119"
+            },
+            "frequence": 62
+          },
+          {
+            "competence": {
+              "type": "MACRO-SAVOIR-FAIRE",
+              "code": "300259",
+              "libelle": "Participer à un inventaire",
+              "codeOgr": "300259"
+            },
+            "frequence": 60
+          }
+        ]
+      },
+      {
+        "code": "11223",
+        "libelle": "Assistant / Assistante de conservation de bibliothèque",
+        "libelleCourt": "Assistant / Assistante de conservation de bibliothèque",
+        "classification": "SYNONYME",
+        "competencesCles": [
+          {
+            "competence": {
+              "type": "COMPETENCE-DETAILLEE",
+              "code": "121265",
+              "libelle": "Renseigner un public sur l'utilisation de supports et outils documentaires",
+              "codeOgr": "121265"
+            },
+            "frequence": 92
+          },
+          {
+            "competence": {
+              "type": "COMPETENCE-DETAILLEE",
+              "code": "121319",
+              "libelle": "Actualiser des documents et fonds documentaires",
+              "codeOgr": "121319"
+            },
+            "frequence": 96
+          },
+          {
+            "competence": {
+              "type": "COMPETENCE-DETAILLEE",
+              "code": "121718",
+              "libelle": "Classer des documents",
+              "codeOgr": "121718"
+            },
+            "frequence": 96
+          },
+          {
+            "competence": {
+              "type": "COMPETENCE-DETAILLEE",
+              "code": "123389",
+              "libelle": "Sélectionner des informations documentaires",
+              "codeOgr": "123389"
+            },
+            "frequence": 75
+          },
+          {
+            "competence": {
+              "type": "MACRO-SAVOIR-FAIRE",
+              "code": "300119",
+              "libelle": "Réaliser une veille documentaire",
+              "codeOgr": "300119"
+            },
+            "frequence": 81
+          }
+        ]
+      }
+    ],
+    "themes": [
+      {
+        "libelle": "Métiers du patrimoine et de la restauration d'oeuvres d'art",
+        "code": "03"
+      },
+      {
+        "libelle": "Métiers de l'intelligence économique",
+        "code": "04"
+      },
+      {
+        "libelle": "Métiers du multimédia",
+        "code": "09"
+      },
+      {
+        "libelle": "Métiers auprès des enfants",
+        "code": "12"
+      }
+    ],
+    "centresInterets": [
+      {
+        "libelle": "J'ai le sens du service public",
+        "code": "5"
+      },
+      {
+        "libelle": "J'ai le souci du détail",
+        "code": "6"
+      },
+      {
+        "libelle": "J'aime organiser, planifier",
+        "code": "18"
+      }
+    ],
+    "centresInteretsLies": [
+      {
+        "centreInteret": {
+          "libelle": "J'ai le sens du service public",
+          "code": "5"
+        },
+        "principal": false
+      },
+      {
+        "centreInteret": {
+          "libelle": "J'ai le souci du détail",
+          "code": "6"
+        },
+        "principal": false
+      },
+      {
+        "centreInteret": {
+          "libelle": "J'aime organiser, planifier",
+          "code": "18"
+        },
+        "principal": true
+      }
+    ],
+    "secteursActivites": [
+      {
+        "code": "82",
+        "libelle": "Culture et patrimoine"
+      }
+    ],
+    "secteursActivitesLies": [
+      {
+        "secteurActivite": {
+          "code": "82",
+          "libelle": "Culture et patrimoine"
+        },
+        "principal": true
+      }
+    ],
+    "competencesMobilisees": [
+      {
+        "type": "SAVOIR",
+        "code": "100598",
+        "libelle": "Techniques de restauration de document",
+        "codeOgr": "100598"
+      },
+      {
+        "type": "SAVOIR",
+        "code": "101398",
+        "libelle": "Finance",
+        "codeOgr": "101398"
+      },
+      {
+        "type": "SAVOIR",
+        "code": "102216",
+        "libelle": "Gestion budgétaire",
+        "codeOgr": "102216"
+      },
+      {
+        "type": "SAVOIR",
+        "code": "102511",
+        "libelle": "Médias",
+        "codeOgr": "102511"
+      },
+      {
+        "type": "SAVOIR",
+        "code": "102714",
+        "libelle": "Type de supports de films",
+        "codeOgr": "102714"
+      },
+      {
+        "type": "SAVOIR",
+        "code": "102802",
+        "libelle": "Spécificités des supports d'impression",
+        "codeOgr": "102802"
+      },
+      {
+        "type": "COMPETENCE-DETAILLEE",
+        "code": "107848",
+        "libelle": "Organiser et animer des activités ludiques et d'éveil",
+        "codeOgr": "107848",
+        "riasecMajeur": "S",
+        "riasecMineur": "R"
+      },
+      {
+        "type": "SAVOIR",
+        "code": "108146",
+        "libelle": "Techniques de micro-filmage",
+        "codeOgr": "108146"
+      },
+      {
+        "type": "SAVOIR",
+        "code": "108147",
+        "libelle": "Lecture en public",
+        "codeOgr": "108147"
+      },
+      {
+        "type": "SAVOIR",
+        "code": "108148",
+        "libelle": "Bibliométrie",
+        "codeOgr": "108148"
+      },
+      {
+        "type": "SAVOIR",
+        "code": "108302",
+        "libelle": "Économie",
+        "codeOgr": "108302"
+      },
+      {
+        "type": "SAVOIR",
+        "code": "108909",
+        "libelle": "Types de supports audio",
+        "codeOgr": "108909"
+      },
+      {
+        "type": "SAVOIR",
+        "code": "109313",
+        "libelle": "Techniques de restauration numérique",
+        "codeOgr": "109313"
+      },
+      {
+        "type": "SAVOIR",
+        "code": "109530",
+        "libelle": "Sciences économiques et sociales",
+        "codeOgr": "109530"
+      },
+      {
+        "type": "SAVOIR",
+        "code": "109659",
+        "libelle": "Techniques de numérisation",
+        "codeOgr": "109659"
+      },
+      {
+        "type": "COMPETENCE-DETAILLEE",
+        "code": "113640",
+        "libelle": "Administrer un site web",
+        "codeOgr": "113640",
+        "riasecMajeur": "E"
+      },
+      {
+        "type": "COMPETENCE-DETAILLEE",
+        "code": "115181",
+        "libelle": "Animer des activités culturelles et artistiques",
+        "codeOgr": "115181",
+        "riasecMajeur": "S"
+      },
+      {
+        "type": "SAVOIR",
+        "code": "116398",
+        "libelle": "Culture générale / Domaine culturel",
+        "codeOgr": "116398"
+      },
+      {
+        "type": "SAVOIR",
+        "code": "118139",
+        "libelle": "Littérature jeunesse",
+        "codeOgr": "118139"
+      },
+      {
+        "type": "SAVOIR",
+        "code": "118899",
+        "libelle": "Histoire-Géographie",
+        "codeOgr": "118899"
+      },
+      {
+        "type": "SAVOIR",
+        "code": "118902",
+        "libelle": "Histoire",
+        "codeOgr": "118902"
+      },
+      {
+        "type": "SAVOIR",
+        "code": "118903",
+        "libelle": "Sciences et techniques de l'ingénieur",
+        "codeOgr": "118903"
+      },
+      {
+        "type": "SAVOIR",
+        "code": "119141",
+        "libelle": "Caractéristiques des livres anciens, manuscrits, incunables",
+        "codeOgr": "119141"
+      },
+      {
+        "type": "COMPETENCE-DETAILLEE",
+        "code": "121661",
+        "libelle": "Négocier des partenariats",
+        "codeOgr": "121661",
+        "riasecMajeur": "E",
+        "riasecMineur": "S"
+      },
+      {
+        "type": "SAVOIR",
+        "code": "121706",
+        "libelle": "Techniques commerciales",
+        "codeOgr": "121706"
+      },
+      {
+        "type": "COMPETENCE-DETAILLEE",
+        "code": "122513",
+        "libelle": "Définir une politique de développement des fonds et des collections documentaires",
+        "codeOgr": "122513",
+        "riasecMajeur": "I",
+        "riasecMineur": "C"
+      },
+      {
+        "type": "COMPETENCE-DETAILLEE",
+        "code": "122642",
+        "libelle": "Définir des règles de conservation des documents (accès, diffusion, élimination)",
+        "codeOgr": "122642",
+        "riasecMajeur": "I",
+        "riasecMineur": "C"
+      },
+      {
+        "type": "SAVOIR",
+        "code": "123009",
+        "libelle": "Nouvelles Technologies de l'information et de la Communication (NTIC)",
+        "codeOgr": "123009"
+      },
+      {
+        "type": "COMPETENCE-DETAILLEE",
+        "code": "123015",
+        "libelle": "Traiter des archives anciennes",
+        "codeOgr": "123015",
+        "riasecMajeur": "I",
+        "riasecMineur": "C"
+      },
+      {
+        "type": "COMPETENCE-DETAILLEE",
+        "code": "123018",
+        "libelle": "Traiter des archives",
+        "codeOgr": "123018",
+        "riasecMajeur": "I",
+        "riasecMineur": "C"
+      },
+      {
+        "type": "COMPETENCE-DETAILLEE",
+        "code": "123307",
+        "libelle": "Actualiser des données d'activité",
+        "codeOgr": "123307",
+        "riasecMajeur": "C"
+      },
+      {
+        "type": "SAVOIR",
+        "code": "124085",
+        "libelle": "Gestion des fonds documentaires",
+        "codeOgr": "124085"
+      },
+      {
+        "type": "SAVOIR",
+        "code": "124284",
+        "libelle": "Médecine générale",
+        "codeOgr": "124284"
+      },
+      {
+        "type": "COMPETENCE-DETAILLEE",
+        "code": "124377",
+        "libelle": "Assurer la gestion administrative d'une activité",
+        "codeOgr": "124377",
+        "riasecMajeur": "C",
+        "riasecMineur": "E"
+      },
+      {
+        "type": "COMPETENCE-DETAILLEE",
+        "code": "124644",
+        "libelle": "Reproduire des documents sous la forme de microfilms, données numériques",
+        "codeOgr": "124644",
+        "riasecMajeur": "C"
+      },
+      {
+        "type": "COMPETENCE-DETAILLEE",
+        "code": "124646",
+        "libelle": "Enregistrer des documents sous la forme de microfilm",
+        "codeOgr": "124646",
+        "riasecMajeur": "C"
+      },
+      {
+        "type": "SAVOIR",
+        "code": "124830",
+        "libelle": "Sciences religieuses et théologie",
+        "codeOgr": "124830"
+      },
+      {
+        "type": "SAVOIR",
+        "code": "124840",
+        "libelle": "Sciences humaines et sociales",
+        "codeOgr": "124840"
+      },
+      {
+        "type": "SAVOIR",
+        "code": "124886",
+        "libelle": "Sciences exactes",
+        "codeOgr": "124886"
+      },
+      {
+        "type": "SAVOIR",
+        "code": "124887",
+        "libelle": "Sciences physico-chimiques et expérimentales",
+        "codeOgr": "124887"
+      },
+      {
+        "type": "COMPETENCE-DETAILLEE",
+        "code": "126288",
+        "libelle": "Effectuer des opérations de remise en état et de restauration de documents",
+        "codeOgr": "126288",
+        "riasecMajeur": "I",
+        "riasecMineur": "C"
+      },
+      {
+        "type": "MACRO-SAVOIR-FAIRE",
+        "code": "300313",
+        "libelle": "Contrôler la réalisation et les coûts d'une prestation ",
+        "codeOgr": "300313",
+        "riasecMajeur": "C"
+      },
+      {
+        "type": "MACRO-SAVOIR-FAIRE",
+        "code": "300315",
+        "libelle": "Identifier et sélectionner des fournisseurs, sous-traitants, prestataires",
+        "codeOgr": "300315",
+        "riasecMajeur": "C"
+      },
+      {
+        "type": "MACRO-SAVOIR-FAIRE",
+        "code": "300318",
+        "libelle": "Réaliser des opérations comptables",
+        "codeOgr": "300318",
+        "riasecMajeur": "C"
+      },
+      {
+        "type": "MACRO-SAVOIR-FAIRE",
+        "code": "300350",
+        "libelle": "Négocier un contrat",
+        "codeOgr": "300350",
+        "riasecMajeur": "E",
+        "riasecMineur": "C"
+      },
+      {
+        "type": "MACRO-SAVOIR-FAIRE",
+        "code": "300401",
+        "libelle": "Diriger et gérer un ensemble, une structure, une organisation",
+        "codeOgr": "300401",
+        "riasecMajeur": "E"
+      },
+      {
+        "type": "MACRO-SAVOIR-ETRE-PROFESSIONNEL",
+        "code": "300412",
+        "libelle": "Être à l'écoute, faire preuve d'empathie",
+        "codeOgr": "300412"
+      },
+      {
+        "type": "MACRO-SAVOIR-FAIRE",
+        "code": "300413",
+        "libelle": "Prendre la parole en public",
+        "codeOgr": "300413"
+      },
+      {
+        "type": "MACRO-SAVOIR-FAIRE",
+        "code": "300431",
+        "libelle": "Mettre à jour un dossier, une base de données",
+        "codeOgr": "300431",
+        "riasecMajeur": "C"
+      },
+      {
+        "type": "MACRO-SAVOIR-FAIRE",
+        "code": "300440",
+        "libelle": "Animer, coordonner une équipe",
+        "codeOgr": "300440",
+        "riasecMajeur": "E"
+      },
+      {
+        "type": "MACRO-SAVOIR-FAIRE",
+        "code": "300452",
+        "libelle": "Collecter et analyser des données, des informations",
+        "codeOgr": "300452",
+        "riasecMajeur": "C"
+      },
+      {
+        "type": "MACRO-SAVOIR-FAIRE",
+        "code": "300453",
+        "libelle": "Organiser le partage et la capitalisation de l'information",
+        "codeOgr": "300453",
+        "riasecMajeur": "E"
+      },
+      {
+        "type": "MACRO-SAVOIR-FAIRE",
+        "code": "300458",
+        "libelle": "Structurer, synthétiser des informations",
+        "codeOgr": "300458",
+        "riasecMajeur": "C"
+      },
+      {
+        "type": "MACRO-SAVOIR-ETRE-PROFESSIONNEL",
+        "code": "300465",
+        "libelle": "Travailler en équipe",
+        "codeOgr": "300465"
+      },
+      {
+        "type": "MACRO-SAVOIR-FAIRE",
+        "code": "300469",
+        "libelle": "Préparer et animer une réunion, un groupe de travail, un atelier",
+        "codeOgr": "300469",
+        "riasecMajeur": "E"
+      },
+      {
+        "type": "MACRO-SAVOIR-ETRE-PROFESSIONNEL",
+        "code": "300490",
+        "libelle": "Faire preuve de rigueur et de précision",
+        "codeOgr": "300490"
+      },
+      {
+        "type": "COMPETENCE-DETAILLEE",
+        "code": "400827",
+        "libelle": "Établir des titres de transport",
+        "codeOgr": "400827",
+        "riasecMajeur": "C"
+      },
+      {
+        "type": "COMPETENCE-DETAILLEE",
+        "code": "405259",
+        "libelle": "Créer des documents numériques",
+        "codeOgr": "405259"
+      }
+    ],
+    "competencesMobiliseesPrincipales": [
+      {
+        "type": "SAVOIR",
+        "code": "100541",
+        "libelle": "Techniques de communication orales, écrites et numériques",
+        "codeOgr": "100541"
+      },
+      {
+        "type": "SAVOIR",
+        "code": "102226",
+        "libelle": "Normes rédactionnelles",
+        "codeOgr": "102226"
+      },
+      {
+        "type": "SAVOIR",
+        "code": "102462",
+        "libelle": "Droit de la propriété intellectuelle",
+        "codeOgr": "102462"
+      },
+      {
+        "type": "COMPETENCE-DETAILLEE",
+        "code": "108128",
+        "libelle": "Enregistrer et suivre les prêts de documents",
+        "codeOgr": "108128",
+        "riasecMajeur": "C"
+      },
+      {
+        "type": "SAVOIR",
+        "code": "108131",
+        "libelle": "Techniques de conservation de documents",
+        "codeOgr": "108131"
+      },
+      {
+        "type": "SAVOIR",
+        "code": "119509",
+        "libelle": "Logiciel de gestion documentaire",
+        "codeOgr": "119509"
+      },
+      {
+        "type": "SAVOIR",
+        "code": "119523",
+        "libelle": "Logiciels d'édition multimédia",
+        "codeOgr": "119523"
+      },
+      {
+        "type": "COMPETENCE-DETAILLEE",
+        "code": "121265",
+        "libelle": "Renseigner un public sur l'utilisation de supports et outils documentaires",
+        "codeOgr": "121265",
+        "riasecMajeur": "S",
+        "riasecMineur": "R"
+      },
+      {
+        "type": "COMPETENCE-DETAILLEE",
+        "code": "121319",
+        "libelle": "Actualiser des documents et fonds documentaires",
+        "codeOgr": "121319",
+        "riasecMajeur": "I",
+        "riasecMineur": "C"
+      },
+      {
+        "type": "SAVOIR",
+        "code": "121411",
+        "libelle": "Méthode de classement et d'archivage",
+        "codeOgr": "121411"
+      },
+      {
+        "type": "SAVOIR",
+        "code": "121611",
+        "libelle": "Documents (catalogue, revue de presse, ...)",
+        "codeOgr": "121611"
+      },
+      {
+        "type": "COMPETENCE-DETAILLEE",
+        "code": "121718",
+        "libelle": "Classer des documents",
+        "codeOgr": "121718",
+        "riasecMajeur": "I",
+        "riasecMineur": "C"
+      },
+      {
+        "type": "SAVOIR",
+        "code": "122789",
+        "libelle": "Sciences de l'information et des bibliothèques",
+        "codeOgr": "122789"
+      },
+      {
+        "type": "COMPETENCE-DETAILLEE",
+        "code": "123389",
+        "libelle": "Sélectionner des informations documentaires",
+        "codeOgr": "123389",
+        "riasecMajeur": "I",
+        "riasecMineur": "C"
+      },
+      {
+        "type": "COMPETENCE-DETAILLEE",
+        "code": "123390",
+        "libelle": "Mettre à disposition d'un public des fonds documentaires",
+        "codeOgr": "123390"
+      },
+      {
+        "type": "COMPETENCE-DETAILLEE",
+        "code": "124403",
+        "libelle": "Réaliser des acquisitions de fonds documentaires",
+        "codeOgr": "124403",
+        "riasecMajeur": "I",
+        "riasecMineur": "C"
+      },
+      {
+        "type": "COMPETENCE-DETAILLEE",
+        "code": "125638",
+        "libelle": "Protéger des documents de valeurs",
+        "codeOgr": "125638",
+        "riasecMajeur": "I",
+        "riasecMineur": "C"
+      },
+      {
+        "type": "COMPETENCE-DETAILLEE",
+        "code": "125639",
+        "libelle": "Contrôler l'état de conservation de documents",
+        "codeOgr": "125639",
+        "riasecMajeur": "C"
+      },
+      {
+        "type": "MACRO-SAVOIR-FAIRE",
+        "code": "300118",
+        "libelle": "Gérer une base documentaire",
+        "codeOgr": "300118",
+        "riasecMajeur": "I",
+        "riasecMineur": "C"
+      },
+      {
+        "type": "MACRO-SAVOIR-FAIRE",
+        "code": "300119",
+        "libelle": "Réaliser une veille documentaire",
+        "codeOgr": "300119",
+        "riasecMajeur": "I",
+        "riasecMineur": "C"
+      },
+      {
+        "type": "MACRO-SAVOIR-FAIRE",
+        "code": "300126",
+        "libelle": "Créer une documentation technique",
+        "codeOgr": "300126",
+        "riasecMajeur": "I",
+        "riasecMineur": "C"
+      },
+      {
+        "type": "MACRO-SAVOIR-FAIRE",
+        "code": "300259",
+        "libelle": "Participer à un inventaire",
+        "codeOgr": "300259",
+        "riasecMajeur": "C"
+      },
+      {
+        "type": "MACRO-SAVOIR-FAIRE",
+        "code": "300361",
+        "libelle": "Accueillir, orienter, informer une personne",
+        "codeOgr": "300361",
+        "riasecMajeur": "S"
+      },
+      {
+        "type": "MACRO-SAVOIR-FAIRE",
+        "code": "300426",
+        "libelle": "Utiliser les outils numériques",
+        "codeOgr": "300426",
+        "riasecMajeur": "C"
+      }
+    ],
+    "competencesMobiliseesEmergentes": [],
+    "divisionsNaf": [
+      {
+        "code": "85",
+        "libelle": "Enseignement"
+      },
+      {
+        "code": "91",
+        "libelle": "Bibliothèques, archives, musées et autres activités culturelles"
+      }
+    ],
+    "formacodes": [
+      {
+        "code": "46354",
+        "libelle": "communication et information"
+      },
+      {
+        "code": "46373",
+        "libelle": "bibliothèque documentation"
+      },
+      {
+        "code": "46382",
+        "libelle": "documentation audiovisuelle et multimédia"
+      },
+      {
+        "code": "46393",
+        "libelle": "discothèque"
+      },
+      {
+        "code": "46391",
+        "libelle": "médiathèque"
+      },
+      {
+        "code": "46392",
+        "libelle": "photothèque"
+      },
+      {
+        "code": "46345",
+        "libelle": "ingénierie documentaire"
+      },
+      {
+        "code": "46385",
+        "libelle": "archivage"
+      },
+      {
+        "code": "46396",
+        "libelle": "archivage dématérialisation"
+      },
+      {
+        "code": "46349",
+        "libelle": "gestion contenu entreprise"
+      },
+      {
+        "code": "46371",
+        "libelle": "informatique documentaire"
+      },
+      {
+        "code": "46362",
+        "libelle": "marketing documentaire"
+      },
+      {
+        "code": "46346",
+        "libelle": "recherche documentaire"
+      },
+      {
+        "code": "46342",
+        "libelle": "veille"
+      },
+      {
+        "code": "46363",
+        "libelle": "réseau documentaire"
+      },
+      {
+        "code": "46395",
+        "libelle": "ludothèque"
+      },
+      {
+        "code": "46309",
+        "libelle": "données ouvertes"
+      },
+      {
+        "code": "33074",
+        "libelle": "gestion connaissances"
+      }
+    ],
+    "contextesTravail": [
+      {
+        "code": "23376",
+        "libelle": "Travail le week-end",
+        "categorie": "HORAIRE_ET_DUREE_TRAVAIL"
+      },
+      {
+        "code": "300795",
+        "libelle": "Port et manipulation de charges lourdes ou encombrantes",
+        "categorie": "CONDITIONS_TRAVAIL"
+      },
+      {
+        "code": "300849",
+        "libelle": "Association",
+        "categorie": "TYPE_STRUCTURE_ACCUEIL"
+      }
+    ]
+  }
