@@ -19,15 +19,21 @@
             <input type="text" id="tokenInput" placeholder="Entrez le token" required>
             <button id="btnToken" type="button">Valider le token</button>
         </div>
+        <div>
+            <label for="secretInput">Entrez le secret :</label>
+            <input type="text" id="secretInput" placeholder="Entrez le secret" required>
+            <button id="btnSecret" type="button">Valider le secret</button>
+        </div>
         
     </header>
     <nav>
         <ul>
             <li><a href="#section1">Importer les métiers ROME</a></li>
             <li><a href="#section10">Mettre à jour les compétences ROME</a></li>
-            <li><a href="#section11">Relier les appellations au parcours</a></li>
+            <li><a href="#section11">Relier les appellations de métier au parcours</a></li>
             <li><a href="#section12">Stats ROME</a></li>
             <li><a href="#section2">Importer les fiches RNCP</a></li>
+            <li><a href="#section3">Rechercher des appelations de métiers</a></li>
         </ul>
     </nav>
     <main>
@@ -76,6 +82,28 @@
             </div>
             <div id="resultImportRNCP"></div>
         </section>
+
+        <section id="section3">
+            <h2>Rechercher dans les références</h2>
+            <div>
+                <label for="sltTypeSemafor">Sélectionner le type de référence</label>
+                <select id="sltTypeSemafor">
+                    <option value="Secteurs">Secteurs</option>
+                    <option value="Domaines">Domaines</option>
+                    <option value="SousDomaines">SousDomaines</option>
+                    <option value="Competences">Competences</option>
+                    <option value="Appellations">Appellations</option>
+                    <option value="Certificats">Certificats</option>
+                    <option value="Formations">Formations</option>
+                </select>            
+            <div>
+                <label for="inputSearchSemafor">Entrez le texte de votre recherche</label>
+                <textarea id="inputSearchSemafor" name="inputSearchSemafor" rows="5" cols="33">codeur</textarea>
+            </div>    
+            <button id="btnSearchSemafor" type="button">Rechercher</button>
+            <div id="resultSearchSemafor"></div>
+        </section>
+
     </main>
     <footer>
         <p>&copy; 2023 Mon Site Web</p>
@@ -86,10 +114,11 @@
         let a = new auth({
             mail:'acehn@univ-paris8.fr',
             apiOmk:'http://localhost/omk_gestForma/api/',
+            //apiOmk:'https://acehn.jardindesconnaissances.fr/api',
             ident: 'Fe82ZlMwNP8KR88BKWzGNnF7eS5qChwr',
             key:'Jo5RZc9S3qr79GAe2TZk9UBakWcZbP48',
         }),
-        token = "nubA5iauEhEpKrNrVQCYWmYy6xE",
+        token = "", secret="", tokenExpirationTimer,
         divResult = d3.select("#resultSave"),
         aCreer, refRome=[], romes, metiersChoisis, appChoisies, appToPar, appToFind, appFind,
         idParcours, itemParcours,updateMetiers=false, competences,
@@ -123,12 +152,21 @@
                     .attr("value", d => d['o:id'])
                     .text(d => d['o:title']);
         }, false)
+        
+        d3.select("#btnSearchSemafor").on("click",searchSemafor);
         d3.select("#btnCorrectRomeAppComp").on("click",correctAppelationCompetence);
         d3.select("#btnCalcStats").on("click",showStatsRome);
         d3.select("#btnToken").on("click",() => {
             token = tokenInput.value;
             console.log('Token mis à jour:', token);
         });
+        d3.select("#btnSecret").on("click",() => {
+            secret = secretInput.value;
+            console.log('Secret mis à jour:', secret);
+            getTokenFranceTravail();
+        });
+
+        
 
         d3.select("#btnListeMetiers").on("click",()=>{
             let url = document.getElementById('urlInput').value;
@@ -169,8 +207,7 @@
                     createMetiersFromRNCP(0);
                 });            
         });        
-                  
-        //getTokenFranceTravail();
+        
         //affiche le bouton de création
         d3.select("#btnSave").append("button")
             .text("Recherche les éléments ROME")
@@ -217,6 +254,116 @@
                 }
             });
         })
+        d3.select("#btnToken").on("click", () => {
+            token = tokenInput.value;
+            console.log('Token mis à jour:', token);
+            startTokenExpirationTimer(3600000); // 1 heure en millisecondes
+        });
+
+        d3.select("#btnSecret").on("click", () => {
+            secret = secretInput.value;
+            console.log('Secret mis à jour:', secret);
+            getTokenFranceTravail();
+        });
+
+        function startTokenExpirationTimer(duration) {
+            clearTimeout(tokenExpirationTimer);
+            tokenExpirationTimer = setTimeout(() => {
+                alert("Le token a expiré. Veuillez le renouveler.");
+                token = "";
+            }, duration);
+        }
+
+        function searchSemafor(e,nb=10){
+            //pour tester https://recherche-referentiel-v2.staging.analytics.diagotech.dev/docs#/Recherche/get_search_search__item_type__get
+            /*PROBLEME de cors // francetravail...
+            if(!token)token = await getSemaforToken();
+            let search = document.getElementById('inputSearchSemafor').value,
+                data, url = "https://recherche-referentiel-v2.staging.analytics.diagotech.dev/search/"
+                    +type+"?query="+search
+                    +"&nb_results="+nb,
+                hds = new Headers();
+                //hds.append("Accept", "application/json");
+                hds.append("Authorization","Bearer "+token.access_token);
+            let reponse = await fetch(url, {                
+                method: 'GET',
+                //mode: 'no-cors',
+                headers:hds                    
+            }).catch(error => {
+                console.error('Error fetching the data:', error);
+                return false;
+            }); 
+            if(!reponse.ok){
+                console.log(reponse);
+                return false;
+            }else{
+                data = await reponse.json();
+            }
+            */
+            let type = document.getElementById('sltTypeSemafor').value,
+                search = document.getElementById('inputSearchSemafor').value,
+                url = "semafor.php?type="+type+"&nb="+nb+"&search="+search;
+            d3.json(url).then(data=>{
+                showSemaforFind(data);
+            })           
+        }
+
+        function showSemaforFind(data){
+            d3.select("#resultSearchSemafor").select("table").remove();
+            let cols = Object.keys(data.search_results[0]),
+                table = d3.select("#resultSearchSemafor").append("table"),
+                thead = table.append("thead"),
+                tbody = table.append("tbody").attr('id','tbodySemafor');
+
+            thead.append("tr")
+                .selectAll("th")
+                .data(cols)
+                .enter()
+                .append("th")
+                .text(d => d);
+            let rows = d3.select('#tbodySemafor').selectAll("tr")
+                .data(data.search_results)
+                .enter()
+                .append("tr")
+                .on("click",addAppelationToParcours);
+
+            rows.selectAll("td")
+                .data((d,i) => {
+                    return cols.map(c=>d[c])
+                })
+                .enter()
+                .append("td")
+                .text((d, i) => {
+                    return d;
+                });
+        }    
+
+
+        async function getSemaforToken(){
+            const bodyData = new URLSearchParams();
+            bodyData.append('client_id', 'EXT_semafor_samuel_szoniecky');
+            bodyData.append('client_secret', secret);
+            bodyData.append('grant_type', 'client_credentials');
+            let data, url = "https://auth.staging.analytics.diagotech.dev/realms/esi-auth-keycloack/protocol/openid-connect/token",
+            reponse = await fetch(url, {                
+                method: 'POST',
+                body: bodyData,
+                headers: {
+                    "Content-Type": "application/x-www-form-urlencoded",
+                },                    
+            }).catch(error => {
+                console.error('Error fetching the data:', error);
+                return false;
+            }); 
+            if(!reponse.ok){
+                console.log(reponse);
+                return false;
+            }else{
+                data = await reponse.json();
+            }            
+            startTokenExpirationTimer(data.expires_in*1000);           
+            return data;
+        }
 
         async function getRomeCompValues(data){
             let dt = {};
@@ -932,21 +1079,22 @@
         }
 
         function getTokenFranceTravail(){
-            let url = "https://entreprise.francetravail.fr/connexion/oauth2/access_token?"
-                +"realm=%2Fpartenaire";
+
+            let url = "https://entreprise.francetravail.fr/connexion/oauth2/access_token?realm=%2Fpartenaire";
             fetch(url, {
                 method: 'POST',
-                data : {
+                mode: "no-cors", // , *cors, same-origin
+                body : {
                     "grant_type":"client_credentials",
-                    "client_id":"xxx",
-                    "client_secret":"xxx",
-                    "scope":"api_rome-metiersv1,nomenclatureRome"
+                    "client_id":"PAR_competencesetmetiers_60f8cf4d38e803b2138b5c8c8b991b4ebd524d6d3075b295cd1fa92dfb18c15f",
+                    "client_secret":secret,
+                    "scope":"api_rome-metiersv1 nomenclatureRome"
                 },
                 headers: {
                     'Content-Type': 'application/x-www-form-urlencoded',
                 }
             })
-            .then(response => response.json())
+            //.then(response => response.json())
             .then(data => {
                 console.log(data);
             })

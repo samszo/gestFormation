@@ -316,6 +316,7 @@ function setCalHeatmap(jours){
 
 function showStatsRome(){
     d3.select('#statsRome').select('div').remove();
+    return;
     //récupère les données
     let url = a.omk.api.replace('/api/','/s/gestion-formation/data-visualization/dataset/3');
     d3.json(url).then(rs=>{
