@@ -1,2 +1,1 @@
 client_id: EXT_semafor_samuel_szoniecky
-client_secret: 3VQClgP742v46usRUyqljJc01oefQnfN
