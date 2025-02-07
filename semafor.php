@@ -16,8 +16,8 @@ if ($tokenData && isset($tokenData['token']) && isset($tokenData['expires_at']) 
     // Récupérer un nouveau token
     $authUrl = "https://auth.staging.analytics.diagotech.dev/realms/esi-auth-keycloack/protocol/openid-connect/token";
     $authData = array(
-        'client_id' => 'EXT_semafor_samuel_szoniecky',
-        'client_secret' => '3VQClgP742v46usRUyqljJc01oefQnfN',
+        'client_id' => 'xxx',
+        'client_secret' => 'xxxx',
         'grant_type' => 'client_credentials'
     );    
     $ch = curl_init($authUrl);
